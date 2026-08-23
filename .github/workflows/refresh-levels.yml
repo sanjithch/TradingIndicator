@@ -1,0 +1,44 @@
+name: Refresh levels
+
+on:
+  schedule:
+    # UTC, does not observe DST — correct for EDT (Mar-Nov); shift +1h during EST
+    - cron: '0 12 * * 1-5'   # 08:00 ET
+    - cron: '0 16 * * 1-5'   # 12:00 ET
+    - cron: '0 20 * * 1-5'   # 16:00 ET
+    - cron: '0 22 * * 1-5'   # 18:00 ET
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          ALPACA_API_KEY_ID: ${{ secrets.ALPACA_API_KEY_ID }}
+          ALPACA_API_SECRET_KEY: ${{ secrets.ALPACA_API_SECRET_KEY }}
+        run: python -m src.main
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/levels.json docs/metrics.json docs/bars data/levels.db
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Refresh levels ($(date -u +'%Y-%m-%dT%H:%M:%SZ'))"
+            git push
+          fi

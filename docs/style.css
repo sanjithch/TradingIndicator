@@ -1,0 +1,104 @@
+:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --border: #2a2e38;
+  --text: #e4e6eb;
+  --muted: #8a8f9c;
+  --buy: #1f6f43;
+  --call: #8a6d1f;
+  --broken: #7a2323;
+  --neutral: #1f2430;
+  --accent: #4a9eff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 1.5rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+}
+
+header h1 { margin: 0 0 0.25rem; font-size: 1.4rem; }
+.muted { color: var(--muted); margin: 0; }
+
+#metrics {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+@media (max-width: 700px) {
+  #metrics { grid-template-columns: 1fr; }
+}
+
+.metric-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+}
+.metric-card h2 { margin: 0 0 0.5rem; font-size: 0.95rem; color: var(--muted); font-weight: 600; }
+.metric-chart { height: 140px; }
+
+#signal-counts { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.signal-badge {
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  border: 1px solid var(--border);
+}
+
+table { width: 100%; border-collapse: collapse; }
+thead th {
+  text-align: left;
+  padding: 0.5rem 0.7rem;
+  color: var(--muted);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+}
+tbody td { padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--border); }
+tbody tr { cursor: pointer; }
+tbody tr:hover { filter: brightness(1.15); }
+
+tr.signal-BUY_ZONE { background: color-mix(in srgb, var(--buy) 25%, transparent); }
+tr.signal-CALL_ZONE { background: color-mix(in srgb, var(--call) 25%, transparent); }
+tr.signal-BROKEN_SUPPORT { background: color-mix(in srgb, var(--broken) 30%, transparent); }
+tr.signal-NEUTRAL { background: transparent; }
+
+.pill {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.pill.BUY_ZONE { background: var(--buy); }
+.pill.CALL_ZONE { background: var(--call); }
+.pill.BROKEN_SUPPORT { background: var(--broken); }
+.pill.NEUTRAL { background: var(--neutral); color: var(--muted); }
+
+#chart-section {
+  margin-top: 1.25rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.chart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+.chart-header h2 { margin: 0; font-size: 1.1rem; }
+#chart-close {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+}
+#candlestick-chart { height: 420px; }
