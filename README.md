@@ -25,7 +25,13 @@ See section 1 of the design spec for the full architecture diagram.
    permissions → *Read and write*. Required so the cron job can commit
    `docs/levels.json`, `docs/metrics.json`, `docs/bars/`, and `data/levels.db`
    back to `main`.
-5. **`tickers.txt`** — one symbol per line, uppercase, no blank lines.
+5. **`tickers.txt`** — one symbol per line, uppercase, no blank lines. The
+   full universe fetched and scored every run.
+6. **`holdings.txt`** (optional) — the subset of `tickers.txt` you actually
+   own, same one-per-line format. Drives the dashboard's "My Holdings" vs
+   "Watchlist" tabs: anything in `holdings.txt` shows under Holdings,
+   everything else in `tickers.txt` shows under Watchlist. Leave it out (or
+   empty) and everything falls under Watchlist.
 
 ## Running locally
 

@@ -16,12 +16,21 @@ from src import config
 from src.fetch import fetch_bars
 from src.pivots import cluster_pivots, find_pivots
 from src.scoring import determine_signal, score_level, select_top_levels, suggested_strike
-from src.store import export_bars_json, export_levels_json, export_metrics_json, init_db, write_levels, write_signal
+from src.store import (
+    export_bars_json,
+    export_holdings_json,
+    export_levels_json,
+    export_metrics_json,
+    init_db,
+    write_levels,
+    write_signal,
+)
 from src.volume import build_volume_profile, high_volume_nodes, price_in_hvn
 
 logger = logging.getLogger("sr_dashboard")
 
 TICKERS_FILE = "tickers.txt"
+HOLDINGS_FILE = "holdings.txt"
 DB_PATH = "data/levels.db"
 LEVELS_JSON_PATH = "docs/levels.json"
 LOOKBACK_DAYS = 60
@@ -38,6 +47,17 @@ def _log(event: str, **fields) -> None:
 
 def load_tickers(path: str | Path = TICKERS_FILE) -> list[str]:
     return [line.strip().upper() for line in Path(path).read_text().splitlines() if line.strip()]
+
+
+def load_holdings(path: str | Path = HOLDINGS_FILE) -> list[str]:
+    """Symbols you actually own, one per line — the same format as
+    tickers.txt. Missing file just means no holdings tagged (everything
+    shows up as watchlist-only on the dashboard), not an error.
+    """
+    p = Path(path)
+    if not p.exists():
+        return []
+    return [line.strip().upper() for line in p.read_text().splitlines() if line.strip()]
 
 
 def process_symbol(symbol: str, bars: list[dict], as_of: datetime) -> dict | None:
@@ -144,6 +164,7 @@ def run() -> None:
     export_levels_json(conn, run_timestamp, LEVELS_JSON_PATH)
     export_metrics_json(conn)
     export_bars_json(all_bars)
+    export_holdings_json(load_holdings())
     conn.close()
 
     _log("run_complete", processed=processed, skipped=skipped, total=len(symbols))

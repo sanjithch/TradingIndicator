@@ -1,6 +1,14 @@
 import json
 
-from src.store import export_bars_json, export_levels_json, export_metrics_json, init_db, write_levels, write_signal
+from src.store import (
+    export_bars_json,
+    export_holdings_json,
+    export_levels_json,
+    export_metrics_json,
+    init_db,
+    write_levels,
+    write_signal,
+)
 
 
 def test_store_round_trip(tmp_path):
@@ -91,3 +99,9 @@ def test_export_bars_json_reshapes_for_lightweight_charts(tmp_path):
     shaped = json.loads((out_dir / "AAPL.json").read_text())
     assert shaped[0]["time"] == 1704067200  # 2024-01-01T00:00:00Z as unix seconds
     assert shaped[0]["close"] == 1.5
+
+
+def test_export_holdings_json_dedupes_and_sorts(tmp_path):
+    out_path = tmp_path / "holdings.json"
+    export_holdings_json(["QBTS", "AAPL", "AAPL", "RGTI"], out_path)
+    assert json.loads(out_path.read_text()) == ["AAPL", "QBTS", "RGTI"]

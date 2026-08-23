@@ -255,6 +255,17 @@ def export_metrics_json(
     out.write_text(json.dumps(payload, indent=2))
 
 
+def export_holdings_json(holdings: list[str], out_path: str | Path = "docs/holdings.json") -> None:
+    """Write docs/holdings.json: the flat list of symbols you actually own,
+    read from holdings.txt. The dashboard uses membership in this list to
+    split the table into "Holdings" vs "Watchlist" — everything in
+    tickers.txt that isn't here is treated as watchlist-only.
+    """
+    out = Path(out_path)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(sorted(set(holdings))))
+
+
 def export_bars_json(bars_by_symbol: dict[str, list[dict]], out_dir: str | Path = "docs/bars") -> None:
     """Write one docs/bars/<SYMBOL>.json per symbol, bars reshaped for
     Lightweight Charts (time as UNIX seconds, not the ISO string fetch.py

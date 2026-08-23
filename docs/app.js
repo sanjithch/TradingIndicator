@@ -29,6 +29,45 @@ function distanceToNearest(row) {
   return d.length ? Math.min(...d) : Infinity;
 }
 
+// App state, populated once in init() and re-sliced on every tab switch.
+const state = {
+  levelsData: null,
+  metrics: null,
+  holdingsSet: new Set(),
+  view: "holdings", // "holdings" | "watchlist"
+};
+
+function rowsForView(view) {
+  const symbols = state.levelsData?.symbols ?? [];
+  return view === "holdings"
+    ? symbols.filter((row) => state.holdingsSet.has(row.symbol))
+    : symbols.filter((row) => !state.holdingsSet.has(row.symbol));
+}
+
+function setView(view) {
+  state.view = view;
+  for (const btn of document.querySelectorAll("#view-tabs .tab")) {
+    btn.classList.toggle("active", btn.dataset.view === view);
+  }
+  const rows = rowsForView(view);
+  renderTable(rows);
+  renderSignalCounts(rows);
+  updateRunMeta(rows.length);
+}
+
+function updateRunMeta(visibleCount) {
+  const el = document.getElementById("run-meta");
+  const ts = state.levelsData?.run_timestamp;
+  if (!ts) return;
+  const label = state.view === "holdings" ? "holdings" : "watchlist";
+  el.textContent = `Last run: ${new Date(ts).toLocaleString()} · ${visibleCount} ${label}`;
+}
+
+document.getElementById("view-tabs").addEventListener("click", (e) => {
+  const btn = e.target.closest(".tab");
+  if (btn) setView(btn.dataset.view);
+});
+
 function renderTable(levels) {
   const tbody = document.getElementById("levels-body");
   tbody.innerHTML = "";
@@ -54,13 +93,14 @@ function renderTable(levels) {
   }
 }
 
-function renderSignalCounts(metrics) {
+function renderSignalCounts(rows) {
+  // Computed from the currently visible (tab-filtered) rows, not
+  // metrics.json's global counts — a "Buy zone: 33" badge that includes
+  // symbols from the other tab would be misleading.
   const el = document.getElementById("signal-counts");
   el.innerHTML = "";
-  const runs = metrics.runs ?? [];
-  if (!runs.length) return;
-  const latest = runs[runs.length - 1];
-  const counts = metrics.signal_counts_by_run?.[latest] ?? {};
+  const counts = {};
+  for (const row of rows) counts[row.signal] = (counts[row.signal] ?? 0) + 1;
   for (const [signal, count] of Object.entries(counts)) {
     const span = document.createElement("span");
     span.className = "signal-badge";
@@ -177,17 +217,21 @@ document.getElementById("chart-close").addEventListener("click", () => {
 
 async function init() {
   try {
-    const [levelsData, metrics] = await Promise.all([
+    const [levelsData, metrics, holdings] = await Promise.all([
       fetchJson("levels.json"),
       fetchJson("metrics.json"),
+      fetchJson("holdings.json").catch(() => []), // missing file = no holdings tagged, not fatal
     ]);
 
-    document.getElementById("run-meta").textContent =
-      `Last run: ${new Date(levelsData.run_timestamp).toLocaleString()} · ${levelsData.symbols.length} symbols`;
+    state.levelsData = levelsData;
+    state.metrics = metrics;
+    state.holdingsSet = new Set(holdings);
 
-    renderTable(levelsData.symbols);
-    renderSignalCounts(metrics);
+    // Level hold rate stays a global metric (it's about how well levels
+    // persist across runs, not which tab you're looking at) — everything
+    // else re-slices per tab.
     renderHoldRateChart(metrics);
+    setView(state.view);
   } catch (e) {
     document.getElementById("run-meta").textContent = `Failed to load dashboard data: ${e.message}`;
   }

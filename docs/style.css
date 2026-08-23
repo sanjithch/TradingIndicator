@@ -25,6 +25,26 @@ body {
 header h1 { margin: 0 0 0.25rem; font-size: 1.4rem; }
 .muted { color: var(--muted); margin: 0; }
 
+#view-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+#view-tabs .tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 600;
+  padding: 0.5rem 0.2rem;
+  margin-bottom: -1px;
+  cursor: pointer;
+}
+#view-tabs .tab:hover { color: var(--text); }
+#view-tabs .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
 #metrics {
   display: grid;
   grid-template-columns: 2fr 1fr;
