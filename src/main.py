@@ -12,7 +12,7 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from src import config
+from src import config, credit_spread
 from src.fetch import fetch_bars
 from src.pivots import cluster_pivots, find_pivots
 from src.scoring import determine_signal, score_level, select_top_levels, suggested_strike
@@ -168,6 +168,14 @@ def run() -> None:
     conn.close()
 
     _log("run_complete", processed=processed, skipped=skipped, total=len(symbols))
+
+    try:
+        credit_spread.run()
+    except Exception as e:
+        # The Credit Spread Watchlist tab is a separate concern from the
+        # main dashboard — a failure there must not mark an otherwise-good
+        # main run as failed.
+        _log("credit_spread_error", error=str(e))
 
 
 if __name__ == "__main__":

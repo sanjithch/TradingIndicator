@@ -79,6 +79,40 @@ they're fully covered by fixture-based unit tests in `tests/`. `test_pivots.py`
 in particular uses a small hand-built bar series with pivots you can verify
 by eye — see the docstring at the top of that file for the layout.
 
+## Credit Spread Watchlist tab
+
+A third tab tracking `AVGO, HPE, MU, DRAM, SNDK, IONQ` (set in
+`src/config.py`'s `CREDIT_SPREAD_TICKERS`), independent of `tickers.txt`/
+`holdings.txt`. Two panels, written by `src/credit_spread.py` (called from
+`main.py`'s `run()`) to `docs/credit_spread.json`:
+
+- **Technical levels** — daily-bar swing support/resistance at 20/60/120-day
+  lookbacks, 50/200-day SMA, 14-day RSI. Uses Alpaca like the rest of the
+  pipeline, but daily bars, not 15-minute — SMA/RSI/N-day-high-low are daily
+  concepts, and `src/fetch.py`'s `fetch_bars` takes an optional `timeframe`
+  and `cache_subdir` for exactly this (daily bars cache under
+  `data/cache/daily/`, separate from the main 15-min cache).
+- **Upcoming catalysts** — earnings dates for those six tickers plus their
+  sector peers (`SECTOR_PEER_GROUPS` in config.py: memory/semis, AI infra,
+  quantum) and scheduled macro releases (CPI, PPI, FOMC, jobs report),
+  filtered to the next 14 days. A sector peer's earnings are flagged as
+  affecting the *entire* watchlist, not just its own sub-sector.
+
+**This panel's data source is static, not live**, and that's a deliberate
+tradeoff, not an oversight: `data/catalysts_seed.json` was seeded once
+(2026-09-06) from Robinhood's earnings API and the official BLS/Federal
+Reserve 2026 release calendars. GitHub Actions can't repeat the earnings
+half of that fetch — it needs an authenticated Robinhood session this
+pipeline doesn't have — while the macro half doesn't need refetching at all,
+since the Fed and BLS publish those dates for the whole year in advance.
+Practically: **the macro calendar (CPI/PPI/FOMC/jobs) is good through
+end of 2026 with no action needed; the earnings dates need periodic manual
+refresh** as companies report and new dates get scheduled — rerun the
+`get_earnings_results`-style lookup per ticker (see this feature's build
+history) and update the `earnings` array in `data/catalysts_seed.json`.
+`DRAM` has no seeded earnings entry — the earnings API returned nothing for
+it, most likely because it isn't a standard quarterly-reporting equity.
+
 ## Tuning thresholds
 
 Every threshold lives in `src/config.py` — nowhere else. Change values there,
@@ -97,6 +131,10 @@ not in the modules that consume them:
 | `PROXIMITY_PCT` | "Within X%" for BUY_ZONE / CALL_ZONE | 1% |
 | `NEUTRAL_PCT` | ">X% from both" for NEUTRAL | 2% |
 | `STRIKE_INCREMENTS` | Option strike rounding tiers | $0.50 / $1 / $5 |
+| `SWING_LOOKBACKS` | Credit Spread tab's S/R lookback windows (days) | 20 / 60 / 120 |
+| `SMA_PERIODS` | Credit Spread tab's moving averages (days) | 50 / 200 |
+| `RSI_PERIOD` | Credit Spread tab's RSI window (days) | 14 |
+| `CATALYST_WINDOW_DAYS` | How far ahead the catalysts panel looks | 14 |
 
 If the dashboard feels cluttered (too many rows in a zone), start with
 `PROXIMITY_PCT` — that's the most common thing worth loosening or tightening.

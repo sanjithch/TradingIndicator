@@ -14,6 +14,7 @@
   <nav id="view-tabs">
     <button type="button" class="tab active" data-view="holdings">My Holdings</button>
     <button type="button" class="tab" data-view="watchlist">Watchlist</button>
+    <button type="button" class="tab" data-view="credit_spread">Credit Spread Watchlist</button>
   </nav>
 </header>
 
@@ -53,6 +54,47 @@
     <button id="chart-close" aria-label="Close chart">&times;</button>
   </div>
   <div id="candlestick-chart"></div>
+</section>
+
+<section id="credit-spread-section" hidden>
+  <div class="panel-block">
+    <h2>Technical levels</h2>
+    <div class="table-scroll">
+      <table id="technicals-table">
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Price</th>
+            <th>20d S / R</th>
+            <th>60d S / R</th>
+            <th>120d S / R</th>
+            <th>SMA50</th>
+            <th>SMA200</th>
+            <th>RSI14</th>
+          </tr>
+        </thead>
+        <tbody id="technicals-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel-block">
+    <h2>Upcoming catalysts (next 14 days)</h2>
+    <div class="table-scroll">
+      <table id="catalysts-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Event</th>
+            <th>Affects</th>
+          </tr>
+        </thead>
+        <tbody id="catalysts-body"></tbody>
+      </table>
+    </div>
+    <p id="catalysts-empty" class="muted" hidden>No catalysts in the next 14 days.</p>
+  </div>
 </section>
 
 <script src="app.js"></script>

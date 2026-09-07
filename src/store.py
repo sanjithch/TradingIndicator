@@ -266,6 +266,22 @@ def export_holdings_json(holdings: list[str], out_path: str | Path = "docs/holdi
     out.write_text(json.dumps(sorted(set(holdings))))
 
 
+def export_credit_spread_json(
+    run_timestamp: str,
+    technicals: list[dict],
+    catalysts: list[dict],
+    out_path: str | Path = "docs/credit_spread.json",
+) -> None:
+    """Write docs/credit_spread.json for the Credit Spread Watchlist tab:
+    per-ticker daily-bar technicals (panel 1) plus the upcoming-catalysts
+    list (panel 2), both computed by src/credit_spread.py.
+    """
+    payload = {"run_timestamp": run_timestamp, "technicals": technicals, "catalysts": catalysts}
+    out = Path(out_path)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(payload, indent=2))
+
+
 def export_bars_json(bars_by_symbol: dict[str, list[dict]], out_dir: str | Path = "docs/bars") -> None:
     """Write one docs/bars/<SYMBOL>.json per symbol, bars reshaped for
     Lightweight Charts (time as UNIX seconds, not the ISO string fetch.py

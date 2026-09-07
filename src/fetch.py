@@ -71,8 +71,9 @@ def _request_with_retry(fn, *args, **kwargs):
             time.sleep(sleep_s)
 
 
-def _cache_path(symbol: str, day: date) -> Path:
-    return CACHE_DIR / symbol / f"{day.isoformat()}.json"
+def _cache_path(symbol: str, day: date, cache_subdir: str = "") -> Path:
+    base = CACHE_DIR / cache_subdir if cache_subdir else CACHE_DIR
+    return base / symbol / f"{day.isoformat()}.json"
 
 
 def _bar_to_dict(bar) -> dict:
@@ -86,15 +87,15 @@ def _bar_to_dict(bar) -> dict:
     }
 
 
-def _write_cache(symbol: str, bars_by_day: dict[date, list]) -> None:
+def _write_cache(symbol: str, bars_by_day: dict[date, list], cache_subdir: str = "") -> None:
     for day, bars in bars_by_day.items():
-        path = _cache_path(symbol, day)
+        path = _cache_path(symbol, day, cache_subdir)
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps([_bar_to_dict(b) for b in bars], indent=None))
 
 
-def _read_cache(symbol: str, day: date) -> list[dict] | None:
-    path = _cache_path(symbol, day)
+def _read_cache(symbol: str, day: date, cache_subdir: str = "") -> list[dict] | None:
+    path = _cache_path(symbol, day, cache_subdir)
     if not path.exists():
         return None
     try:
@@ -117,8 +118,17 @@ def fetch_bars(
     end: datetime | None = None,
     feed: str = "iex",
     use_cache: bool = True,
+    timeframe: TimeFrame = None,
+    cache_subdir: str = "",
 ) -> dict[str, list[dict]]:
-    """Fetch 15-minute bars for symbols between start and end.
+    """Fetch bars for symbols between start and end.
+
+    `timeframe` defaults to 15-minute bars (the main dashboard's intraday
+    levels); pass `TimeFrame.Day` for daily bars (the Credit Spread
+    Watchlist's SMA/RSI/swing-lookback technicals — those are all daily-bar
+    concepts, not intraday ones). `cache_subdir` namespaces the disk cache
+    so daily and 15-min bars for the same symbol/day never collide — pass
+    e.g. "daily" alongside TimeFrame.Day.
 
     Batches symbols in groups of BATCH_SIZE, retries on 429/5xx, and caches
     raw bars to disk per symbol/day so a rerun over the same range is cheap.
@@ -128,6 +138,7 @@ def fetch_bars(
     with freshly fetched ones.
     """
     end = end or datetime.now()
+    timeframe = timeframe or TimeFrame(15, TimeFrame.Minute.unit)
     client = _get_client()
     results: dict[str, list[dict]] = {s: [] for s in symbols}
 
@@ -135,7 +146,7 @@ def fetch_bars(
         try:
             request = StockBarsRequest(
                 symbol_or_symbols=batch,
-                timeframe=TimeFrame(15, TimeFrame.Minute.unit),
+                timeframe=timeframe,
                 start=start,
                 end=end,
                 feed=feed,
@@ -147,7 +158,7 @@ def fetch_bars(
             # Fall back to per-symbol fetch so one bad ticker in the batch
             # doesn't take the rest of the batch down with it.
             for symbol in batch:
-                results[symbol] = _fetch_single_symbol(client, symbol, start, end, feed)
+                results[symbol] = _fetch_single_symbol(client, symbol, start, end, feed, timeframe, cache_subdir)
             continue
 
         for symbol in batch:
@@ -156,13 +167,13 @@ def fetch_bars(
                 logger.warning("No bars returned for %s in this batch", symbol)
             by_day = _group_bars_by_day(bars)
             if use_cache:
-                _write_cache(symbol, by_day)
+                _write_cache(symbol, by_day, cache_subdir)
             results[symbol] = [_bar_to_dict(b) for b in bars]
 
     return results
 
 
-def _fetch_single_symbol(client, symbol: str, start, end, feed) -> list[dict]:
+def _fetch_single_symbol(client, symbol: str, start, end, feed, timeframe, cache_subdir: str = "") -> list[dict]:
     """Best-effort single-symbol fetch used when a batch request fails.
     Logs and returns [] for this symbol on failure rather than raising,
     so the caller can continue with the rest of the run.
@@ -170,7 +181,7 @@ def _fetch_single_symbol(client, symbol: str, start, end, feed) -> list[dict]:
     try:
         request = StockBarsRequest(
             symbol_or_symbols=symbol,
-            timeframe=TimeFrame(15, TimeFrame.Minute.unit),
+            timeframe=timeframe,
             start=start,
             end=end,
             feed=feed,
@@ -179,7 +190,7 @@ def _fetch_single_symbol(client, symbol: str, start, end, feed) -> list[dict]:
         bar_set = _request_with_retry(client.get_stock_bars, request)
         bars = bar_set.data.get(symbol, [])
         by_day = _group_bars_by_day(bars)
-        _write_cache(symbol, by_day)
+        _write_cache(symbol, by_day, cache_subdir)
         return [_bar_to_dict(b) for b in bars]
     except Exception as e:
         logger.error("Skipping %s after single-symbol fetch failed: %s", symbol, e)

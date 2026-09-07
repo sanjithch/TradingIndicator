@@ -2,6 +2,7 @@ import json
 
 from src.store import (
     export_bars_json,
+    export_credit_spread_json,
     export_holdings_json,
     export_levels_json,
     export_metrics_json,
@@ -105,3 +106,15 @@ def test_export_holdings_json_dedupes_and_sorts(tmp_path):
     out_path = tmp_path / "holdings.json"
     export_holdings_json(["QBTS", "AAPL", "AAPL", "RGTI"], out_path)
     assert json.loads(out_path.read_text()) == ["AAPL", "QBTS", "RGTI"]
+
+
+def test_export_credit_spread_json(tmp_path):
+    out_path = tmp_path / "credit_spread.json"
+    technicals = [{"symbol": "AVGO", "current_price": 100.0, "rsi14": 55.0}]
+    catalysts = [{"date": "2026-09-16", "category": "macro", "title": "FOMC Decision"}]
+    export_credit_spread_json("2026-09-06T00:00:00Z", technicals, catalysts, out_path)
+
+    payload = json.loads(out_path.read_text())
+    assert payload["run_timestamp"] == "2026-09-06T00:00:00Z"
+    assert payload["technicals"] == technicals
+    assert payload["catalysts"] == catalysts

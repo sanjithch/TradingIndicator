@@ -37,3 +37,28 @@ STRIKE_INCREMENTS = [
     (200.0, 1.00),
     (float("inf"), 5.00),
 ]
+
+# --- Credit Spread Watchlist tab (technicals.py, catalysts.py, credit_spread.py) ---
+CREDIT_SPREAD_TICKERS = ["AVGO", "HPE", "MU", "DRAM", "SNDK", "IONQ"]
+
+# Daily-bar lookback windows for swing support/resistance (in trading days,
+# used as a bar count against daily bars — not the 15-min bars the rest of
+# the pipeline uses).
+SWING_LOOKBACKS = [20, 60, 120]
+SMA_PERIODS = [50, 200]
+RSI_PERIOD = 14
+
+# Calendar days of daily bars to fetch: needs to comfortably cover the
+# longest SMA/lookback (200 trading days) plus weekends/holidays padding.
+CREDIT_SPREAD_DAILY_LOOKBACK_DAYS = 300
+
+# Catalysts panel: how far ahead to look, and which tickers "move the whole
+# group" when they report — sector peers of the watchlist above, grouped by
+# sub-sector for labeling only (any peer reporting is flagged against the
+# *entire* watchlist, not just its own sub-sector — see catalysts.py).
+CATALYST_WINDOW_DAYS = 14
+SECTOR_PEER_GROUPS = {
+    "memory_semis": ["WDC", "STX", "NVDA", "TSM"],
+    "ai_infra": ["DELL", "SMCI", "ANET"],
+    "quantum": ["RGTI", "QBTS"],
+}

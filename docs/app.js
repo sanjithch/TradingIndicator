@@ -34,7 +34,8 @@ const state = {
   levelsData: null,
   metrics: null,
   holdingsSet: new Set(),
-  view: "holdings", // "holdings" | "watchlist"
+  creditSpreadData: null,
+  view: "holdings", // "holdings" | "watchlist" | "credit_spread"
 };
 
 function rowsForView(view) {
@@ -49,18 +50,31 @@ function setView(view) {
   for (const btn of document.querySelectorAll("#view-tabs .tab")) {
     btn.classList.toggle("active", btn.dataset.view === view);
   }
-  const rows = rowsForView(view);
-  renderTable(rows);
-  renderSignalCounts(rows);
-  updateRunMeta(rows.length);
+
+  const isCreditSpread = view === "credit_spread";
+  document.getElementById("metrics").hidden = isCreditSpread;
+  document.getElementById("table-section").hidden = isCreditSpread;
+  document.getElementById("credit-spread-section").hidden = !isCreditSpread;
+  if (isCreditSpread) closeChart(); // per-symbol chart belongs to the other two tabs' rows
+
+  if (isCreditSpread) {
+    const data = state.creditSpreadData;
+    renderTechnicals(data?.technicals ?? []);
+    renderCatalysts(data?.catalysts ?? []);
+    updateRunMeta(data?.technicals?.length ?? 0, data?.run_timestamp);
+  } else {
+    const rows = rowsForView(view);
+    renderTable(rows);
+    renderSignalCounts(rows);
+    updateRunMeta(rows.length, state.levelsData?.run_timestamp);
+  }
 }
 
-function updateRunMeta(visibleCount) {
+function updateRunMeta(visibleCount, timestamp) {
   const el = document.getElementById("run-meta");
-  const ts = state.levelsData?.run_timestamp;
-  if (!ts) return;
-  const label = state.view === "holdings" ? "holdings" : "watchlist";
-  el.textContent = `Last run: ${new Date(ts).toLocaleString()} · ${visibleCount} ${label}`;
+  if (!timestamp) return;
+  const labels = { holdings: "holdings", watchlist: "watchlist", credit_spread: "tickers" };
+  el.textContent = `Last run: ${new Date(timestamp).toLocaleString()} · ${visibleCount} ${labels[state.view]}`;
 }
 
 document.getElementById("view-tabs").addEventListener("click", (e) => {
@@ -207,25 +221,91 @@ async function openChart(row) {
   chart.timeScale().fitContent();
 }
 
-document.getElementById("chart-close").addEventListener("click", () => {
+function closeChart() {
   document.getElementById("chart-section").hidden = true;
   if (activeChart) {
     activeChart.remove();
     activeChart = null;
   }
-});
+}
+
+document.getElementById("chart-close").addEventListener("click", closeChart);
+
+const RSI_OVERBOUGHT = 70;
+const RSI_OVERSOLD = 30;
+
+function rsiClass(value) {
+  if (value == null) return "";
+  if (value >= RSI_OVERBOUGHT) return "rsi-overbought";
+  if (value <= RSI_OVERSOLD) return "rsi-oversold";
+  return "";
+}
+
+function srCell(level) {
+  if (!level) return "—";
+  return `
+    <span class="sr-line support">S: ${fmtPrice(level.support)} (${fmtPct(level.pct_to_support)})</span>
+    <span class="sr-line resistance">R: ${fmtPrice(level.resistance)} (${fmtPct(level.pct_to_resistance)})</span>
+  `;
+}
+
+function renderTechnicals(technicals) {
+  const tbody = document.getElementById("technicals-body");
+  tbody.innerHTML = "";
+
+  for (const row of technicals) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${row.symbol}</td>
+      <td>${fmtPrice(row.current_price)}</td>
+      <td class="sr-cell">${srCell(row.levels?.["20"])}</td>
+      <td class="sr-cell">${srCell(row.levels?.["60"])}</td>
+      <td class="sr-cell">${srCell(row.levels?.["120"])}</td>
+      <td>${fmtPrice(row.sma?.["50"]?.value)} <span class="muted">(${fmtPct(row.sma?.["50"]?.pct_distance)})</span></td>
+      <td>${fmtPrice(row.sma?.["200"]?.value)} <span class="muted">(${fmtPct(row.sma?.["200"]?.pct_distance)})</span></td>
+      <td class="rsi-value ${rsiClass(row.rsi14)}">${row.rsi14 != null ? row.rsi14.toFixed(1) : "—"}</td>
+    `;
+    tbody.appendChild(tr);
+  }
+}
+
+const CATALYST_TYPE_LABELS = { earnings: "Earnings", macro: "Macro" };
+
+function renderCatalysts(catalysts) {
+  const tbody = document.getElementById("catalysts-body");
+  const emptyNote = document.getElementById("catalysts-empty");
+  tbody.innerHTML = "";
+
+  emptyNote.hidden = catalysts.length > 0;
+
+  for (const event of catalysts) {
+    const tr = document.createElement("tr");
+    if (event.is_sector_peer) tr.className = "catalyst-sector-peer";
+    const pillClass = event.is_sector_peer ? "sector-peer" : event.category === "macro" ? "macro" : "";
+    const pillLabel = event.is_sector_peer ? "Sector peer" : CATALYST_TYPE_LABELS[event.category] ?? event.category;
+    tr.innerHTML = `
+      <td>${event.date}</td>
+      <td><span class="catalyst-pill ${pillClass}">${pillLabel}</span></td>
+      <td>${event.title}</td>
+      <td>${event.affects.join(", ")}</td>
+    `;
+    tbody.appendChild(tr);
+  }
+}
 
 async function init() {
   try {
-    const [levelsData, metrics, holdings] = await Promise.all([
+    const [levelsData, metrics, holdings, creditSpreadData] = await Promise.all([
       fetchJson("levels.json"),
       fetchJson("metrics.json"),
       fetchJson("holdings.json").catch(() => []), // missing file = no holdings tagged, not fatal
+      fetchJson("credit_spread.json").catch(() => null), // missing file = tab renders empty, not fatal
     ]);
 
     state.levelsData = levelsData;
     state.metrics = metrics;
     state.holdingsSet = new Set(holdings);
+    state.creditSpreadData = creditSpreadData;
 
     // Level hold rate stays a global metric (it's about how well levels
     // persist across runs, not which tab you're looking at) — everything
