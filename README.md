@@ -136,6 +136,30 @@ doesn't run then). To tighten, change the cron to `*/15`; the cost is ~2x
 the bot commits. The Yahoo endpoint is unofficial and could change or
 rate-limit; if a fetch fails the previous value is kept and shown dimmed.
 
+### Macro tilt (Bullish / Neutral / Bearish, measured against VOO)
+
+The leftmost tile in the strip. Two rules on 20-trading-day momentum
+(`src/macro_signal.py`, thresholds in `config.py`): 10Y down >=30 bp is
+**bullish**; 10Y up >=30 bp, or WTI up >=10% together with the 10Y up >=10 bp,
+is **bearish**. It is built from a 10-year study (2016-2026) of VOO against
+WTI and the 10Y, and the study's honest finding is that oil and yields
+explain little: same-day correlation with VOO is ~0.1 and changes sign by
+era, and oil moves alone had no forward-return signal. What survived:
+
+| State | Avg VOO return, next 20d | Positive | Held in both halves? |
+|---|---|---|---|
+| Bullish | +2.27% (176 days) | 73% | yes |
+| Neutral | +1.24% | 71% | -- |
+| Bearish | +0.91% (431 days) | 65% | no, later half only |
+| All days | +1.26% | 70% | -- |
+
+So "bearish" has meant *weaker than usual*, not *down*. Windows overlap, so the
+effective sample is ~n/20. The tile prints this track record under the verdict.
+Refresh the numbers with `python -m src.calibrate_signal` (writes
+`data/signal_calibration.json`) every few months or after changing thresholds.
+The signal uses daily data (FRED WTI spot, Treasury 10Y), so it only changes
+when a new daily print lands. It is a historical pattern, not a forecast or advice.
+
 ## Tuning thresholds
 
 Every threshold lives in `src/config.py` — nowhere else. Change values there,

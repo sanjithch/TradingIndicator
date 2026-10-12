@@ -28,15 +28,18 @@ import logging
 import sys
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from src import config
+from src.macro_signal import classify, diff_bp, pct_change
 from src.store import export_market_json
 
 logger = logging.getLogger("sr_dashboard")
 
 MARKET_JSON_PATH = "docs/market.json"
+CALIBRATION_PATH = "data/signal_calibration.json"
+FRED_WTI_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO&cosd={start}"
 YAHOO_URL = "https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?interval=5m&range=1d"
 TREASURY_URL = (
     "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/"
@@ -113,6 +116,34 @@ def parse_treasury_curve(csv_text: str, maturities: list[str]) -> dict | None:
     }
 
 
+def parse_series(csv_text: str, column: str) -> list[tuple[str, float]]:
+    """(YYYY-MM-DD, value) pairs for one column of the Treasury CSV,
+    oldest -> newest, skipping blank cells."""
+    out = []
+    for row in csv.DictReader(io.StringIO(csv_text)):
+        raw = (row.get(column) or "").strip()
+        if not raw:
+            continue
+        try:
+            day = datetime.strptime(row["Date"], "%m/%d/%Y").date().isoformat()
+            out.append((day, float(raw)))
+        except (KeyError, ValueError):
+            continue
+    return sorted(out)
+
+
+def parse_fred_series(csv_text: str, column: str) -> list[tuple[str, float]]:
+    """(YYYY-MM-DD, value) pairs from a single-series FRED CSV, oldest ->
+    newest. FRED marks no-print days with '.' or a blank."""
+    out = []
+    for row in csv.DictReader(io.StringIO(csv_text)):
+        raw = (row.get(column) or "").strip()
+        if raw in ("", "."):
+            continue
+        out.append((row["observation_date"], float(raw)))
+    return sorted(out)
+
+
 def keep_previous(new, old, stale_marker: bool = True):
     """Fallback rule: use the fresh value; if the fetch failed (None), reuse
     the previous one flagged stale so the page shows old data honestly
@@ -145,14 +176,51 @@ def fetch_quote(symbol: str, label: str) -> dict:
     return parse_yahoo_quote(json.loads(_http_get(url)), label)
 
 
-def fetch_curve(maturities: list[str], today: datetime | None = None) -> dict | None:
+def fetch_treasury_text(today: datetime | None = None) -> str:
+    """Treasury par-curve CSV for this year; early in January (too few rows
+    for a day-over-day change, or for a 20-day lookback) the prior year's
+    rows are appended."""
     year = (today or datetime.now(timezone.utc)).year
     text = _http_get(TREASURY_URL.format(year=year))
-    curve = parse_treasury_curve(text, maturities)
-    if curve is None:  # early January: new year's file may have <2 rows yet
+    if len(text.splitlines()) < config.SIGNAL_LOOKBACK + 3:
         text = _http_get(TREASURY_URL.format(year=year - 1)) + "\n" + "\n".join(text.splitlines()[1:])
-        curve = parse_treasury_curve(text, maturities)
-    return curve
+    return text
+
+
+def fetch_wti_history(days: int = 120) -> list[tuple[str, float]]:
+    """Recent WTI spot closes from FRED (daily; lags ~1-2 days). Used only
+    for the 20-day signal window, where that lag doesn't matter and, unlike
+    front-month futures, the series has no contract-roll gaps."""
+    start = (datetime.now(timezone.utc) - timedelta(days=days)).date().isoformat()
+    return parse_fred_series(_http_get(FRED_WTI_URL.format(start=start)), "DCOILWTICO")
+
+
+def build_signal(treasury_text: str | None, wti: list[tuple[str, float]] | None, calibration: dict | None) -> dict | None:
+    """Macro tilt from the 20-day 10Y and WTI moves. Always daily data, so
+    the verdict only changes when a new daily print lands."""
+    if not treasury_text:
+        return None
+    y10 = parse_series(treasury_text, "10 Yr")
+    lookback = config.SIGNAL_LOOKBACK
+    sig = classify(
+        pct_change([v for _, v in wti], lookback) if wti else None,
+        diff_bp([v for _, v in y10], lookback),
+    )
+    if sig is None:
+        return None
+    sig["as_of"] = {"y10": y10[-1][0] if y10 else None, "wti": wti[-1][0] if wti else None}
+    sig["calibration"] = calibration
+    return sig
+
+
+def _load_calibration(path: str | Path = CALIBRATION_PATH) -> dict | None:
+    p = Path(path)
+    if not p.exists():
+        return None
+    try:
+        return json.loads(p.read_text())
+    except (json.JSONDecodeError, OSError):
+        return None
 
 
 def _load_previous(path: str | Path) -> dict:
@@ -190,17 +258,40 @@ def run(path: str | Path = MARKET_JSON_PATH) -> dict:
         intraday = None
 
     try:
-        treasury = fetch_curve(config.MARKET_CURVE_MATURITIES)
+        voo = fetch_quote(*config.MARKET_REFERENCE)
+    except Exception as e:
+        logger.error("market_fetch_failed source=%s error=%s", config.MARKET_REFERENCE[0], e)
+        errors.append(f"{config.MARKET_REFERENCE[0]}: {e}")
+        voo = None
+
+    treasury_text = None
+    treasury = None
+    try:
+        treasury_text = fetch_treasury_text()
+        treasury = parse_treasury_curve(treasury_text, config.MARKET_CURVE_MATURITIES)
     except Exception as e:
         logger.error("market_fetch_failed source=treasury error=%s", e)
         errors.append(f"treasury: {e}")
-        treasury = None
+
+    try:
+        wti_history = fetch_wti_history()
+    except Exception as e:
+        logger.error("market_fetch_failed source=fred_wti error=%s", e)
+        errors.append(f"fred_wti: {e}")
+        wti_history = None
+
+    # The tilt needs the 10Y history; without it keep the previous verdict
+    # (stale) rather than showing nothing. A missing oil series only zeroes
+    # the oil rule inside classify().
+    signal = build_signal(treasury_text, wti_history, _load_calibration())
 
     payload = {
         "fetched_at": datetime.now(timezone.utc).isoformat(),
         "oil": oil,
+        "voo": keep_previous(voo, previous.get("voo")),
         "yield_10y_intraday": keep_previous(intraday, previous.get("yield_10y_intraday")),
         "treasury": keep_previous(treasury, previous.get("treasury")),
+        "signal": keep_previous(signal, previous.get("signal")),
         "errors": errors,
     }
     export_market_json(payload, path)

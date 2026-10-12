@@ -47,6 +47,13 @@ MARKET_INTRADAY_YIELD = ("^TNX", "10Y (intraday)")
 # Official Treasury par-curve columns to display, in this order.
 MARKET_CURVE_MATURITIES = ["3 Mo", "2 Yr", "5 Yr", "10 Yr", "30 Yr"]
 
+# --- Macro tilt signal (macro_signal.py), calibrated against VOO ---
+MARKET_REFERENCE = ("VOO", "VOO (S&P 500)")  # the measuring stick; shown as a tile
+SIGNAL_LOOKBACK = 20  # trading days for the oil / 10Y momentum windows
+SIGNAL_YIELD_BP = 30  # 10Y 20d move that counts as a shock (either direction)
+SIGNAL_OIL_PCT = 10  # WTI 20d rise (%) that counts as an oil shock...
+SIGNAL_OIL_YIELD_BP = 10  # ...when the 10Y is also up at least this much
+
 # --- Credit Spread Watchlist tab (technicals.py, catalysts.py, credit_spread.py) ---
 CREDIT_SPREAD_TICKERS = ["AVGO", "HPE", "MU", "DRAM", "SNDK", "IONQ"]
 

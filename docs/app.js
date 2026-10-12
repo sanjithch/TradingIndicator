@@ -316,11 +316,64 @@ function marketTile({ label, value, change, changeText, asOf, stale, inverted })
   return tile;
 }
 
+const SIGNAL_TEXT = { BULLISH: "Bullish tilt", NEUTRAL: "Neutral", BEARISH: "Bearish tilt" };
+
+function fmtSigned(n, digits = 1, suffix = "") {
+  return `${n >= 0 ? "+" : ""}${n.toFixed(digits)}${suffix}`;
+}
+
+// The sign never shows a verdict without its track record: what VOO actually
+// did over the next 20 trading days after this state, vs. the all-days average.
+function signalTile(s) {
+  const cal = s.calibration;
+  const hist = cal?.states?.[s.state];
+  const tile = document.createElement("div");
+  tile.className = `market-tile signal-tile ${s.state.toLowerCase()}${s.stale ? " stale" : ""}`;
+
+  const moves = [
+    s.y10_20d_bp != null ? `10Y ${fmtSigned(s.y10_20d_bp, 0, " bp")}` : null,
+    s.wti_20d_pct != null ? `WTI ${fmtSigned(s.wti_20d_pct, 0, "%")}` : null,
+  ].filter(Boolean).join(" · ");
+
+  const history = hist?.mean_pct != null
+    ? `History: VOO next 20d avg ${fmtSigned(hist.mean_pct, 1, "%")} (${hist.n} days) vs ${fmtSigned(cal.baseline.mean_pct, 1, "%")} overall`
+    : "";
+
+  tile.title = [
+    `Macro tilt: ${SIGNAL_TEXT[s.state]} (score ${s.score})`,
+    ...s.components.map((c) => `${c.points >= 0 ? "+" : ""}${c.points}  ${c.name}: ${c.note}`),
+    hist ? `Earlier half of history: ${fmtSigned(hist.first_half_mean_pct ?? 0, 1, "%")}, later half: ${fmtSigned(hist.second_half_mean_pct ?? 0, 1, "%")}` : "",
+    "A historical pattern in oil/10Y momentum, not a forecast or advice.",
+  ].filter(Boolean).join("\n");
+
+  tile.innerHTML = `
+    <div class="m-label">Macro tilt (vs VOO, 20d)</div>
+    <div class="m-value">${SIGNAL_TEXT[s.state]}</div>
+    <div class="m-sub">${moves}</div>
+    <div class="m-sub">${history}</div>
+  `;
+  return tile;
+}
+
 function renderMarket(m) {
   const strip = document.getElementById("market-strip");
   const tiles = document.getElementById("market-tiles");
   tiles.innerHTML = "";
   if (!m) { strip.hidden = true; return; }
+
+  if (m.signal) tiles.appendChild(signalTile(m.signal));
+
+  if (m.voo) {
+    const v = m.voo;
+    tiles.appendChild(marketTile({
+      label: v.label,
+      value: `$${v.price.toFixed(2)}`,
+      change: v.change,
+      changeText: v.change_pct == null ? "" : `${v.change >= 0 ? "+" : ""}${v.change.toFixed(2)} (${v.change_pct.toFixed(2)}%)`,
+      asOf: v.as_of,
+      stale: v.stale,
+    }));
+  }
 
   for (const q of m.oil ?? []) {
     tiles.appendChild(marketTile({
@@ -371,7 +424,9 @@ function renderMarket(m) {
 
   document.getElementById("market-note").textContent =
     `Oil: NYMEX futures (Yahoo Finance, ~10–15 min delayed). Treasury: official end-of-day par curve` +
-    `${t ? " for " + t.as_of : ""}; 10Y intraday is the live-ish line. Fetched ${fmtAsOf(m.fetched_at)}.`;
+    `${t ? " for " + t.as_of : ""}; 10Y intraday is the live-ish line. Fetched ${fmtAsOf(m.fetched_at)}. ` +
+    `Macro tilt is a historical pattern in oil and 10Y momentum, not a forecast or advice: ` +
+    `in 10 years of data a "bearish" tilt meant weaker-than-usual VOO returns, not declines.`;
   strip.hidden = false;
 }
 
