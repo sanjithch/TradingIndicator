@@ -1,0 +1,46 @@
+name: Refresh market (oil + yields)
+
+on:
+  schedule:
+    # Every 30 min, weekdays, 12:00-22:30 UTC = 08:00-18:30 EDT (shift +1h in
+    # EST). Covers the NYMEX day session and the Treasury curve, which is
+    # published after the close. GitHub may delay or occasionally skip
+    # scheduled runs under load, so treat this as "about every 30-45 min".
+    - cron: '0,30 12-22 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-data
+  cancel-in-progress: false
+
+jobs:
+  refresh-market:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # market.py is stdlib-only apart from importing src.store/src.config,
+      # so no pip install (and no Alpaca keys) are needed here.
+      - name: Fetch oil + yields
+        run: python -m src.market
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/market.json
+          # fetched_at changes every run, so this commits every run by design
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Refresh market ($(date -u +'%Y-%m-%dT%H:%M:%SZ'))"
+            git pull --rebase origin main
+            git push
+          fi

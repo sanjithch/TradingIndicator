@@ -38,6 +38,15 @@ STRIKE_INCREMENTS = [
     (float("inf"), 5.00),
 ]
 
+# --- Market strip: oil + Treasury yields (market.py) ---
+# Yahoo Finance chart-API symbols -> display label. NYMEX front-month
+# futures, ~10-15 min delayed.
+MARKET_OIL_SYMBOLS = [("CL=F", "WTI crude"), ("BZ=F", "Brent crude")]
+# Intraday 10Y yield index (quoted directly in percent), same Yahoo source.
+MARKET_INTRADAY_YIELD = ("^TNX", "10Y (intraday)")
+# Official Treasury par-curve columns to display, in this order.
+MARKET_CURVE_MATURITIES = ["3 Mo", "2 Yr", "5 Yr", "10 Yr", "30 Yr"]
+
 # --- Credit Spread Watchlist tab (technicals.py, catalysts.py, credit_spread.py) ---
 CREDIT_SPREAD_TICKERS = ["AVGO", "HPE", "MU", "DRAM", "SNDK", "IONQ"]
 

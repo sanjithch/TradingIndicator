@@ -293,7 +293,100 @@ function renderCatalysts(catalysts) {
   }
 }
 
+// ---- Market strip (oil + Treasury yields), refreshed from market.json ----
+const MARKET_POLL_MS = 5 * 60 * 1000; // re-read the file; it's rewritten by the market workflow
+
+function fmtAsOf(iso) {
+  const d = new Date(iso);
+  if (isNaN(d)) return "";
+  return d.toLocaleString([], { weekday: "short", hour: "numeric", minute: "2-digit" });
+}
+
+function marketTile({ label, value, change, changeText, asOf, stale, inverted }) {
+  const dir = change == null || change === 0 ? "" : change > 0 ? "up" : "down";
+  const arrow = dir === "up" ? "▲ " : dir === "down" ? "▼ " : "";
+  const tile = document.createElement("div");
+  tile.className = `market-tile${stale ? " stale" : ""}${inverted ? " inverted" : ""}`;
+  tile.title = `${label}${asOf ? " · as of " + fmtAsOf(asOf) : ""}${stale ? " · last fetch failed, showing previous value" : ""}`;
+  tile.innerHTML = `
+    <div class="m-label">${label}</div>
+    <div class="m-value">${value}</div>
+    <div class="m-change ${dir}">${changeText ? arrow + changeText : "&nbsp;"}</div>
+  `;
+  return tile;
+}
+
+function renderMarket(m) {
+  const strip = document.getElementById("market-strip");
+  const tiles = document.getElementById("market-tiles");
+  tiles.innerHTML = "";
+  if (!m) { strip.hidden = true; return; }
+
+  for (const q of m.oil ?? []) {
+    tiles.appendChild(marketTile({
+      label: q.label,
+      value: `$${q.price.toFixed(2)}`,
+      change: q.change,
+      changeText: q.change_pct == null ? "" : `${q.change >= 0 ? "+" : ""}${q.change.toFixed(2)} (${q.change_pct.toFixed(2)}%)`,
+      asOf: q.as_of,
+      stale: q.stale,
+    }));
+  }
+
+  const intra = m.yield_10y_intraday;
+  if (intra) {
+    tiles.appendChild(marketTile({
+      label: intra.label,
+      value: `${intra.price.toFixed(3)}%`,
+      change: intra.change,
+      changeText: intra.change == null ? "" : `${intra.change >= 0 ? "+" : ""}${(intra.change * 100).toFixed(1)} bp`,
+      asOf: intra.as_of,
+      stale: intra.stale,
+    }));
+  }
+
+  const t = m.treasury;
+  if (t) {
+    for (const r of t.curve) {
+      if (r.rate == null) continue;
+      tiles.appendChild(marketTile({
+        label: `${r.maturity} Treasury`,
+        value: `${r.rate.toFixed(2)}%`,
+        change: r.change_bp,
+        changeText: r.change_bp == null ? "" : `${r.change_bp >= 0 ? "+" : ""}${r.change_bp} bp`,
+        asOf: t.as_of,
+        stale: t.stale,
+      }));
+    }
+    if (t.spread_2s10s_bp != null) {
+      tiles.appendChild(marketTile({
+        label: "2s10s spread",
+        value: `${t.spread_2s10s_bp >= 0 ? "+" : ""}${t.spread_2s10s_bp} bp`,
+        asOf: t.as_of,
+        stale: t.stale,
+        inverted: t.spread_2s10s_bp < 0, // inverted curve highlighted
+      }));
+    }
+  }
+
+  document.getElementById("market-note").textContent =
+    `Oil: NYMEX futures (Yahoo Finance, ~10–15 min delayed). Treasury: official end-of-day par curve` +
+    `${t ? " for " + t.as_of : ""}; 10Y intraday is the live-ish line. Fetched ${fmtAsOf(m.fetched_at)}.`;
+  strip.hidden = false;
+}
+
+async function refreshMarket() {
+  try {
+    renderMarket(await fetchJson("market.json"));
+  } catch (e) {
+    renderMarket(null); // missing/unreachable file: hide the strip, don't break the page
+  }
+}
+
 async function init() {
+  refreshMarket();
+  setInterval(refreshMarket, MARKET_POLL_MS);
+
   try {
     const [levelsData, metrics, holdings, creditSpreadData] = await Promise.all([
       fetchJson("levels.json"),
