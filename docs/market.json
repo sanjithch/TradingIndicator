@@ -1,42 +1,42 @@
 {
-  "fetched_at": "2026-10-12T03:13:11.656400+00:00",
+  "fetched_at": "2026-10-12T20:33:50.445769+00:00",
   "oil": [
     {
       "symbol": "CL=F",
       "label": "WTI crude",
-      "price": 90.03,
+      "price": 93.21,
       "prev_close": 91.85,
-      "change": -1.8199999999999932,
-      "change_pct": -1.9814915623298783,
-      "as_of": "2026-10-12T03:03:02+00:00"
+      "change": 1.3599999999999994,
+      "change_pct": 1.4806750136091447,
+      "as_of": "2026-10-12T20:23:00+00:00"
     },
     {
       "symbol": "BZ=F",
       "label": "Brent crude",
-      "price": 102.93,
+      "price": 106.03,
       "prev_close": 104.72,
-      "change": -1.789999999999992,
-      "change_pct": -1.7093200916730253,
-      "as_of": "2026-10-12T03:02:41+00:00"
+      "change": 1.3100000000000023,
+      "change_pct": 1.2509549274255178,
+      "as_of": "2026-10-12T20:22:39+00:00"
     }
   ],
   "voo": {
     "symbol": "VOO",
     "label": "VOO (S&P 500)",
-    "price": 715.59,
-    "prev_close": 711.28,
-    "change": 4.310000000000059,
-    "change_pct": 0.6059498369137414,
-    "as_of": "2026-10-09T20:00:00+00:00"
+    "price": 715.13,
+    "prev_close": 715.59,
+    "change": -0.4600000000000364,
+    "change_pct": -0.06428261993600194,
+    "as_of": "2026-10-12T20:00:00+00:00"
   },
   "yield_10y_intraday": {
     "symbol": "^TNX",
     "label": "10Y (intraday)",
-    "price": 5.244,
-    "prev_close": 5.231,
-    "change": 0.0129999999999999,
-    "change_pct": 0.24851844771554008,
-    "as_of": "2026-10-09T18:59:55+00:00"
+    "price": 5.24,
+    "prev_close": 5.244,
+    "change": -0.0039999999999995595,
+    "change_pct": -0.07627765064835162,
+    "as_of": "2026-10-12T18:59:53+00:00"
   },
   "treasury": {
     "as_of": "2026-10-09",
@@ -78,7 +78,7 @@
   "signal": {
     "state": "NEUTRAL",
     "score": 0,
-    "wti_20d_pct": 2.154760641120901,
+    "wti_20d_pct": null,
     "y10_20d_bp": 28.000000000000025,
     "components": [
       {
@@ -89,12 +89,12 @@
       {
         "name": "Oil + rates",
         "points": 0,
-        "note": "WTI +2% in 20d (no oil + rates headwind)"
+        "note": "WTI 20d change unavailable"
       }
     ],
     "as_of": {
       "y10": "2026-10-09",
-      "wti": "2026-10-06"
+      "wti": null
     },
     "calibration": {
       "horizon_days": 20,
@@ -133,5 +133,7 @@
       "sources": "VOO adjusted close (Yahoo); WTI spot DCOILWTICO and 10Y DGS10 (FRED)"
     }
   },
-  "errors": []
+  "errors": [
+    "fred_wti: GET failed for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO&cosd=2026-06-14: The read operation timed out"
+  ]
 }
