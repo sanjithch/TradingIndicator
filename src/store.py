@@ -282,6 +282,15 @@ def export_credit_spread_json(
     out.write_text(json.dumps(payload, indent=2))
 
 
+def export_market_json(payload: dict, out_path: str | Path = "docs/market.json") -> None:
+    """Write docs/market.json (oil + Treasury yields) for the dashboard's
+    market strip. Built by src/market.py, which runs on its own schedule.
+    """
+    out = Path(out_path)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(payload, indent=2))
+
+
 def export_bars_json(bars_by_symbol: dict[str, list[dict]], out_dir: str | Path = "docs/bars") -> None:
     """Write one docs/bars/<SYMBOL>.json per symbol, bars reshaped for
     Lightweight Charts (time as UNIX seconds, not the ISO string fetch.py

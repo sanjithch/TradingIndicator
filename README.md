@@ -113,6 +113,29 @@ history) and update the `earnings` array in `data/catalysts_seed.json`.
 `DRAM` has no seeded earnings entry — the earnings API returned nothing for
 it, most likely because it isn't a standard quarterly-reporting equity.
 
+## Market strip (oil + Treasury yields)
+
+A strip above the tabs shows WTI and Brent, the intraday 10Y yield, the
+official 3M/2Y/5Y/10Y/30Y Treasury par yields, and the 2s10s spread
+(highlighted when inverted). Written to `docs/market.json` by
+`python -m src.market`, which runs on its **own workflow**
+(`refresh-market.yml`) and is deliberately not part of `src.main`.
+
+| Data | Source | Real freshness |
+|---|---|---|
+| WTI / Brent | NYMEX futures via Yahoo Finance chart API | ~10-15 min exchange delay + job cadence |
+| 10Y intraday | Yahoo `^TNX` | same |
+| Yield curve | US Treasury daily par curve CSV | **end of day** -- published once per business day after the close |
+
+**Cadence:** the workflow runs every 30 min on weekdays, 08:00-18:30 ET
+(`0,30 12-22 * * 1-5` UTC; shift +1h in EST). GitHub can delay scheduled
+runs, so expect data 30-45 min old at worst during market hours, plus the
+exchange delay. The page re-reads `market.json` every 5 min. Overnight and
+weekend values are the last fetch (oil futures trade nearly 24h but the job
+doesn't run then). To tighten, change the cron to `*/15`; the cost is ~2x
+the bot commits. The Yahoo endpoint is unofficial and could change or
+rate-limit; if a fetch fails the previous value is kept and shown dimmed.
+
 ## Tuning thresholds
 
 Every threshold lives in `src/config.py` — nowhere else. Change values there,

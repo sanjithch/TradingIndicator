@@ -25,6 +25,25 @@ body {
 header h1 { margin: 0 0 0.25rem; font-size: 1.4rem; }
 .muted { color: var(--muted); margin: 0; }
 
+/* Market strip: oil + Treasury yields, above the tabs so it shows on all of them. */
+#market-strip { margin-top: 0.9rem; }
+#market-tiles { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.market-tile {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  min-width: 112px;
+}
+.market-tile .m-label { font-size: 0.75rem; color: var(--muted); }
+.market-tile .m-value { font-size: 1.15rem; font-weight: 600; }
+.market-tile .m-change { font-size: 0.8rem; }
+.market-tile .m-change.up { color: #3fb97a; }
+.market-tile .m-change.down { color: #e0605a; }
+.market-tile.stale { opacity: 0.6; }
+.market-tile.inverted .m-value { color: #e0605a; }
+#market-note { font-size: 0.75rem; margin-top: 0.4rem; }
+
 #view-tabs {
   display: flex;
   gap: 0.5rem;
