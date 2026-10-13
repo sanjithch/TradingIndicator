@@ -1,5 +1,5 @@
 {
-  "run_timestamp": "2026-10-12T22:46:37.037059+00:00",
+  "run_timestamp": "2026-10-13T01:50:57.408735+00:00",
   "technicals": [
     {
       "symbol": "AVGO",
@@ -284,6 +284,22 @@
       "is_sector_peer": false,
       "source_ticker": null,
       "peer_group": null
+    },
+    {
+      "date": "2026-10-27",
+      "category": "earnings",
+      "title": "STX earnings (tentative)",
+      "affects": [
+        "AVGO",
+        "HPE",
+        "MU",
+        "DRAM",
+        "SNDK",
+        "IONQ"
+      ],
+      "is_sector_peer": true,
+      "source_ticker": "STX",
+      "peer_group": "memory_semis"
     }
   ]
 }
