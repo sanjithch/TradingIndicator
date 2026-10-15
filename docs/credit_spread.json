@@ -1,5 +1,5 @@
 {
-  "run_timestamp": "2026-10-14T23:00:03.502298+00:00",
+  "run_timestamp": "2026-10-15T00:09:47.799082+00:00",
   "technicals": [
     {
       "symbol": "AVGO",
@@ -238,22 +238,6 @@
   ],
   "catalysts": [
     {
-      "date": "2026-10-14",
-      "category": "macro",
-      "title": "CPI (Sep 2026)",
-      "affects": [
-        "AVGO",
-        "HPE",
-        "MU",
-        "DRAM",
-        "SNDK",
-        "IONQ"
-      ],
-      "is_sector_peer": false,
-      "source_ticker": null,
-      "peer_group": null
-    },
-    {
       "date": "2026-10-15",
       "category": "earnings",
       "title": "TSM earnings (tentative)",
@@ -316,6 +300,22 @@
       "is_sector_peer": false,
       "source_ticker": null,
       "peer_group": null
+    },
+    {
+      "date": "2026-10-29",
+      "category": "earnings",
+      "title": "WDC earnings (tentative)",
+      "affects": [
+        "AVGO",
+        "HPE",
+        "MU",
+        "DRAM",
+        "SNDK",
+        "IONQ"
+      ],
+      "is_sector_peer": true,
+      "source_ticker": "WDC",
+      "peer_group": "memory_semis"
     }
   ]
 }
