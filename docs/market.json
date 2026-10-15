@@ -1,33 +1,33 @@
 {
-  "fetched_at": "2026-10-15T19:33:41.391912+00:00",
+  "fetched_at": "2026-10-15T22:45:55.881245+00:00",
   "oil": [
     {
       "symbol": "CL=F",
       "label": "WTI crude",
-      "price": 96.22,
-      "prev_close": 93.9,
-      "change": 2.319999999999993,
-      "change_pct": 2.470713525026617,
-      "as_of": "2026-10-15T19:22:37+00:00"
+      "price": 96.14,
+      "prev_close": 96.5,
+      "change": -0.35999999999999943,
+      "change_pct": -0.3730569948186523,
+      "as_of": "2026-10-15T22:35:08+00:00"
     },
     {
       "symbol": "BZ=F",
       "label": "Brent crude",
-      "price": 105.77,
-      "prev_close": 106.06,
-      "change": -0.29000000000000625,
-      "change_pct": -0.27343013388648524,
-      "as_of": "2026-10-15T19:22:58+00:00"
+      "price": 105.58,
+      "prev_close": 105.92,
+      "change": -0.3400000000000034,
+      "change_pct": -0.320996978851967,
+      "as_of": "2026-10-15T22:34:49+00:00"
     }
   ],
   "voo": {
     "symbol": "VOO",
     "label": "VOO (S&P 500)",
-    "price": 709.66,
+    "price": 709.43,
     "prev_close": 707.43,
-    "change": 2.230000000000018,
-    "change_pct": 0.31522553468187925,
-    "as_of": "2026-10-15T19:32:56+00:00"
+    "change": 2.0,
+    "change_pct": 0.2827134840196203,
+    "as_of": "2026-10-15T20:00:00+00:00"
   },
   "yield_10y_intraday": {
     "symbol": "^TNX",
@@ -39,52 +39,52 @@
     "as_of": "2026-10-15T18:59:55+00:00"
   },
   "treasury": {
-    "as_of": "2026-10-14",
-    "prior_as_of": "2026-10-13",
+    "as_of": "2026-10-15",
+    "prior_as_of": "2026-10-14",
     "curve": [
       {
         "maturity": "3M",
         "rate": 4.28,
-        "prior": 4.26,
-        "change_bp": 2.0
-      },
-      {
-        "maturity": "2Y",
-        "rate": 4.82,
-        "prior": 4.79,
-        "change_bp": 3.0
-      },
-      {
-        "maturity": "5Y",
-        "rate": 5.0,
-        "prior": 5.0,
+        "prior": 4.28,
         "change_bp": 0.0
       },
       {
+        "maturity": "2Y",
+        "rate": 4.77,
+        "prior": 4.82,
+        "change_bp": -5.0
+      },
+      {
+        "maturity": "5Y",
+        "rate": 4.91,
+        "prior": 5.0,
+        "change_bp": -9.0
+      },
+      {
         "maturity": "10Y",
-        "rate": 5.19,
-        "prior": 5.21,
-        "change_bp": -2.0
+        "rate": 5.1,
+        "prior": 5.19,
+        "change_bp": -9.0
       },
       {
         "maturity": "30Y",
-        "rate": 5.52,
-        "prior": 5.56,
-        "change_bp": -4.0
+        "rate": 5.43,
+        "prior": 5.52,
+        "change_bp": -9.0
       }
     ],
-    "spread_2s10s_bp": 37.0
+    "spread_2s10s_bp": 33.0
   },
   "signal": {
     "state": "NEUTRAL",
     "score": 0,
     "wti_20d_pct": null,
-    "y10_20d_bp": 19.00000000000004,
+    "y10_20d_bp": 8.999999999999986,
     "components": [
       {
         "name": "10Y momentum",
         "points": 0,
-        "note": "10Y +19 bp in 20d (inside +/-30 bp)"
+        "note": "10Y +9 bp in 20d (inside +/-30 bp)"
       },
       {
         "name": "Oil + rates",
@@ -93,7 +93,7 @@
       }
     ],
     "as_of": {
-      "y10": "2026-10-14",
+      "y10": "2026-10-15",
       "wti": null
     },
     "calibration": {
