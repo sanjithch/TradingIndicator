@@ -1,42 +1,42 @@
 {
-  "fetched_at": "2026-10-14T23:20:38.427736+00:00",
+  "fetched_at": "2026-10-15T15:55:50.664071+00:00",
   "oil": [
     {
       "symbol": "CL=F",
       "label": "WTI crude",
-      "price": 94.65,
-      "prev_close": 95.09,
-      "change": -0.4399999999999977,
-      "change_pct": -0.46271952886738643,
-      "as_of": "2026-10-14T23:09:56+00:00"
+      "price": 95.89,
+      "prev_close": 93.9,
+      "change": 1.9899999999999949,
+      "change_pct": 2.1192758253461075,
+      "as_of": "2026-10-15T15:45:04+00:00"
     },
     {
       "symbol": "BZ=F",
       "label": "Brent crude",
-      "price": 105.58,
+      "price": 105.96,
       "prev_close": 106.06,
-      "change": -0.480000000000004,
-      "change_pct": -0.4525740147086592,
-      "as_of": "2026-10-14T23:09:51+00:00"
+      "change": -0.10000000000000853,
+      "change_pct": -0.09428625306431127,
+      "as_of": "2026-10-15T15:45:04+00:00"
     }
   ],
   "voo": {
     "symbol": "VOO",
     "label": "VOO (S&P 500)",
-    "price": 707.43,
-    "prev_close": 715.2,
-    "change": -7.7700000000000955,
-    "change_pct": -1.0864093959731675,
-    "as_of": "2026-10-14T20:00:00+00:00"
+    "price": 707.58,
+    "prev_close": 707.43,
+    "change": 0.15000000000009095,
+    "change_pct": 0.02120351130148438,
+    "as_of": "2026-10-15T15:55:09+00:00"
   },
   "yield_10y_intraday": {
     "symbol": "^TNX",
     "label": "10Y (intraday)",
-    "price": 5.19,
-    "prev_close": 5.217,
-    "change": -0.026999999999999247,
-    "change_pct": -0.5175388154111414,
-    "as_of": "2026-10-14T18:59:54+00:00"
+    "price": 5.093,
+    "prev_close": 5.19,
+    "change": -0.09700000000000042,
+    "change_pct": -1.8689788053949983,
+    "as_of": "2026-10-15T15:40:05+00:00"
   },
   "treasury": {
     "as_of": "2026-10-14",
@@ -134,6 +134,6 @@
     }
   },
   "errors": [
-    "fred_wti: GET failed for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO&cosd=2026-06-16: The read operation timed out"
+    "fred_wti: GET failed for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO&cosd=2026-06-17: The read operation timed out"
   ]
 }
