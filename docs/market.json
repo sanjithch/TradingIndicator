@@ -1,42 +1,42 @@
 {
-  "fetched_at": "2026-10-15T22:45:55.881245+00:00",
+  "fetched_at": "2026-10-16T15:44:22.956876+00:00",
   "oil": [
     {
       "symbol": "CL=F",
       "label": "WTI crude",
-      "price": 96.14,
+      "price": 95.57,
       "prev_close": 96.5,
-      "change": -0.35999999999999943,
-      "change_pct": -0.3730569948186523,
-      "as_of": "2026-10-15T22:35:08+00:00"
+      "change": -0.9300000000000068,
+      "change_pct": -0.9637305699481936,
+      "as_of": "2026-10-16T15:33:37+00:00"
     },
     {
       "symbol": "BZ=F",
       "label": "Brent crude",
-      "price": 105.58,
+      "price": 105.63,
       "prev_close": 105.92,
-      "change": -0.3400000000000034,
-      "change_pct": -0.320996978851967,
-      "as_of": "2026-10-15T22:34:49+00:00"
+      "change": -0.29000000000000625,
+      "change_pct": -0.2737915407855044,
+      "as_of": "2026-10-16T15:33:32+00:00"
     }
   ],
   "voo": {
     "symbol": "VOO",
     "label": "VOO (S&P 500)",
-    "price": 709.43,
-    "prev_close": 707.43,
-    "change": 2.0,
-    "change_pct": 0.2827134840196203,
-    "as_of": "2026-10-15T20:00:00+00:00"
+    "price": 706.885,
+    "prev_close": 709.43,
+    "change": -2.544999999999959,
+    "change_pct": -0.358738705721489,
+    "as_of": "2026-10-16T15:43:39+00:00"
   },
   "yield_10y_intraday": {
     "symbol": "^TNX",
     "label": "10Y (intraday)",
-    "price": 5.089,
-    "prev_close": 5.19,
-    "change": -0.10099999999999998,
-    "change_pct": -1.9460500963391132,
-    "as_of": "2026-10-15T18:59:55+00:00"
+    "price": 5.079,
+    "prev_close": 5.0889997,
+    "change": -0.009999699999999834,
+    "change_pct": -0.19649637629178549,
+    "as_of": "2026-10-16T15:28:35+00:00"
   },
   "treasury": {
     "as_of": "2026-10-15",
@@ -134,6 +134,6 @@
     }
   },
   "errors": [
-    "fred_wti: GET failed for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO&cosd=2026-06-17: The read operation timed out"
+    "fred_wti: GET failed for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO&cosd=2026-06-18: The read operation timed out"
   ]
 }
