@@ -1,5 +1,5 @@
 {
-  "run_timestamp": "2026-10-19T23:21:42.066480+00:00",
+  "run_timestamp": "2026-10-20T00:45:51.406399+00:00",
   "technicals": [
     {
       "symbol": "AVGO",
@@ -284,6 +284,38 @@
       "is_sector_peer": true,
       "source_ticker": "WDC",
       "peer_group": "memory_semis"
+    },
+    {
+      "date": "2026-11-03",
+      "category": "earnings",
+      "title": "SMCI earnings (tentative)",
+      "affects": [
+        "AVGO",
+        "HPE",
+        "MU",
+        "DRAM",
+        "SNDK",
+        "IONQ"
+      ],
+      "is_sector_peer": true,
+      "source_ticker": "SMCI",
+      "peer_group": "ai_infra"
+    },
+    {
+      "date": "2026-11-03",
+      "category": "earnings",
+      "title": "ANET earnings (tentative)",
+      "affects": [
+        "AVGO",
+        "HPE",
+        "MU",
+        "DRAM",
+        "SNDK",
+        "IONQ"
+      ],
+      "is_sector_peer": true,
+      "source_ticker": "ANET",
+      "peer_group": "ai_infra"
     }
   ]
 }
