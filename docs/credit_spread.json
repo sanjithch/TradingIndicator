@@ -1,5 +1,5 @@
 {
-  "run_timestamp": "2026-10-21T23:02:16.755234+00:00",
+  "run_timestamp": "2026-10-22T00:16:55.583332+00:00",
   "technicals": [
     {
       "symbol": "AVGO",
@@ -327,6 +327,33 @@
       "is_sector_peer": false,
       "source_ticker": "IONQ",
       "peer_group": null
+    },
+    {
+      "date": "2026-11-05",
+      "category": "earnings",
+      "title": "SNDK earnings (tentative)",
+      "affects": [
+        "SNDK"
+      ],
+      "is_sector_peer": false,
+      "source_ticker": "SNDK",
+      "peer_group": null
+    },
+    {
+      "date": "2026-11-05",
+      "category": "earnings",
+      "title": "QBTS earnings (tentative)",
+      "affects": [
+        "AVGO",
+        "HPE",
+        "MU",
+        "DRAM",
+        "SNDK",
+        "IONQ"
+      ],
+      "is_sector_peer": true,
+      "source_ticker": "QBTS",
+      "peer_group": "quantum"
     }
   ]
 }
