@@ -1,42 +1,42 @@
 {
-  "fetched_at": "2026-11-03T23:45:37.240356+00:00",
+  "fetched_at": "2026-11-04T19:00:13.109848+00:00",
   "oil": [
     {
       "symbol": "CL=F",
       "label": "WTI crude",
-      "price": 96.48,
+      "price": 88.32,
       "prev_close": 96.09,
-      "change": 0.39000000000000057,
-      "change_pct": 0.4058694973462385,
-      "as_of": "2026-11-03T23:35:34+00:00"
+      "change": -7.77000000000001,
+      "change_pct": -8.086169216359673,
+      "as_of": "2026-11-04T18:50:11+00:00"
     },
     {
       "symbol": "BZ=F",
       "label": "Brent crude",
-      "price": 104.18,
+      "price": 95.02,
       "prev_close": 103.6,
-      "change": 0.5800000000000125,
-      "change_pct": 0.5598455598455719,
-      "as_of": "2026-11-03T23:35:34+00:00"
+      "change": -8.579999999999998,
+      "change_pct": -8.281853281853282,
+      "as_of": "2026-11-04T18:50:07+00:00"
     }
   ],
   "voo": {
     "symbol": "VOO",
     "label": "VOO (S&P 500)",
-    "price": 693.54,
-    "prev_close": 691.32,
-    "change": 2.2199999999999136,
-    "change_pct": 0.32112480472139004,
-    "as_of": "2026-11-03T21:00:00+00:00"
+    "price": 705.52,
+    "prev_close": 693.54,
+    "change": 11.980000000000018,
+    "change_pct": 1.727369726331577,
+    "as_of": "2026-11-04T19:00:08+00:00"
   },
   "yield_10y_intraday": {
     "symbol": "^TNX",
     "label": "10Y (intraday)",
-    "price": 4.952,
-    "prev_close": 4.894,
-    "change": 0.05799999999999983,
-    "change_pct": 1.1851246424192854,
-    "as_of": "2026-11-03T19:59:55+00:00"
+    "price": 4.896,
+    "prev_close": 4.952,
+    "change": -0.05600000000000005,
+    "change_pct": -1.1308562197092094,
+    "as_of": "2026-11-04T18:45:03+00:00"
   },
   "treasury": {
     "as_of": "2026-11-03",
@@ -78,7 +78,7 @@
   "signal": {
     "state": "BULLISH",
     "score": 1,
-    "wti_20d_pct": 7.49792013311148,
+    "wti_20d_pct": 3.5328345802161376,
     "y10_20d_bp": -35.99999999999994,
     "components": [
       {
@@ -89,12 +89,12 @@
       {
         "name": "Oil + rates",
         "points": 0,
-        "note": "WTI +7% in 20d (no oil + rates headwind)"
+        "note": "WTI +4% in 20d (no oil + rates headwind)"
       }
     ],
     "as_of": {
       "y10": "2026-11-03",
-      "wti": "2026-10-27"
+      "wti": "2026-11-03"
     },
     "calibration": {
       "horizon_days": 20,
