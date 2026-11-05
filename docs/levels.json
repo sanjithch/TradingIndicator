@@ -1,14 +1,14 @@
 {
-  "run_timestamp": "2026-11-05T01:51:52.609390+00:00",
+  "run_timestamp": "2026-11-05T19:22:47.662663+00:00",
   "symbols": [
     {
       "symbol": "RGTI",
-      "current_price": 11.225,
-      "nearest_support": 11.120574880151244,
+      "current_price": 9.755,
+      "nearest_support": null,
       "nearest_resist": 12.007683054753059,
-      "pct_to_support": 0.009390262731393576,
-      "pct_to_resist": 0.06518185491606944,
-      "signal": "BUY_ZONE",
+      "pct_to_support": null,
+      "pct_to_resist": 0.18760347391592486,
+      "signal": "NEUTRAL",
       "suggested_strike": 12.5,
       "levels": [
         {
@@ -17,7 +17,15 @@
           "touch_count": 5,
           "last_touch": "2026-10-06T18:45:00+00:00",
           "in_hvn": true,
-          "score": 18.293187673525924
+          "score": 18.27194694963333
+        },
+        {
+          "price": 12.007683054753059,
+          "level_type": "resistance",
+          "touch_count": 4,
+          "last_touch": "2026-10-21T13:30:00+00:00",
+          "in_hvn": true,
+          "score": 15.701946949633333
         },
         {
           "price": 15.969836329068581,
@@ -25,49 +33,17 @@
           "touch_count": 4,
           "last_touch": "2026-10-01T17:30:00+00:00",
           "in_hvn": true,
-          "score": 15.14621797655623
-        },
-        {
-          "price": 12.007683054753059,
-          "level_type": "resistance",
-          "touch_count": 4,
-          "last_touch": "2026-10-21T13:30:00+00:00",
-          "in_hvn": false,
-          "score": 13.723187673525926
-        },
-        {
-          "price": 11.120574880151244,
-          "level_type": "support",
-          "touch_count": 3,
-          "last_touch": "2026-10-30T14:00:00+00:00",
-          "in_hvn": false,
-          "score": 10.985611915950168
-        },
-        {
-          "price": 10.813824615384615,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-11-04T16:00:00+00:00",
-          "in_hvn": false,
-          "score": 8.0
-        },
-        {
-          "price": 10.924944118555109,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-11-03T19:00:00+00:00",
-          "in_hvn": false,
-          "score": 8.0
+          "score": 15.124977252663637
         }
       ]
     },
     {
       "symbol": "IONQ",
-      "current_price": 29.54,
+      "current_price": 26.455,
       "nearest_support": null,
       "nearest_resist": 31.234824944164938,
       "pct_to_support": null,
-      "pct_to_resist": 0.05426074732912994,
+      "pct_to_resist": 0.1530287092278989,
       "signal": "NEUTRAL",
       "suggested_strike": 32.0,
       "levels": [
@@ -77,7 +53,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-26T18:00:00+00:00",
           "in_hvn": true,
-          "score": 18.874096749661952
+          "score": 18.852856030432662
         },
         {
           "price": 32.483383089004064,
@@ -85,7 +61,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-29T15:30:00+00:00",
           "in_hvn": false,
-          "score": 16.958339173904378
+          "score": 16.937098454675084
         },
         {
           "price": 45.284334616064235,
@@ -93,17 +69,17 @@
           "touch_count": 4,
           "last_touch": "2026-10-06T13:30:00+00:00",
           "in_hvn": false,
-          "score": 13.286824022389226
+          "score": 13.265583303159932
         }
       ]
     },
     {
       "symbol": "QBTS",
-      "current_price": 10.39,
-      "nearest_support": 10.22834767478646,
+      "current_price": 8.975,
+      "nearest_support": null,
       "nearest_resist": 11.67026985974933,
-      "pct_to_support": 0.01580434400093998,
-      "pct_to_resist": 0.10970353514831485,
+      "pct_to_support": null,
+      "pct_to_resist": 0.2309518024981835,
       "signal": "NEUTRAL",
       "suggested_strike": 12.0,
       "levels": [
@@ -113,15 +89,15 @@
           "touch_count": 6,
           "last_touch": "2026-10-28T13:30:00+00:00",
           "in_hvn": false,
-          "score": 19.926824021270033
+          "score": 19.905583301831314
         },
         {
           "price": 11.67026985974933,
           "level_type": "resistance",
           "touch_count": 4,
           "last_touch": "2026-10-28T17:00:00+00:00",
-          "in_hvn": true,
-          "score": 15.931066445512458
+          "in_hvn": false,
+          "score": 13.909825726073738
         },
         {
           "price": 17.18624689138946,
@@ -129,25 +105,17 @@
           "touch_count": 4,
           "last_touch": "2026-09-30T14:00:00+00:00",
           "in_hvn": false,
-          "score": 13.11288462733064
-        },
-        {
-          "price": 10.22834767478646,
-          "level_type": "support",
-          "touch_count": 3,
-          "last_touch": "2026-11-03T19:15:00+00:00",
-          "in_hvn": false,
-          "score": 11.0
+          "score": 13.09164390789192
         }
       ]
     },
     {
       "symbol": "DRAM",
-      "current_price": 45.15,
+      "current_price": 38.65,
       "nearest_support": null,
       "nearest_resist": 47.82265500078915,
       "pct_to_support": null,
-      "pct_to_resist": 0.05588679676494427,
+      "pct_to_resist": 0.19180564108449827,
       "signal": "NEUTRAL",
       "suggested_strike": 48.0,
       "levels": [
@@ -157,7 +125,7 @@
           "touch_count": 13,
           "last_touch": "2026-10-05T20:00:00+00:00",
           "in_hvn": true,
-          "score": 42.265611899021884
+          "score": 42.24437117929697
         },
         {
           "price": 48.87918225036049,
@@ -165,25 +133,25 @@
           "touch_count": 6,
           "last_touch": "2026-10-26T17:45:00+00:00",
           "in_hvn": false,
-          "score": 19.873793717203704
+          "score": 19.85255299747879
         },
         {
           "price": 47.82265500078915,
           "level_type": "resistance",
           "touch_count": 5,
           "last_touch": "2026-11-04T14:45:00+00:00",
-          "in_hvn": false,
-          "score": 17.0
+          "in_hvn": true,
+          "score": 19.0
         }
       ]
     },
     {
       "symbol": "HPE",
-      "current_price": 50.1,
-      "nearest_support": 49.29284918035179,
+      "current_price": 45.45,
+      "nearest_support": null,
       "nearest_resist": 60.920460047053496,
-      "pct_to_support": 0.016374602666910678,
-      "pct_to_resist": 0.1776161906639581,
+      "pct_to_support": null,
+      "pct_to_resist": 0.25394522685981824,
       "signal": "NEUTRAL",
       "suggested_strike": 61.0,
       "levels": [
@@ -193,7 +161,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-28T13:30:00+00:00",
           "in_hvn": false,
-          "score": 22.92682401899158
+          "score": 22.905583298847475
         },
         {
           "price": 73.12550155395014,
@@ -201,7 +169,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-09T17:45:00+00:00",
           "in_hvn": false,
-          "score": 16.379248261415825
+          "score": 16.358007541271718
         },
         {
           "price": 60.920460047053496,
@@ -209,26 +177,18 @@
           "touch_count": 4,
           "last_touch": "2026-10-29T14:00:00+00:00",
           "in_hvn": true,
-          "score": 15.956520988688553
-        },
-        {
-          "price": 49.29284918035179,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-11-04T18:45:00+00:00",
-          "in_hvn": false,
-          "score": 8.0
+          "score": 15.935280268544444
         }
       ]
     },
     {
       "symbol": "SPCX",
-      "current_price": 135.64,
-      "nearest_support": 134.58358331532975,
+      "current_price": 125.47,
+      "nearest_support": null,
       "nearest_resist": 148.66258840432394,
-      "pct_to_support": 0.007849521157384045,
-      "pct_to_resist": 0.0875982891466,
-      "signal": "BUY_ZONE",
+      "pct_to_support": null,
+      "pct_to_resist": 0.1560082375348267,
+      "signal": "NEUTRAL",
       "suggested_strike": 149.0,
       "levels": [
         {
@@ -237,7 +197,7 @@
           "touch_count": 11,
           "last_touch": "2026-10-27T19:00:00+00:00",
           "in_hvn": true,
-          "score": 36.90439977552087
+          "score": 36.8831590551367
         },
         {
           "price": 148.66258840432394,
@@ -245,7 +205,7 @@
           "touch_count": 11,
           "last_touch": "2026-10-26T12:00:00+00:00",
           "in_hvn": true,
-          "score": 36.86682401794512
+          "score": 36.84558329756094
         },
         {
           "price": 154.73749019382902,
@@ -253,27 +213,19 @@
           "touch_count": 11,
           "last_touch": "2026-10-22T13:15:00+00:00",
           "in_hvn": false,
-          "score": 34.75197553309663
-        },
-        {
-          "price": 134.58358331532975,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-11-04T16:15:00+00:00",
-          "in_hvn": false,
-          "score": 8.0
+          "score": 34.730734812712456
         }
       ]
     },
     {
       "symbol": "AMC",
-      "current_price": 3.45,
+      "current_price": 3.165,
       "nearest_support": 2.8756032455557006,
-      "nearest_resist": null,
-      "pct_to_support": 0.19974826337118678,
-      "pct_to_resist": null,
+      "nearest_resist": 3.2196020711615145,
+      "pct_to_support": 0.10063862422313219,
+      "pct_to_resist": 0.016959260788963298,
       "signal": "NEUTRAL",
-      "suggested_strike": null,
+      "suggested_strike": 3.5,
       "levels": [
         {
           "price": 2.8756032455557006,
@@ -281,7 +233,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-08T15:30:00+00:00",
           "in_hvn": true,
-          "score": 18.347430077453534
+          "score": 18.326189356770033
         },
         {
           "price": 2.6995790629575405,
@@ -289,7 +241,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-05T13:30:00+00:00",
           "in_hvn": false,
-          "score": 16.257733107756565
+          "score": 16.236492387073064
         },
         {
           "price": 2.8543222925229337,
@@ -297,28 +249,28 @@
           "touch_count": 4,
           "last_touch": "2026-10-26T15:45:00+00:00",
           "in_hvn": false,
-          "score": 13.87136947139293
+          "score": 13.850128750709427
+        },
+        {
+          "price": 3.2196020711615145,
+          "level_type": "resistance",
+          "touch_count": 2,
+          "last_touch": "2026-11-05T17:30:00+00:00",
+          "in_hvn": false,
+          "score": 8.0
         }
       ]
     },
     {
       "symbol": "WULF",
-      "current_price": 11.69,
-      "nearest_support": 11.495818325512701,
+      "current_price": 10.155,
+      "nearest_support": null,
       "nearest_resist": 11.950731323555534,
-      "pct_to_support": 0.016891505153343495,
-      "pct_to_resist": 0.021817185617889236,
+      "pct_to_support": null,
+      "pct_to_resist": 0.15026120786566854,
       "signal": "NEUTRAL",
       "suggested_strike": 12.0,
       "levels": [
-        {
-          "price": 11.084347620292334,
-          "level_type": "support",
-          "touch_count": 4,
-          "last_touch": "2026-11-02T14:30:00+00:00",
-          "in_hvn": false,
-          "score": 14.0
-        },
         {
           "price": 11.950731323555534,
           "level_type": "resistance",
@@ -328,20 +280,12 @@
           "score": 14.0
         },
         {
-          "price": 11.495818325512701,
-          "level_type": "support",
-          "touch_count": 4,
-          "last_touch": "2026-10-30T18:30:00+00:00",
-          "in_hvn": false,
-          "score": 13.99106644008586
-        },
-        {
           "price": 16.591783981411876,
           "level_type": "resistance",
           "touch_count": 4,
           "last_touch": "2026-09-24T18:45:00+00:00",
           "in_hvn": false,
-          "score": 12.944096743116162
+          "score": 12.922856022134344
         },
         {
           "price": 12.455343385993745,
@@ -349,17 +293,17 @@
           "touch_count": 3,
           "last_touch": "2026-10-26T17:15:00+00:00",
           "in_hvn": true,
-          "score": 12.87318765220707
+          "score": 12.851946931225253
         }
       ]
     },
     {
       "symbol": "COP",
-      "current_price": 136.93,
-      "nearest_support": 129.00540481783563,
+      "current_price": 137.48,
+      "nearest_support": 135.12091399387472,
       "nearest_resist": 142.60831624870337,
-      "pct_to_support": 0.06142839668891739,
-      "pct_to_resist": 0.03981756743274778,
+      "pct_to_support": 0.017459073776189885,
+      "pct_to_resist": 0.03596084985506596,
       "signal": "NEUTRAL",
       "suggested_strike": 143.0,
       "levels": [
@@ -369,7 +313,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-05T19:45:00+00:00",
           "in_hvn": false,
-          "score": 22.265308863281817
+          "score": 22.24406814186936
         },
         {
           "price": 125.21632057231245,
@@ -377,7 +321,15 @@
           "touch_count": 7,
           "last_touch": "2026-10-05T13:45:00+00:00",
           "in_hvn": false,
-          "score": 22.25803613600909
+          "score": 22.23679541459663
+        },
+        {
+          "price": 135.12091399387472,
+          "level_type": "support",
+          "touch_count": 5,
+          "last_touch": "2026-11-04T20:00:00+00:00",
+          "in_hvn": false,
+          "score": 17.0
         },
         {
           "price": 142.60831624870337,
@@ -385,15 +337,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-15T18:00:00+00:00",
           "in_hvn": false,
-          "score": 16.554096742069696
-        },
-        {
-          "price": 129.00540481783563,
-          "level_type": "support",
-          "touch_count": 5,
-          "last_touch": "2026-10-07T16:30:00+00:00",
-          "in_hvn": false,
-          "score": 16.31955128752424
+          "score": 16.53285602065724
         },
         {
           "price": 150.20199849778842,
@@ -401,7 +345,7 @@
           "touch_count": 4,
           "last_touch": "2026-10-29T17:45:00+00:00",
           "in_hvn": false,
-          "score": 13.961066439039394
+          "score": 13.939825717626936
         },
         {
           "price": 146.62994466723222,
@@ -409,17 +353,17 @@
           "touch_count": 4,
           "last_touch": "2026-10-21T14:15:00+00:00",
           "in_hvn": false,
-          "score": 13.724096742069698
+          "score": 13.702856020657238
         }
       ]
     },
     {
       "symbol": "CVX",
-      "current_price": 216.98,
+      "current_price": 216.22,
       "nearest_support": 209.91007538806954,
       "nearest_resist": 217.19937666031927,
-      "pct_to_support": 0.03368073018343679,
-      "pct_to_resist": 0.0010100243550071047,
+      "pct_to_support": 0.030060132179291696,
+      "pct_to_resist": 0.004509113586688299,
       "signal": "CALL_ZONE",
       "suggested_strike": 220.0,
       "levels": [
@@ -429,7 +373,7 @@
           "touch_count": 10,
           "last_touch": "2026-10-07T17:30:00+00:00",
           "in_hvn": false,
-          "score": 31.32076340776835
+          "score": 31.299522685923904
         },
         {
           "price": 209.91007538806954,
@@ -437,7 +381,7 @@
           "touch_count": 8,
           "last_touch": "2026-10-09T13:30:00+00:00",
           "in_hvn": false,
-          "score": 25.374096741101685
+          "score": 25.35285601925724
         },
         {
           "price": 202.69606708193135,
@@ -445,7 +389,7 @@
           "touch_count": 8,
           "last_touch": "2026-10-05T13:45:00+00:00",
           "in_hvn": false,
-          "score": 25.258036135041078
+          "score": 25.23679541319663
         },
         {
           "price": 232.30616742373263,
@@ -453,7 +397,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-29T13:30:00+00:00",
           "in_hvn": false,
-          "score": 16.955914922919867
+          "score": 16.93467420107542
         },
         {
           "price": 217.19937666031927,
@@ -461,13 +405,13 @@
           "touch_count": 5,
           "last_touch": "2026-10-12T13:45:00+00:00",
           "in_hvn": false,
-          "score": 16.46167249867744
+          "score": 16.440431776832998
         },
         {
-          "price": 226.59957789207564,
+          "price": 222.70563446828896,
           "level_type": "resistance",
           "touch_count": 4,
-          "last_touch": "2026-11-03T18:30:00+00:00",
+          "last_touch": "2026-11-05T16:00:00+00:00",
           "in_hvn": false,
           "score": 14.0
         }
@@ -475,29 +419,29 @@
     },
     {
       "symbol": "VTI",
-      "current_price": 376.94,
-      "nearest_support": 373.9209869005143,
-      "nearest_resist": 378.6838430493813,
-      "pct_to_support": 0.00807393327801875,
-      "pct_to_resist": 0.004605010436513195,
-      "signal": "BUY_ZONE",
+      "current_price": 362.19,
+      "nearest_support": null,
+      "nearest_resist": 375.32640949677335,
+      "pct_to_support": null,
+      "pct_to_resist": 0.03499996047276893,
+      "signal": "NEUTRAL",
       "suggested_strike": 380.0,
       "levels": [
         {
-          "price": 378.6838430493813,
+          "price": 378.6661854621172,
           "level_type": "resistance",
-          "touch_count": 31,
-          "last_touch": "2026-11-04T18:00:00+00:00",
+          "touch_count": 32,
+          "last_touch": "2026-11-04T20:30:00+00:00",
           "in_hvn": true,
-          "score": 97.0
+          "score": 100.0
         },
         {
-          "price": 373.9209869005143,
-          "level_type": "support",
-          "touch_count": 25,
-          "last_touch": "2026-11-04T16:00:00+00:00",
-          "in_hvn": false,
-          "score": 77.0
+          "price": 375.32640949677335,
+          "level_type": "resistance",
+          "touch_count": 21,
+          "last_touch": "2026-11-03T18:30:00+00:00",
+          "in_hvn": true,
+          "score": 67.0
         },
         {
           "price": 381.82409577298256,
@@ -505,27 +449,19 @@
           "touch_count": 11,
           "last_touch": "2026-10-13T19:45:00+00:00",
           "in_hvn": false,
-          "score": 34.49803613395454
-        },
-        {
-          "price": 369.46268692143366,
-          "level_type": "support",
-          "touch_count": 5,
-          "last_touch": "2026-11-03T19:45:00+00:00",
-          "in_hvn": false,
-          "score": 17.0
+          "score": 34.476795411848485
         }
       ]
     },
     {
       "symbol": "SPGI",
-      "current_price": 481.57,
+      "current_price": 471.13,
       "nearest_support": 447.4988509427251,
-      "nearest_resist": 483.59455582164446,
-      "pct_to_support": 0.07613684143657308,
-      "pct_to_resist": 0.004186473559870161,
-      "signal": "CALL_ZONE",
-      "suggested_strike": 485.0,
+      "nearest_resist": 476.991656,
+      "pct_to_support": 0.05280717259383407,
+      "pct_to_resist": 0.012288801965961398,
+      "signal": "NEUTRAL",
+      "suggested_strike": 480.0,
       "levels": [
         {
           "price": 447.4988509427251,
@@ -533,7 +469,7 @@
           "touch_count": 10,
           "last_touch": "2026-10-28T19:15:00+00:00",
           "in_hvn": false,
-          "score": 31.933793708778786
+          "score": 31.91255298633165
         },
         {
           "price": 404.45677951458646,
@@ -541,7 +477,7 @@
           "touch_count": 9,
           "last_touch": "2026-10-14T16:45:00+00:00",
           "in_hvn": true,
-          "score": 30.523490678475756
+          "score": 30.50224995602862
         },
         {
           "price": 401.15210951979776,
@@ -549,13 +485,21 @@
           "touch_count": 7,
           "last_touch": "2026-09-25T15:45:00+00:00",
           "in_hvn": false,
-          "score": 21.969551284536365
+          "score": 21.948310562089226
         },
         {
-          "price": 483.59455582164446,
+          "price": 483.5706098953377,
+          "level_type": "resistance",
+          "touch_count": 3,
+          "last_touch": "2026-11-05T14:30:00+00:00",
+          "in_hvn": false,
+          "score": 11.0
+        },
+        {
+          "price": 476.991656,
           "level_type": "resistance",
           "touch_count": 2,
-          "last_touch": "2026-11-04T18:30:00+00:00",
+          "last_touch": "2026-11-02T18:30:00+00:00",
           "in_hvn": false,
           "score": 8.0
         }
@@ -563,72 +507,48 @@
     },
     {
       "symbol": "TSLA",
-      "current_price": 383.97,
-      "nearest_support": 372.35230497977375,
-      "nearest_resist": 387.736941309091,
-      "pct_to_support": 0.031200814027074048,
-      "pct_to_resist": 0.009715198392943613,
-      "signal": "CALL_ZONE",
-      "suggested_strike": 390.0,
+      "current_price": 342.31,
+      "nearest_support": null,
+      "nearest_resist": 367.5404722214075,
+      "pct_to_support": null,
+      "pct_to_resist": 0.06864678621354278,
+      "signal": "NEUTRAL",
+      "suggested_strike": 370.0,
       "levels": [
         {
-          "price": 364.6545184111789,
-          "level_type": "support",
-          "touch_count": 11,
-          "last_touch": "2026-10-23T13:45:00+00:00",
+          "price": 378.1992945242895,
+          "level_type": "resistance",
+          "touch_count": 10,
+          "last_touch": "2026-10-23T15:15:00+00:00",
           "in_hvn": false,
-          "score": 34.781672495693265
+          "score": 31.76224995466936
         },
         {
-          "price": 372.35230497977375,
-          "level_type": "support",
+          "price": 374.4827133190281,
+          "level_type": "resistance",
+          "touch_count": 10,
+          "last_touch": "2026-10-20T18:45:00+00:00",
+          "in_hvn": false,
+          "score": 31.67921965163906
+        },
+        {
+          "price": 367.5404722214075,
+          "level_type": "resistance",
           "touch_count": 9,
-          "last_touch": "2026-10-23T16:15:00+00:00",
+          "last_touch": "2026-10-14T20:15:00+00:00",
           "in_hvn": true,
-          "score": 30.78470279872357
-        },
-        {
-          "price": 354.662440449779,
-          "level_type": "support",
-          "touch_count": 9,
-          "last_touch": "2026-10-15T14:00:00+00:00",
-          "in_hvn": false,
-          "score": 28.549248253269024
-        },
-        {
-          "price": 387.736941309091,
-          "level_type": "resistance",
-          "touch_count": 7,
-          "last_touch": "2026-10-22T14:00:00+00:00",
-          "in_hvn": false,
-          "score": 22.752884616905387
-        },
-        {
-          "price": 404.3838784756543,
-          "level_type": "resistance",
-          "touch_count": 4,
-          "last_touch": "2026-10-30T14:45:00+00:00",
-          "in_hvn": false,
-          "score": 13.986520980541751
-        },
-        {
-          "price": 407.2514129116213,
-          "level_type": "resistance",
-          "touch_count": 3,
-          "last_touch": "2026-11-03T14:00:00+00:00",
-          "in_hvn": false,
-          "score": 11.0
+          "score": 30.506492378911783
         }
       ]
     },
     {
       "symbol": "NVDA",
-      "current_price": 200.17,
-      "nearest_support": null,
+      "current_price": 183.37,
+      "nearest_support": 181.6157570527091,
       "nearest_resist": 218.3951816846067,
-      "pct_to_support": null,
-      "pct_to_resist": 0.08345047516170226,
-      "signal": "NEUTRAL",
+      "pct_to_support": 0.009659090024781103,
+      "pct_to_resist": 0.16037524919019497,
+      "signal": "BUY_ZONE",
       "suggested_strike": 220.0,
       "levels": [
         {
@@ -636,16 +556,16 @@
           "level_type": "resistance",
           "touch_count": 11,
           "last_touch": "2026-10-28T18:30:00+00:00",
-          "in_hvn": false,
-          "score": 34.932884615792254
+          "in_hvn": true,
+          "score": 36.9116438926899
         },
         {
           "price": 229.54474348589667,
           "level_type": "resistance",
           "touch_count": 8,
           "last_touch": "2026-10-13T20:00:00+00:00",
-          "in_hvn": false,
-          "score": 25.4983391612468
+          "in_hvn": true,
+          "score": 27.477098438144445
         },
         {
           "price": 226.57189269422133,
@@ -653,19 +573,27 @@
           "touch_count": 8,
           "last_touch": "2026-10-13T14:00:00+00:00",
           "in_hvn": false,
-          "score": 25.491066433974073
+          "score": 25.469825710871717
+        },
+        {
+          "price": 181.6157570527091,
+          "level_type": "support",
+          "touch_count": 2,
+          "last_touch": "2026-11-05T18:00:00+00:00",
+          "in_hvn": false,
+          "score": 8.0
         }
       ]
     },
     {
       "symbol": "AAPL",
-      "current_price": 349.5,
+      "current_price": 343.56,
       "nearest_support": 342.29025254923846,
-      "nearest_resist": 351.46232522140406,
-      "pct_to_support": 0.021063256686587702,
-      "pct_to_resist": 0.005583315993166234,
-      "signal": "CALL_ZONE",
-      "suggested_strike": 355.0,
+      "nearest_resist": 345.3505463122005,
+      "pct_to_support": 0.0037095635686525703,
+      "pct_to_resist": 0.0051847212385233,
+      "signal": "BUY_ZONE",
+      "suggested_strike": 350.0,
       "levels": [
         {
           "price": 330.2845059149742,
@@ -689,7 +617,23 @@
           "touch_count": 13,
           "last_touch": "2026-10-30T18:45:00+00:00",
           "in_hvn": false,
-          "score": 40.99136946331852
+          "score": 40.970128739905725
+        },
+        {
+          "price": 345.3505463122005,
+          "level_type": "resistance",
+          "touch_count": 12,
+          "last_touch": "2026-10-30T19:45:00+00:00",
+          "in_hvn": false,
+          "score": 37.971340861117845
+        },
+        {
+          "price": 347.6977906877351,
+          "level_type": "resistance",
+          "touch_count": 10,
+          "last_touch": "2026-10-30T14:45:00+00:00",
+          "in_hvn": false,
+          "score": 31.965280255057237
         },
         {
           "price": 351.46232522140406,
@@ -697,18 +641,18 @@
           "touch_count": 4,
           "last_touch": "2026-10-29T18:45:00+00:00",
           "in_hvn": false,
-          "score": 13.962278554227609
+          "score": 13.941037830814814
         }
       ]
     },
     {
       "symbol": "LCID",
-      "current_price": 3.37,
-      "nearest_support": 3.3298154837059886,
+      "current_price": 3.015,
+      "nearest_support": 3.007042216145224,
       "nearest_resist": 3.5216837960556635,
-      "pct_to_support": 0.012068091007039025,
-      "pct_to_resist": 0.04307138426952228,
-      "signal": "NEUTRAL",
+      "pct_to_support": 0.002646382485769415,
+      "pct_to_resist": 0.14387543726190197,
+      "signal": "BUY_ZONE",
       "suggested_strike": 4.0,
       "levels": [
         {
@@ -717,15 +661,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-05T17:45:00+00:00",
           "in_hvn": true,
-          "score": 18.262884613790234
-        },
-        {
-          "price": 3.28166323978294,
-          "level_type": "support",
-          "touch_count": 3,
-          "last_touch": "2026-11-04T16:00:00+00:00",
-          "in_hvn": true,
-          "score": 13.0
+          "score": 18.241643889948147
         },
         {
           "price": 4.188787470652951,
@@ -733,15 +669,7 @@
           "touch_count": 3,
           "last_touch": "2026-10-05T15:00:00+00:00",
           "in_hvn": true,
-          "score": 12.259551280456902
-        },
-        {
-          "price": 3.3298154837059886,
-          "level_type": "support",
-          "touch_count": 3,
-          "last_touch": "2026-11-04T19:30:00+00:00",
-          "in_hvn": false,
-          "score": 11.0
+          "score": 12.238310556614815
         },
         {
           "price": 3.5216837960556635,
@@ -752,24 +680,24 @@
           "score": 11.0
         },
         {
-          "price": 3.2332804563101813,
+          "price": 3.007042216145224,
           "level_type": "support",
-          "touch_count": 3,
-          "last_touch": "2026-10-28T14:00:00+00:00",
+          "touch_count": 2,
+          "last_touch": "2026-11-03T20:45:00+00:00",
           "in_hvn": false,
-          "score": 10.92743006833569
+          "score": 8.0
         }
       ]
     },
     {
       "symbol": "AMZN",
-      "current_price": 265.92,
-      "nearest_support": 253.39544516366905,
-      "nearest_resist": 271.1245629905672,
-      "pct_to_support": 0.0494269138430697,
-      "pct_to_resist": 0.019196206102315625,
-      "signal": "NEUTRAL",
-      "suggested_strike": 275.0,
+      "current_price": 259.31,
+      "nearest_support": 253.10001709928028,
+      "nearest_resist": 259.98171367153606,
+      "pct_to_support": 0.024535687400936892,
+      "pct_to_resist": 0.002583695837872293,
+      "signal": "CALL_ZONE",
+      "suggested_strike": 260.0,
       "levels": [
         {
           "price": 250.65365137121879,
@@ -780,12 +708,12 @@
           "score": 41.0
         },
         {
-          "price": 253.39544516366905,
+          "price": 253.10001709928028,
           "level_type": "support",
-          "touch_count": 11,
-          "last_touch": "2026-10-28T18:15:00+00:00",
+          "touch_count": 12,
+          "last_touch": "2026-11-05T15:45:00+00:00",
           "in_hvn": true,
-          "score": 36.932581582541076
+          "score": 40.0
         },
         {
           "price": 245.54026617600204,
@@ -794,6 +722,22 @@
           "last_touch": "2026-11-03T14:45:00+00:00",
           "in_hvn": false,
           "score": 35.0
+        },
+        {
+          "price": 262.7818566480742,
+          "level_type": "resistance",
+          "touch_count": 7,
+          "last_touch": "2026-11-05T16:45:00+00:00",
+          "in_hvn": false,
+          "score": 23.0
+        },
+        {
+          "price": 259.98171367153606,
+          "level_type": "resistance",
+          "touch_count": 4,
+          "last_touch": "2026-10-13T19:30:00+00:00",
+          "in_hvn": false,
+          "score": 13.476492373491919
         },
         {
           "price": 271.1245629905672,
@@ -807,11 +751,11 @@
     },
     {
       "symbol": "RIVN",
-      "current_price": 14.055,
-      "nearest_support": 13.169361574887718,
+      "current_price": 13.135,
+      "nearest_support": 12.814590720961283,
       "nearest_resist": 15.15794976604573,
-      "pct_to_support": 0.06724991337477439,
-      "pct_to_resist": 0.07276378290396315,
+      "pct_to_support": 0.025003473463620834,
+      "pct_to_resist": 0.1334580070041662,
       "signal": "NEUTRAL",
       "suggested_strike": 15.5,
       "levels": [
@@ -821,7 +765,7 @@
           "touch_count": 7,
           "last_touch": "2026-09-11T17:30:00+00:00",
           "in_hvn": false,
-          "score": 21.564399763366332
+          "score": 21.543159038844443
         },
         {
           "price": 15.15794976604573,
@@ -829,7 +773,7 @@
           "touch_count": 6,
           "last_touch": "2026-09-30T16:30:00+00:00",
           "in_hvn": true,
-          "score": 21.115914914881483
+          "score": 21.094674190359598
         },
         {
           "price": 11.421551417925496,
@@ -837,7 +781,15 @@
           "touch_count": 5,
           "last_touch": "2026-10-29T19:30:00+00:00",
           "in_hvn": false,
-          "score": 16.96318764215421
+          "score": 16.941946917632322
+        },
+        {
+          "price": 12.814590720961283,
+          "level_type": "support",
+          "touch_count": 4,
+          "last_touch": "2026-11-05T18:00:00+00:00",
+          "in_hvn": false,
+          "score": 14.0
         },
         {
           "price": 15.322681852744843,
@@ -845,15 +797,7 @@
           "touch_count": 4,
           "last_touch": "2026-10-02T13:30:00+00:00",
           "in_hvn": false,
-          "score": 13.170460369426936
-        },
-        {
-          "price": 13.169361574887718,
-          "level_type": "support",
-          "touch_count": 3,
-          "last_touch": "2026-11-03T20:00:00+00:00",
-          "in_hvn": false,
-          "score": 11.0
+          "score": 13.14921964490505
         },
         {
           "price": 11.604742009670952,
@@ -861,19 +805,19 @@
           "touch_count": 2,
           "last_touch": "2026-10-26T16:00:00+00:00",
           "in_hvn": true,
-          "score": 9.871672490639057
+          "score": 9.850431766117172
         }
       ]
     },
     {
       "symbol": "MSFT",
-      "current_price": 556.07,
+      "current_price": 536.85,
       "nearest_support": 523.0723150634556,
-      "nearest_resist": 557.4773697825927,
-      "pct_to_support": 0.06308436517528448,
-      "pct_to_resist": 0.0025245325799351233,
+      "nearest_resist": 541.5958363045645,
+      "pct_to_support": 0.026339923830365684,
+      "pct_to_resist": 0.008762689789025026,
       "signal": "CALL_ZONE",
-      "suggested_strike": 560.0,
+      "suggested_strike": 545.0,
       "levels": [
         {
           "price": 491.08782720265896,
@@ -881,7 +825,7 @@
           "touch_count": 14,
           "last_touch": "2026-09-24T13:45:00+00:00",
           "in_hvn": false,
-          "score": 42.93803612596027
+          "score": 42.916795401250845
         },
         {
           "price": 523.0723150634556,
@@ -897,27 +841,43 @@
           "touch_count": 8,
           "last_touch": "2026-09-24T17:45:00+00:00",
           "in_hvn": false,
-          "score": 24.942884610808754
+          "score": 24.921643886099325
         },
         {
-          "price": 557.4773697825927,
+          "price": 541.5958363045645,
+          "level_type": "resistance",
+          "touch_count": 5,
+          "last_touch": "2026-10-16T13:30:00+00:00",
+          "in_hvn": false,
+          "score": 16.55649237094781
+        },
+        {
+          "price": 557.8096270374045,
+          "level_type": "resistance",
+          "touch_count": 4,
+          "last_touch": "2026-11-04T20:15:00+00:00",
+          "in_hvn": false,
+          "score": 14.0
+        },
+        {
+          "price": 547.4874312527281,
           "level_type": "resistance",
           "touch_count": 3,
-          "last_touch": "2026-11-04T16:45:00+00:00",
+          "last_touch": "2026-10-29T13:15:00+00:00",
           "in_hvn": false,
-          "score": 11.0
+          "score": 10.934371158826599
         }
       ]
     },
     {
       "symbol": "GOOGL",
-      "current_price": 289.5,
-      "nearest_support": 289.48212134270307,
-      "nearest_resist": 339.7030013802909,
-      "pct_to_support": 6.17608341890217e-05,
-      "pct_to_resist": 0.14778498033960444,
+      "current_price": 282.855,
+      "nearest_support": 281.45743211442766,
+      "nearest_resist": 344.7719356746765,
+      "pct_to_support": 0.004965468046351572,
+      "pct_to_resist": 0.17958809655870808,
       "signal": "BUY_ZONE",
-      "suggested_strike": 340.0,
+      "suggested_strike": 345.0,
       "levels": [
         {
           "price": 344.7719356746765,
@@ -925,7 +885,7 @@
           "touch_count": 11,
           "last_touch": "2026-10-19T19:30:00+00:00",
           "in_hvn": true,
-          "score": 36.672278549246464
+          "score": 36.65103782380808
         },
         {
           "price": 347.44246791289504,
@@ -933,23 +893,23 @@
           "touch_count": 9,
           "last_touch": "2026-10-19T15:45:00+00:00",
           "in_hvn": false,
-          "score": 28.66773309470101
+          "score": 28.646492369262628
         },
         {
-          "price": 339.7030013802909,
+          "price": 353.04824419559964,
           "level_type": "resistance",
           "touch_count": 6,
-          "last_touch": "2026-10-01T18:00:00+00:00",
-          "in_hvn": true,
-          "score": 21.14682400379192
+          "last_touch": "2026-10-15T14:00:00+00:00",
+          "in_hvn": false,
+          "score": 19.528007520777777
         },
         {
-          "price": 277.3700340199028,
+          "price": 277.2294797630622,
           "level_type": "support",
-          "touch_count": 3,
-          "last_touch": "2026-11-03T20:00:00+00:00",
+          "touch_count": 4,
+          "last_touch": "2026-11-05T15:45:00+00:00",
           "in_hvn": false,
-          "score": 11.0
+          "score": 14.0
         },
         {
           "price": 281.45743211442766,
@@ -960,22 +920,22 @@
           "score": 8.0
         },
         {
-          "price": 289.48212134270307,
+          "price": 280.1340476392568,
           "level_type": "support",
           "touch_count": 2,
-          "last_touch": "2026-11-04T18:45:00+00:00",
+          "last_touch": "2026-10-30T13:30:00+00:00",
           "in_hvn": false,
-          "score": 8.0
+          "score": 7.9637650965353535
         }
       ]
     },
     {
       "symbol": "F",
-      "current_price": 12.67,
+      "current_price": 12.41,
       "nearest_support": 12.149407268559381,
       "nearest_resist": 12.811652776987206,
-      "pct_to_support": 0.04284922876754862,
-      "pct_to_resist": 0.011056557608371036,
+      "pct_to_support": 0.021449007814149847,
+      "pct_to_resist": 0.03135058247197193,
       "signal": "NEUTRAL",
       "suggested_strike": 13.0,
       "levels": [
@@ -985,7 +945,7 @@
           "touch_count": 9,
           "last_touch": "2026-10-20T16:15:00+00:00",
           "in_hvn": true,
-          "score": 30.697430063403367
+          "score": 30.676189337635353
         },
         {
           "price": 12.149407268559381,
@@ -1001,7 +961,7 @@
           "touch_count": 8,
           "last_touch": "2026-10-21T15:00:00+00:00",
           "in_hvn": false,
-          "score": 25.725005820979124
+          "score": 25.70376509521111
         },
         {
           "price": 12.811652776987206,
@@ -1017,25 +977,25 @@
           "touch_count": 4,
           "last_touch": "2026-09-22T19:45:00+00:00",
           "in_hvn": false,
-          "score": 12.887127033100336
+          "score": 12.865886307332323
         },
         {
-          "price": 13.928013008729867,
+          "price": 12.858309843644463,
           "level_type": "resistance",
           "touch_count": 3,
-          "last_touch": "2026-09-14T16:45:00+00:00",
+          "last_touch": "2026-11-05T14:30:00+00:00",
           "in_hvn": false,
-          "score": 9.6507633967367
+          "score": 11.0
         }
       ]
     },
     {
       "symbol": "AMD",
-      "current_price": 491.14,
-      "nearest_support": 476.9119033093017,
+      "current_price": 416.25,
+      "nearest_support": null,
       "nearest_resist": 526.2345689945508,
-      "pct_to_support": 0.02983380492700902,
-      "pct_to_resist": 0.06668997261355185,
+      "pct_to_support": null,
+      "pct_to_resist": 0.2090029341947122,
       "signal": "NEUTRAL",
       "suggested_strike": 530.0,
       "levels": [
@@ -1045,7 +1005,7 @@
           "touch_count": 8,
           "last_touch": "2026-10-26T13:30:00+00:00",
           "in_hvn": false,
-          "score": 25.868642183647474
+          "score": 25.847401457575085
         },
         {
           "price": 553.4202366615841,
@@ -1053,7 +1013,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-27T13:30:00+00:00",
           "in_hvn": false,
-          "score": 22.897733092738385
+          "score": 22.876492366665993
         },
         {
           "price": 614.9524410906363,
@@ -1061,25 +1021,17 @@
           "touch_count": 5,
           "last_touch": "2026-10-09T18:15:00+00:00",
           "in_hvn": true,
-          "score": 18.379854304859595
-        },
-        {
-          "price": 476.9119033093017,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-11-04T16:00:00+00:00",
-          "in_hvn": false,
-          "score": 8.0
+          "score": 18.358613578787207
         }
       ]
     },
     {
       "symbol": "META",
-      "current_price": 633.33,
-      "nearest_support": 625.2643221330836,
+      "current_price": 602.53,
+      "nearest_support": null,
       "nearest_resist": 656.9828771324619,
-      "pct_to_support": 0.01289962913508391,
-      "pct_to_resist": 0.036002273355585396,
+      "pct_to_support": null,
+      "pct_to_resist": 0.08288325164596803,
       "signal": "NEUTRAL",
       "suggested_strike": 660.0,
       "levels": [
@@ -1089,15 +1041,7 @@
           "touch_count": 9,
           "last_touch": "2026-10-21T20:30:00+00:00",
           "in_hvn": false,
-          "score": 28.731672485635016
-        },
-        {
-          "price": 609.1100956041703,
-          "level_type": "support",
-          "touch_count": 7,
-          "last_touch": "2026-11-02T20:45:00+00:00",
-          "in_hvn": false,
-          "score": 23.0
+          "score": 28.710431759170035
         },
         {
           "price": 656.9828771324619,
@@ -1105,7 +1049,7 @@
           "touch_count": 6,
           "last_touch": "2026-10-26T12:00:00+00:00",
           "in_hvn": false,
-          "score": 19.866824000786533
+          "score": 19.845583274321548
         },
         {
           "price": 736.8803597750069,
@@ -1113,32 +1057,16 @@
           "touch_count": 6,
           "last_touch": "2026-10-15T15:30:00+00:00",
           "in_hvn": false,
-          "score": 19.551066425028957
-        },
-        {
-          "price": 617.1242442186624,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-11-03T20:15:00+00:00",
-          "in_hvn": false,
-          "score": 8.0
-        },
-        {
-          "price": 625.2643221330836,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-11-04T19:30:00+00:00",
-          "in_hvn": false,
-          "score": 8.0
+          "score": 19.52982569856397
         }
       ]
     },
     {
       "symbol": "DIS",
-      "current_price": 118.95,
+      "current_price": 117.455,
       "nearest_support": 110.5695976416737,
       "nearest_resist": null,
-      "pct_to_support": 0.07579300763565167,
+      "pct_to_support": 0.06227211191126912,
       "pct_to_resist": null,
       "signal": "NEUTRAL",
       "suggested_strike": null,
@@ -1149,7 +1077,7 @@
           "touch_count": 14,
           "last_touch": "2026-10-07T19:45:00+00:00",
           "in_hvn": true,
-          "score": 45.32349066638653
+          "score": 45.30224993963973
         },
         {
           "price": 110.5695976416737,
@@ -1157,7 +1085,7 @@
           "touch_count": 8,
           "last_touch": "2026-10-30T18:30:00+00:00",
           "in_hvn": false,
-          "score": 25.99106642396229
+          "score": 25.969825697215487
         },
         {
           "price": 108.5900240268829,
@@ -1165,17 +1093,17 @@
           "touch_count": 6,
           "last_touch": "2026-10-28T19:00:00+00:00",
           "in_hvn": false,
-          "score": 19.933490666386533
+          "score": 19.91224993963973
         }
       ]
     },
     {
       "symbol": "WMT",
-      "current_price": 129.23,
+      "current_price": 129.025,
       "nearest_support": 118.00863958444724,
       "nearest_resist": 130.8324015489481,
-      "pct_to_support": 0.09508931257124376,
-      "pct_to_resist": 0.012247742378623272,
+      "pct_to_support": 0.09335215162504637,
+      "pct_to_resist": 0.013814632518779324,
       "signal": "NEUTRAL",
       "suggested_strike": 131.0,
       "levels": [
@@ -1185,7 +1113,15 @@
           "touch_count": 10,
           "last_touch": "2026-10-28T19:00:00+00:00",
           "in_hvn": false,
-          "score": 31.93349066536498
+          "score": 31.912249938224917
+        },
+        {
+          "price": 108.09287153151139,
+          "level_type": "support",
+          "touch_count": 6,
+          "last_touch": "2026-10-07T19:45:00+00:00",
+          "in_hvn": true,
+          "score": 21.302249938224914
         },
         {
           "price": 107.28488208675246,
@@ -1193,15 +1129,7 @@
           "touch_count": 6,
           "last_touch": "2026-09-28T13:30:00+00:00",
           "in_hvn": true,
-          "score": 21.054096725971043
-        },
-        {
-          "price": 108.09287153151139,
-          "level_type": "support",
-          "touch_count": 6,
-          "last_touch": "2026-10-07T19:45:00+00:00",
-          "in_hvn": false,
-          "score": 19.323490665364982
+          "score": 21.032855998830975
         },
         {
           "price": 130.8324015489481,
@@ -1215,12 +1143,12 @@
     },
     {
       "symbol": "NFLX",
-      "current_price": 66.4,
+      "current_price": 65.0,
       "nearest_support": 64.99174006104086,
-      "nearest_resist": 67.24105758366431,
-      "pct_to_support": 0.021668291041853884,
-      "pct_to_resist": 0.012508095706523174,
-      "signal": "NEUTRAL",
+      "nearest_resist": 67.26343921060862,
+      "pct_to_support": 0.00012709213434483241,
+      "pct_to_resist": 0.03365036395955858,
+      "signal": "BUY_ZONE",
       "suggested_strike": 68.0,
       "levels": [
         {
@@ -1229,7 +1157,7 @@
           "touch_count": 10,
           "last_touch": "2026-10-14T13:30:00+00:00",
           "in_hvn": false,
-          "score": 31.51955127046229
+          "score": 31.49831054300842
         },
         {
           "price": 72.13882813581293,
@@ -1237,7 +1165,7 @@
           "touch_count": 9,
           "last_touch": "2026-10-09T13:45:00+00:00",
           "in_hvn": false,
-          "score": 28.374399755310776
+          "score": 28.353159027856904
         },
         {
           "price": 61.6284055979062,
@@ -1248,12 +1176,12 @@
           "score": 23.0
         },
         {
-          "price": 67.24105758366431,
+          "price": 67.26343921060862,
           "level_type": "resistance",
-          "touch_count": 6,
-          "last_touch": "2026-10-23T16:15:00+00:00",
+          "touch_count": 7,
+          "last_touch": "2026-11-05T14:30:00+00:00",
           "in_hvn": false,
-          "score": 19.784702785613806
+          "score": 23.0
         },
         {
           "price": 62.757553369046825,
@@ -1269,17 +1197,17 @@
           "touch_count": 2,
           "last_touch": "2026-10-21T19:45:00+00:00",
           "in_hvn": false,
-          "score": 7.730763391674411
+          "score": 7.709522664220539
         }
       ]
     },
     {
       "symbol": "KO",
-      "current_price": 95.87,
+      "current_price": 95.565,
       "nearest_support": 91.80032255974933,
       "nearest_resist": 96.36214077437472,
-      "pct_to_support": 0.04433184249000731,
-      "pct_to_resist": 0.005107200508621241,
+      "pct_to_support": 0.0410094140769536,
+      "pct_to_resist": 0.008272343972112189,
       "signal": "CALL_ZONE",
       "suggested_strike": 97.0,
       "levels": [
@@ -1289,7 +1217,7 @@
           "touch_count": 22,
           "last_touch": "2026-10-09T15:45:00+00:00",
           "in_hvn": false,
-          "score": 67.37682399662155
+          "score": 67.35558326886027
         },
         {
           "price": 88.12155707130191,
@@ -1297,7 +1225,7 @@
           "touch_count": 9,
           "last_touch": "2026-10-09T19:45:00+00:00",
           "in_hvn": true,
-          "score": 30.381672481470034
+          "score": 30.360431753708752
         },
         {
           "price": 91.80032255974933,
@@ -1305,7 +1233,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-29T15:30:00+00:00",
           "in_hvn": false,
-          "score": 22.9583391481367
+          "score": 22.93709842037542
         },
         {
           "price": 96.36214077437472,
@@ -1319,11 +1247,11 @@
     },
     {
       "symbol": "SNOW",
-      "current_price": 290.68,
-      "nearest_support": 284.50468291757966,
+      "current_price": 271.72,
+      "nearest_support": null,
       "nearest_resist": 334.60931505879023,
-      "pct_to_support": 0.02170550241596313,
-      "pct_to_resist": 0.13128539189374308,
+      "pct_to_support": null,
+      "pct_to_resist": 0.1879484886657763,
       "signal": "NEUTRAL",
       "suggested_strike": 335.0,
       "levels": [
@@ -1333,7 +1261,7 @@
           "touch_count": 13,
           "last_touch": "2026-10-28T19:45:00+00:00",
           "in_hvn": true,
-          "score": 42.93439975310774
+          "score": 42.913159025120876
         },
         {
           "price": 334.60931505879023,
@@ -1341,7 +1269,7 @@
           "touch_count": 8,
           "last_touch": "2026-10-26T18:30:00+00:00",
           "in_hvn": true,
-          "score": 27.874702783410775
+          "score": 27.853462055423904
         },
         {
           "price": 343.6723464320415,
@@ -1349,25 +1277,17 @@
           "touch_count": 7,
           "last_touch": "2026-10-28T16:45:00+00:00",
           "in_hvn": false,
-          "score": 22.93076338947138
-        },
-        {
-          "price": 284.50468291757966,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-11-04T16:00:00+00:00",
-          "in_hvn": false,
-          "score": 8.0
+          "score": 22.909522661484512
         }
       ]
     },
     {
       "symbol": "DELL",
-      "current_price": 372.61,
+      "current_price": 324.75,
       "nearest_support": null,
       "nearest_resist": 566.925822315353,
       "pct_to_support": null,
-      "pct_to_resist": 0.3427535220070901,
+      "pct_to_resist": 0.4271737373441467,
       "signal": "NEUTRAL",
       "suggested_strike": 570.0,
       "levels": [
@@ -1377,7 +1297,7 @@
           "touch_count": 6,
           "last_touch": "2026-10-13T16:45:00+00:00",
           "in_hvn": true,
-          "score": 21.494399752033335
+          "score": 21.4731590216734
         },
         {
           "price": 583.6734590196079,
@@ -1385,7 +1305,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-08T18:15:00+00:00",
           "in_hvn": false,
-          "score": 16.35076338839697
+          "score": 16.329522658037035
         },
         {
           "price": 566.925822315353,
@@ -1393,17 +1313,17 @@
           "touch_count": 5,
           "last_touch": "2026-10-02T17:45:00+00:00",
           "in_hvn": false,
-          "score": 16.175611873245455
+          "score": 16.154371142885523
         }
       ]
     },
     {
       "symbol": "SNDK",
-      "current_price": 1042.54,
+      "current_price": 838.02,
       "nearest_support": null,
       "nearest_resist": 1389.350832107436,
       "pct_to_support": null,
-      "pct_to_resist": 0.24962077546776015,
+      "pct_to_resist": 0.39682621506847926,
       "signal": "NEUTRAL",
       "suggested_strike": 1390.0,
       "levels": [
@@ -1413,7 +1333,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-28T17:00:00+00:00",
           "in_hvn": false,
-          "score": 22.931066417584177
+          "score": 22.909825686944444
         },
         {
           "price": 1747.0874057319047,
@@ -1421,7 +1341,7 @@
           "touch_count": 6,
           "last_touch": "2026-10-05T13:30:00+00:00",
           "in_hvn": true,
-          "score": 21.25773308425084
+          "score": 21.236492353611112
         },
         {
           "price": 1717.4740654289117,
@@ -1429,17 +1349,17 @@
           "touch_count": 5,
           "last_touch": "2026-10-06T13:30:00+00:00",
           "in_hvn": true,
-          "score": 18.286823993341752
+          "score": 18.26558326270202
         }
       ]
     },
     {
       "symbol": "MU",
-      "current_price": 800.31,
-      "nearest_support": 791.2942197680838,
+      "current_price": 678.35,
+      "nearest_support": null,
       "nearest_resist": 916.5292117708692,
-      "pct_to_support": 0.011393714255310095,
-      "pct_to_resist": 0.1268036089611554,
+      "pct_to_support": null,
+      "pct_to_resist": 0.25987083522485,
       "signal": "NEUTRAL",
       "suggested_strike": 920.0,
       "levels": [
@@ -1449,41 +1369,33 @@
           "touch_count": 8,
           "last_touch": "2026-10-08T16:15:00+00:00",
           "in_hvn": true,
-          "score": 27.348339143622894
+          "score": 27.327098412849494
         },
         {
           "price": 916.5292117708692,
           "level_type": "resistance",
           "touch_count": 7,
           "last_touch": "2026-10-26T17:45:00+00:00",
-          "in_hvn": false,
-          "score": 22.87379368907744
+          "in_hvn": true,
+          "score": 24.85255295830404
         },
         {
           "price": 1084.0374424469533,
           "level_type": "resistance",
           "touch_count": 7,
           "last_touch": "2026-10-07T17:15:00+00:00",
-          "in_hvn": false,
-          "score": 22.320460355744107
-        },
-        {
-          "price": 791.2942197680838,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-11-04T20:30:00+00:00",
-          "in_hvn": false,
-          "score": 8.0
+          "in_hvn": true,
+          "score": 24.299219624970707
         }
       ]
     },
     {
       "symbol": "TSM",
-      "current_price": 397.01,
+      "current_price": 359.76,
       "nearest_support": null,
       "nearest_resist": 419.407428857243,
       "pct_to_support": null,
-      "pct_to_resist": 0.0534025563597411,
+      "pct_to_resist": 0.14221834129110214,
       "signal": "NEUTRAL",
       "suggested_strike": 420.0,
       "levels": [
@@ -1493,7 +1405,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-29T19:45:00+00:00",
           "in_hvn": true,
-          "score": 24.96349065761751
+          "score": 24.942249926561278
         },
         {
           "price": 440.48296713353494,
@@ -1501,7 +1413,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-28T20:00:00+00:00",
           "in_hvn": false,
-          "score": 22.934702778829628
+          "score": 22.9134620477734
         },
         {
           "price": 419.407428857243,
@@ -1509,35 +1421,35 @@
           "touch_count": 6,
           "last_touch": "2026-10-30T13:30:00+00:00",
           "in_hvn": true,
-          "score": 21.98500580913266
+          "score": 21.96376507807643
         }
       ]
     },
     {
       "symbol": "VOO",
-      "current_price": 704.76,
-      "nearest_support": 698.3213146334143,
-      "nearest_resist": 708.1431947528339,
-      "pct_to_support": 0.009220233195897334,
-      "pct_to_resist": 0.004777557389384715,
-      "signal": "BUY_ZONE",
-      "suggested_strike": 710.0,
+      "current_price": 676.955,
+      "nearest_support": null,
+      "nearest_resist": 701.571854689534,
+      "pct_to_support": null,
+      "pct_to_resist": 0.03508814460698062,
+      "signal": "NEUTRAL",
+      "suggested_strike": 705.0,
       "levels": [
         {
-          "price": 708.1431947528339,
+          "price": 708.0869051853107,
           "level_type": "resistance",
-          "touch_count": 30,
-          "last_touch": "2026-11-04T18:00:00+00:00",
+          "touch_count": 31,
+          "last_touch": "2026-11-04T20:30:00+00:00",
           "in_hvn": true,
-          "score": 94.0
+          "score": 97.0
         },
         {
-          "price": 698.3213146334143,
-          "level_type": "support",
-          "touch_count": 18,
-          "last_touch": "2026-10-23T19:45:00+00:00",
+          "price": 701.571854689534,
+          "level_type": "resistance",
+          "touch_count": 19,
+          "last_touch": "2026-11-03T18:30:00+00:00",
           "in_hvn": false,
-          "score": 55.78894520193906
+          "score": 59.0
         },
         {
           "price": 712.6594035563464,
@@ -1545,25 +1457,17 @@
           "touch_count": 10,
           "last_touch": "2026-10-21T18:15:00+00:00",
           "in_hvn": true,
-          "score": 33.728945201939055
-        },
-        {
-          "price": 689.6916771495713,
-          "level_type": "support",
-          "touch_count": 4,
-          "last_touch": "2026-11-03T19:45:00+00:00",
-          "in_hvn": false,
-          "score": 14.0
+          "score": 33.70770447070235
         }
       ]
     },
     {
       "symbol": "ARM",
-      "current_price": 184.97,
+      "current_price": 169.0,
       "nearest_support": null,
       "nearest_resist": 227.7641395297668,
       "pct_to_support": null,
-      "pct_to_resist": 0.18788795996647212,
+      "pct_to_resist": 0.25800435332396493,
       "signal": "NEUTRAL",
       "suggested_strike": 230.0,
       "levels": [
@@ -1573,7 +1477,7 @@
           "touch_count": 6,
           "last_touch": "2026-10-09T19:00:00+00:00",
           "in_hvn": false,
-          "score": 19.380763382664647
+          "score": 19.359522651213805
         },
         {
           "price": 227.7641395297668,
@@ -1581,7 +1485,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-27T16:15:00+00:00",
           "in_hvn": true,
-          "score": 18.901066412967676
+          "score": 18.879825681516834
         },
         {
           "price": 266.2790787428185,
@@ -1589,19 +1493,19 @@
           "touch_count": 4,
           "last_touch": "2026-09-17T17:00:00+00:00",
           "in_hvn": false,
-          "score": 12.738339140240404
+          "score": 12.717098408789562
         }
       ]
     },
     {
       "symbol": "MRNA",
-      "current_price": 258.375,
+      "current_price": 242.12,
       "nearest_support": 217.17443966615073,
-      "nearest_resist": null,
-      "pct_to_support": 0.1897118297953683,
-      "pct_to_resist": null,
-      "signal": "NEUTRAL",
-      "suggested_strike": null,
+      "nearest_resist": 242.35378034976515,
+      "pct_to_support": 0.11486416344481694,
+      "pct_to_resist": 0.0009646243166817896,
+      "signal": "CALL_ZONE",
+      "suggested_strike": 245.0,
       "levels": [
         {
           "price": 217.17443966615073,
@@ -1617,7 +1521,7 @@
           "touch_count": 6,
           "last_touch": "2026-10-26T13:30:00+00:00",
           "in_hvn": false,
-          "score": 19.868642169416834
+          "score": 19.847401437642425
         },
         {
           "price": 186.0222600483087,
@@ -1625,27 +1529,43 @@
           "touch_count": 5,
           "last_touch": "2026-10-05T13:30:00+00:00",
           "in_hvn": false,
-          "score": 16.257733078507744
+          "score": 16.236492346733332
+        },
+        {
+          "price": 253.84891659485413,
+          "level_type": "resistance",
+          "touch_count": 2,
+          "last_touch": "2026-11-04T14:45:00+00:00",
+          "in_hvn": false,
+          "score": 8.0
+        },
+        {
+          "price": 242.35378034976515,
+          "level_type": "resistance",
+          "touch_count": 2,
+          "last_touch": "2026-10-20T17:45:00+00:00",
+          "in_hvn": false,
+          "score": 7.678007498248485
         }
       ]
     },
     {
       "symbol": "DNLI",
-      "current_price": 20.94,
-      "nearest_support": 19.9902854054054,
-      "nearest_resist": 21.101818880351264,
-      "pct_to_support": 0.047508806169310386,
-      "pct_to_resist": 0.007668480203947646,
-      "signal": "CALL_ZONE",
-      "suggested_strike": 21.5,
+      "current_price": 19.99,
+      "nearest_support": 19.989082172373077,
+      "nearest_resist": 20.608816636851518,
+      "pct_to_support": 4.5916446738589276e-05,
+      "pct_to_resist": 0.0300267913367227,
+      "signal": "BUY_ZONE",
+      "suggested_strike": 21.0,
       "levels": [
         {
-          "price": 19.9902854054054,
+          "price": 19.989082172373077,
           "level_type": "support",
-          "touch_count": 8,
-          "last_touch": "2026-10-02T15:00:00+00:00",
+          "touch_count": 9,
+          "last_touch": "2026-11-05T18:00:00+00:00",
           "in_hvn": false,
-          "score": 25.172278531948486
+          "score": 29.0
         },
         {
           "price": 18.966759086104563,
@@ -1653,7 +1573,23 @@
           "touch_count": 5,
           "last_touch": "2026-10-30T14:15:00+00:00",
           "in_hvn": false,
-          "score": 16.98591489558485
+          "score": 16.96467415673805
+        },
+        {
+          "price": 20.608816636851518,
+          "level_type": "resistance",
+          "touch_count": 5,
+          "last_touch": "2026-09-25T19:45:00+00:00",
+          "in_hvn": false,
+          "score": 15.953159005222895
+        },
+        {
+          "price": 21.01383339746056,
+          "level_type": "resistance",
+          "touch_count": 4,
+          "last_touch": "2026-11-05T14:30:00+00:00",
+          "in_hvn": false,
+          "score": 14.0
         },
         {
           "price": 18.811020692249812,
@@ -1661,7 +1597,7 @@
           "touch_count": 4,
           "last_touch": "2026-10-28T16:15:00+00:00",
           "in_hvn": false,
-          "score": 13.930157319827273
+          "score": 13.90891658098047
         },
         {
           "price": 21.51634700939199,
@@ -1670,34 +1606,18 @@
           "last_touch": "2026-11-04T18:00:00+00:00",
           "in_hvn": false,
           "score": 11.0
-        },
-        {
-          "price": 22.185233785175015,
-          "level_type": "resistance",
-          "touch_count": 3,
-          "last_touch": "2026-11-04T14:30:00+00:00",
-          "in_hvn": false,
-          "score": 11.0
-        },
-        {
-          "price": 21.101818880351264,
-          "level_type": "resistance",
-          "touch_count": 2,
-          "last_touch": "2026-09-30T18:15:00+00:00",
-          "in_hvn": false,
-          "score": 7.118036107706061
         }
       ]
     },
     {
       "symbol": "UNH",
-      "current_price": 409.28,
+      "current_price": 397.17,
       "nearest_support": 376.2034549022117,
-      "nearest_resist": 412.7594052955135,
-      "pct_to_support": 0.08792195995750755,
-      "pct_to_resist": 0.008429620865992015,
-      "signal": "CALL_ZONE",
-      "suggested_strike": 415.0,
+      "nearest_resist": 409.200196146302,
+      "pct_to_support": 0.05573193128499638,
+      "pct_to_resist": 0.029399292228102485,
+      "signal": "NEUTRAL",
+      "suggested_strike": 410.0,
       "levels": [
         {
           "price": 373.60602129088784,
@@ -1705,7 +1625,7 @@
           "touch_count": 15,
           "last_touch": "2026-10-13T14:00:00+00:00",
           "in_hvn": false,
-          "score": 46.49106640951784
+          "score": 46.469825670499326
         },
         {
           "price": 376.2034549022117,
@@ -1713,7 +1633,7 @@
           "touch_count": 9,
           "last_touch": "2026-10-13T19:15:00+00:00",
           "in_hvn": true,
-          "score": 30.49743004588148
+          "score": 30.476189306862963
         },
         {
           "price": 368.8778856850443,
@@ -1721,7 +1641,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-08T19:30:00+00:00",
           "in_hvn": false,
-          "score": 22.352278530729965
+          "score": 22.33103779171145
         },
         {
           "price": 412.7594052955135,
@@ -1729,35 +1649,35 @@
           "touch_count": 4,
           "last_touch": "2026-10-29T13:30:00+00:00",
           "in_hvn": false,
-          "score": 13.95591489436633
+          "score": 13.934674155347812
         },
         {
-          "price": 421.6031440828,
+          "price": 415.9820106610298,
           "level_type": "resistance",
           "touch_count": 3,
-          "last_touch": "2026-10-26T14:15:00+00:00",
+          "last_touch": "2026-11-04T20:30:00+00:00",
           "in_hvn": false,
-          "score": 10.869551258002694
+          "score": 11.0
         },
         {
-          "price": 426.185326108297,
+          "price": 409.200196146302,
           "level_type": "resistance",
           "touch_count": 3,
-          "last_touch": "2026-10-23T15:15:00+00:00",
+          "last_touch": "2026-10-30T18:00:00+00:00",
           "in_hvn": false,
-          "score": 10.783490651942088
+          "score": 10.969219609893265
         }
       ]
     },
     {
       "symbol": "ELV",
-      "current_price": 434.36,
+      "current_price": 426.565,
       "nearest_support": 426.3395515449821,
-      "nearest_resist": 442.416889371487,
-      "pct_to_support": 0.018812349044214104,
-      "pct_to_resist": 0.018211080013091022,
-      "signal": "NEUTRAL",
-      "suggested_strike": 445.0,
+      "nearest_resist": 432.7191293000699,
+      "pct_to_support": 0.0005288002349322513,
+      "pct_to_resist": 0.014221995015621994,
+      "signal": "BUY_ZONE",
+      "suggested_strike": 435.0,
       "levels": [
         {
           "price": 416.7675831612521,
@@ -1765,7 +1685,15 @@
           "touch_count": 9,
           "last_touch": "2026-10-30T16:45:00+00:00",
           "in_hvn": false,
-          "score": 28.988945196364647
+          "score": 28.967704456359595
+        },
+        {
+          "price": 432.7191293000699,
+          "level_type": "resistance",
+          "touch_count": 8,
+          "last_touch": "2026-11-04T16:00:00+00:00",
+          "in_hvn": false,
+          "score": 26.0
         },
         {
           "price": 411.6763532083716,
@@ -1781,7 +1709,7 @@
           "touch_count": 6,
           "last_touch": "2026-10-21T14:15:00+00:00",
           "in_hvn": false,
-          "score": 19.72409671151616
+          "score": 19.702855971511113
         },
         {
           "price": 442.416889371487,
@@ -1789,43 +1717,43 @@
           "touch_count": 4,
           "last_touch": "2026-10-23T15:30:00+00:00",
           "in_hvn": false,
-          "score": 13.783793681213131
+          "score": 13.762552941208082
         },
         {
-          "price": 450.1279033400212,
+          "price": 449.8080809190809,
           "level_type": "resistance",
-          "touch_count": 2,
-          "last_touch": "2026-10-22T15:15:00+00:00",
+          "touch_count": 3,
+          "last_touch": "2026-11-05T15:00:00+00:00",
           "in_hvn": false,
-          "score": 7.754399741819192
+          "score": 11.0
         }
       ]
     },
     {
       "symbol": "USO",
-      "current_price": 145.37,
-      "nearest_support": 145.07257434376908,
-      "nearest_resist": 147.540431063892,
-      "pct_to_support": 0.0020501852784809453,
-      "pct_to_resist": 0.014710754524989038,
+      "current_price": 147.98,
+      "nearest_support": 146.72854723827442,
+      "nearest_resist": 148.93887326958756,
+      "pct_to_support": 0.008529033956107554,
+      "pct_to_resist": 0.006438032251338152,
       "signal": "BUY_ZONE",
-      "suggested_strike": 148.0,
+      "suggested_strike": 149.0,
       "levels": [
         {
-          "price": 149.4487744717969,
-          "level_type": "resistance",
-          "touch_count": 9,
-          "last_touch": "2026-10-09T18:15:00+00:00",
-          "in_hvn": true,
-          "score": 30.379854286248484
+          "price": 146.72854723827442,
+          "level_type": "support",
+          "touch_count": 12,
+          "last_touch": "2026-11-05T16:30:00+00:00",
+          "in_hvn": false,
+          "score": 38.0
         },
         {
-          "price": 147.540431063892,
+          "price": 148.93887326958756,
           "level_type": "resistance",
-          "touch_count": 9,
-          "last_touch": "2026-10-07T13:30:00+00:00",
-          "in_hvn": true,
-          "score": 30.31591489230909
+          "touch_count": 10,
+          "last_touch": "2026-11-05T18:00:00+00:00",
+          "in_hvn": false,
+          "score": 32.0
         },
         {
           "price": 154.3287138868422,
@@ -1834,6 +1762,14 @@
           "last_touch": "2026-11-04T15:30:00+00:00",
           "in_hvn": false,
           "score": 29.0
+        },
+        {
+          "price": 157.58555775316455,
+          "level_type": "resistance",
+          "touch_count": 7,
+          "last_touch": "2026-10-16T13:30:00+00:00",
+          "in_hvn": false,
+          "score": 22.55649233381414
         },
         {
           "price": 142.95509508535955,
@@ -1849,26 +1785,18 @@
           "touch_count": 4,
           "last_touch": "2026-09-30T18:15:00+00:00",
           "in_hvn": true,
-          "score": 15.118036104430303
-        },
-        {
-          "price": 143.87428657074338,
-          "level_type": "support",
-          "touch_count": 3,
-          "last_touch": "2026-10-06T18:00:00+00:00",
-          "in_hvn": false,
-          "score": 10.292278528672727
+          "score": 15.096795364117172
         }
       ]
     },
     {
       "symbol": "NEM",
-      "current_price": 118.155,
+      "current_price": 118.91,
       "nearest_support": 117.04988317059161,
       "nearest_resist": 118.94663125820678,
-      "pct_to_support": 0.009441417620193276,
-      "pct_to_resist": 0.006655348283788899,
-      "signal": "BUY_ZONE",
+      "pct_to_support": 0.015891659000610875,
+      "pct_to_resist": 0.0003079638138491177,
+      "signal": "CALL_ZONE",
       "suggested_strike": 119.0,
       "levels": [
         {
@@ -1877,7 +1805,7 @@
           "touch_count": 9,
           "last_touch": "2026-10-15T17:15:00+00:00",
           "in_hvn": false,
-          "score": 28.553187618474073
+          "score": 28.531946871501347
         },
         {
           "price": 123.81095325308058,
@@ -1885,7 +1813,7 @@
           "touch_count": 7,
           "last_touch": "2026-09-23T19:00:00+00:00",
           "in_hvn": false,
-          "score": 21.915308830595286
+          "score": 21.89406808362256
         },
         {
           "price": 115.87640142695506,
@@ -1893,7 +1821,7 @@
           "touch_count": 6,
           "last_touch": "2026-10-21T15:00:00+00:00",
           "in_hvn": false,
-          "score": 19.725005800292255
+          "score": 19.70376505331953
         },
         {
           "price": 118.94663125820678,
@@ -1901,7 +1829,7 @@
           "touch_count": 6,
           "last_touch": "2026-10-20T14:30:00+00:00",
           "in_hvn": false,
-          "score": 19.695308830595287
+          "score": 19.674068083622558
         },
         {
           "price": 117.04988317059161,
@@ -1917,18 +1845,18 @@
           "touch_count": 5,
           "last_touch": "2026-09-25T19:30:00+00:00",
           "in_hvn": false,
-          "score": 15.974096709383165
+          "score": 15.952855962410437
         }
       ]
     },
     {
       "symbol": "FCX",
-      "current_price": 62.63,
-      "nearest_support": 62.42671486635064,
+      "current_price": 58.11,
+      "nearest_support": null,
       "nearest_resist": 69.89180633709118,
-      "pct_to_support": 0.0032563804468098705,
-      "pct_to_resist": 0.10390068189205436,
-      "signal": "BUY_ZONE",
+      "pct_to_support": null,
+      "pct_to_resist": 0.16857206809432032,
+      "signal": "NEUTRAL",
       "suggested_strike": 70.0,
       "levels": [
         {
@@ -1937,7 +1865,7 @@
           "touch_count": 12,
           "last_touch": "2026-10-20T18:00:00+00:00",
           "in_hvn": false,
-          "score": 37.699551253782154
+          "score": 37.67831050651919
         },
         {
           "price": 72.76474811565649,
@@ -1945,41 +1873,25 @@
           "touch_count": 9,
           "last_touch": "2026-10-13T19:45:00+00:00",
           "in_hvn": false,
-          "score": 28.498036102267005
+          "score": 28.47679535500404
         },
         {
           "price": 72.23751289346953,
           "level_type": "resistance",
           "touch_count": 8,
           "last_touch": "2026-10-16T14:45:00+00:00",
-          "in_hvn": false,
-          "score": 25.579248223479123
-        },
-        {
-          "price": 61.25766242198469,
-          "level_type": "support",
-          "touch_count": 4,
-          "last_touch": "2026-11-04T16:15:00+00:00",
-          "in_hvn": false,
-          "score": 14.0
-        },
-        {
-          "price": 62.42671486635064,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-10-30T15:30:00+00:00",
-          "in_hvn": false,
-          "score": 7.987430041660943
+          "in_hvn": true,
+          "score": 27.55800747621616
         }
       ]
     },
     {
       "symbol": "CIFR",
-      "current_price": 6.51,
+      "current_price": 5.685,
       "nearest_support": null,
       "nearest_resist": 8.50991984814508,
       "pct_to_support": null,
-      "pct_to_resist": 0.2350104212298786,
+      "pct_to_resist": 0.3319561051754009,
       "signal": "NEUTRAL",
       "suggested_strike": 9.0,
       "levels": [
@@ -1988,8 +1900,8 @@
           "level_type": "resistance",
           "touch_count": 5,
           "last_touch": "2026-10-28T15:15:00+00:00",
-          "in_hvn": false,
-          "score": 16.928945192044107
+          "in_hvn": true,
+          "score": 18.907704390665657
         },
         {
           "price": 15.739578483133318,
@@ -1997,7 +1909,7 @@
           "touch_count": 4,
           "last_touch": "2026-10-06T17:45:00+00:00",
           "in_hvn": false,
-          "score": 13.29197549507441
+          "score": 13.27073469369596
         },
         {
           "price": 16.18556600767669,
@@ -2005,27 +1917,27 @@
           "touch_count": 3,
           "last_touch": "2026-09-30T16:30:00+00:00",
           "in_hvn": false,
-          "score": 10.115914889013805
+          "score": 10.094674087635354
         }
       ]
     },
     {
       "symbol": "B",
-      "current_price": 40.13,
+      "current_price": 40.1,
       "nearest_support": 40.065753384842,
-      "nearest_resist": 40.827666032572424,
-      "pct_to_support": 0.001603529441737929,
-      "pct_to_resist": 0.017088070427925546,
+      "nearest_resist": 40.791300247538075,
+      "pct_to_support": 0.0008547602943854925,
+      "pct_to_resist": 0.016947247166503265,
       "signal": "BUY_ZONE",
       "suggested_strike": 41.0,
       "levels": [
         {
-          "price": 40.827666032572424,
+          "price": 40.791300247538075,
           "level_type": "resistance",
-          "touch_count": 12,
-          "last_touch": "2026-10-21T19:30:00+00:00",
+          "touch_count": 13,
+          "last_touch": "2026-11-05T16:45:00+00:00",
           "in_hvn": true,
-          "score": 39.730460342304376
+          "score": 43.0
         },
         {
           "price": 41.18493845951927,
@@ -2033,7 +1945,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-20T14:30:00+00:00",
           "in_hvn": false,
-          "score": 22.69530882715286
+          "score": 22.674068025512796
         },
         {
           "price": 43.842861434361446,
@@ -2041,7 +1953,7 @@
           "touch_count": 6,
           "last_touch": "2026-09-22T18:00:00+00:00",
           "in_hvn": false,
-          "score": 18.885005796849832
+          "score": 18.863764995209763
         },
         {
           "price": 40.065753384842,
@@ -2049,7 +1961,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-19T15:00:00+00:00",
           "in_hvn": true,
-          "score": 18.666823978668013
+          "score": 18.645583177027945
         },
         {
           "price": 38.81739358201413,
@@ -2057,7 +1969,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-29T13:30:00+00:00",
           "in_hvn": false,
-          "score": 16.955914887758922
+          "score": 16.934674086118854
         },
         {
           "price": 38.39449523080546,
@@ -2065,17 +1977,17 @@
           "touch_count": 4,
           "last_touch": "2026-10-22T16:45:00+00:00",
           "in_hvn": false,
-          "score": 13.756217918061953
+          "score": 13.734977116421886
         }
       ]
     },
     {
       "symbol": "USD",
-      "current_price": 65.1,
+      "current_price": 52.165,
       "nearest_support": null,
       "nearest_resist": 80.74680412371133,
       "pct_to_support": null,
-      "pct_to_resist": 0.1937761412790905,
+      "pct_to_resist": 0.3539682397822389,
       "signal": "NEUTRAL",
       "suggested_strike": 81.0,
       "levels": [
@@ -2085,7 +1997,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-21T19:45:00+00:00",
           "in_hvn": false,
-          "score": 16.730763371431987
+          "score": 16.709522569580134
         },
         {
           "price": 82.80664634146342,
@@ -2093,7 +2005,7 @@
           "touch_count": 3,
           "last_touch": "2026-10-28T19:00:00+00:00",
           "in_hvn": false,
-          "score": 10.93349064415926
+          "score": 10.912249842307407
         },
         {
           "price": 80.74680412371133,
@@ -2101,18 +2013,18 @@
           "touch_count": 2,
           "last_touch": "2026-10-27T16:15:00+00:00",
           "in_hvn": true,
-          "score": 9.901066401735017
+          "score": 9.879825599883166
         }
       ]
     },
     {
       "symbol": "SIVR",
-      "current_price": 49.6,
-      "nearest_support": 49.30591745496955,
+      "current_price": 49.675,
+      "nearest_support": 49.004153887543715,
       "nearest_resist": 51.44574023093981,
-      "pct_to_support": 0.00596444727550259,
-      "pct_to_resist": 0.03587741614085611,
-      "signal": "BUY_ZONE",
+      "pct_to_support": 0.013689576479491117,
+      "pct_to_resist": 0.034419569491875635,
+      "signal": "NEUTRAL",
       "suggested_strike": 52.0,
       "levels": [
         {
@@ -2121,7 +2033,7 @@
           "touch_count": 10,
           "last_touch": "2026-10-09T18:45:00+00:00",
           "in_hvn": true,
-          "score": 33.38046034035118
+          "score": 33.35921953834175
         },
         {
           "price": 51.44574023093981,
@@ -2129,7 +2041,7 @@
           "touch_count": 6,
           "last_touch": "2026-10-28T19:45:00+00:00",
           "in_hvn": false,
-          "score": 19.934399734290572
+          "score": 19.913158932281146
         },
         {
           "price": 62.89753252454305,
@@ -2137,15 +2049,7 @@
           "touch_count": 6,
           "last_touch": "2026-09-21T19:30:00+00:00",
           "in_hvn": false,
-          "score": 18.857733067623904
-        },
-        {
-          "price": 49.30591745496955,
-          "level_type": "support",
-          "touch_count": 3,
-          "last_touch": "2026-11-04T15:45:00+00:00",
-          "in_hvn": false,
-          "score": 11.0
+          "score": 18.836492265614478
         },
         {
           "price": 46.74710971348707,
@@ -2162,16 +2066,24 @@
           "last_touch": "2026-11-03T17:30:00+00:00",
           "in_hvn": false,
           "score": 8.0
+        },
+        {
+          "price": 49.004153887543715,
+          "level_type": "support",
+          "touch_count": 2,
+          "last_touch": "2026-11-05T15:45:00+00:00",
+          "in_hvn": false,
+          "score": 8.0
         }
       ]
     },
     {
       "symbol": "SLV",
-      "current_price": 47.17,
-      "nearest_support": 46.83676866453274,
+      "current_price": 47.23,
+      "nearest_support": 46.960705467623846,
       "nearest_resist": 48.97662964037123,
-      "pct_to_support": 0.007114737949879129,
-      "pct_to_resist": 0.03688758605149159,
+      "pct_to_support": 0.005734465223522048,
+      "pct_to_resist": 0.03566251196124554,
       "signal": "BUY_ZONE",
       "suggested_strike": 49.0,
       "levels": [
@@ -2181,7 +2093,7 @@
           "touch_count": 9,
           "last_touch": "2026-09-25T18:45:00+00:00",
           "in_hvn": false,
-          "score": 27.973187612069022
+          "score": 27.95194680985118
         },
         {
           "price": 55.254520384608604,
@@ -2189,7 +2101,7 @@
           "touch_count": 8,
           "last_touch": "2026-10-09T18:45:00+00:00",
           "in_hvn": true,
-          "score": 27.380460339341752
+          "score": 27.359219537123906
         },
         {
           "price": 48.97662964037123,
@@ -2197,7 +2109,15 @@
           "touch_count": 7,
           "last_touch": "2026-10-28T19:45:00+00:00",
           "in_hvn": false,
-          "score": 22.934399733281143
+          "score": 22.9131589310633
+        },
+        {
+          "price": 46.960705467623846,
+          "level_type": "support",
+          "touch_count": 3,
+          "last_touch": "2026-11-05T18:00:00+00:00",
+          "in_hvn": true,
+          "score": 13.0
         },
         {
           "price": 44.64806757450406,
@@ -2208,30 +2128,22 @@
           "score": 11.0
         },
         {
-          "price": 46.83676866453274,
-          "level_type": "support",
-          "touch_count": 3,
-          "last_touch": "2026-11-04T15:45:00+00:00",
-          "in_hvn": false,
-          "score": 11.0
-        },
-        {
-          "price": 44.26186946797373,
+          "price": 46.657236510337874,
           "level_type": "support",
           "touch_count": 2,
-          "last_touch": "2026-10-30T18:15:00+00:00",
+          "last_touch": "2026-11-05T16:00:00+00:00",
           "in_hvn": false,
-          "score": 7.990763369644781
+          "score": 8.0
         }
       ]
     },
     {
       "symbol": "IAU",
-      "current_price": 76.355,
-      "nearest_support": 75.74446862288879,
-      "nearest_resist": 77.87248270765592,
-      "pct_to_support": 0.008060408742859964,
-      "pct_to_resist": 0.019486764193107284,
+      "current_price": 77.105,
+      "nearest_support": 76.60196468917435,
+      "nearest_resist": 77.7884709047227,
+      "pct_to_support": 0.006566872179673254,
+      "pct_to_resist": 0.008786275096727754,
       "signal": "BUY_ZONE",
       "suggested_strike": 78.0,
       "levels": [
@@ -2241,7 +2153,15 @@
           "touch_count": 13,
           "last_touch": "2026-10-16T19:30:00+00:00",
           "in_hvn": false,
-          "score": 40.58500579284411
+          "score": 40.563764990300676
+        },
+        {
+          "price": 77.7884709047227,
+          "level_type": "resistance",
+          "touch_count": 12,
+          "last_touch": "2026-11-05T16:45:00+00:00",
+          "in_hvn": true,
+          "score": 40.0
         },
         {
           "price": 81.97429337118265,
@@ -2249,15 +2169,7 @@
           "touch_count": 11,
           "last_touch": "2026-09-22T19:45:00+00:00",
           "in_hvn": false,
-          "score": 33.88712700496532
-        },
-        {
-          "price": 77.87248270765592,
-          "level_type": "resistance",
-          "touch_count": 10,
-          "last_touch": "2026-10-21T18:30:00+00:00",
-          "in_hvn": true,
-          "score": 33.729248217086536
+          "score": 33.86588620242188
         },
         {
           "price": 75.74446862288879,
@@ -2265,7 +2177,15 @@
           "touch_count": 6,
           "last_touch": "2026-10-29T14:00:00+00:00",
           "in_hvn": false,
-          "score": 19.95652094435926
+          "score": 19.935280141815824
+        },
+        {
+          "price": 76.60196468917435,
+          "level_type": "support",
+          "touch_count": 5,
+          "last_touch": "2026-11-05T15:45:00+00:00",
+          "in_hvn": false,
+          "score": 17.0
         },
         {
           "price": 74.9263037524764,
@@ -2273,43 +2193,35 @@
           "touch_count": 5,
           "last_touch": "2026-10-29T18:15:00+00:00",
           "in_hvn": false,
-          "score": 16.961672459510773
-        },
-        {
-          "price": 73.68622579586479,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-11-03T20:00:00+00:00",
-          "in_hvn": false,
-          "score": 8.0
+          "score": 16.94043165696734
         }
       ]
     },
     {
       "symbol": "GLDM",
-      "current_price": 80.31,
-      "nearest_support": 79.74354063124903,
-      "nearest_resist": 81.9174353671148,
-      "pct_to_support": 0.0071035141438025315,
-      "pct_to_resist": 0.01962262807558667,
+      "current_price": 81.095,
+      "nearest_support": 80.59922448289467,
+      "nearest_resist": 81.83398417151788,
+      "pct_to_support": 0.006151120191119783,
+      "pct_to_resist": 0.009030284654954956,
       "signal": "BUY_ZONE",
       "suggested_strike": 82.0,
       "levels": [
+        {
+          "price": 81.83398417151788,
+          "level_type": "resistance",
+          "touch_count": 13,
+          "last_touch": "2026-11-05T16:45:00+00:00",
+          "in_hvn": true,
+          "score": 43.0
+        },
         {
           "price": 82.58174046966238,
           "level_type": "resistance",
           "touch_count": 12,
           "last_touch": "2026-10-16T19:30:00+00:00",
           "in_hvn": true,
-          "score": 39.58500579175623
-        },
-        {
-          "price": 81.9174353671148,
-          "level_type": "resistance",
-          "touch_count": 11,
-          "last_touch": "2026-10-21T18:15:00+00:00",
-          "in_hvn": true,
-          "score": 36.72894518569562
+          "score": 39.563764983392595
         },
         {
           "price": 86.26127237001792,
@@ -2317,7 +2229,7 @@
           "touch_count": 10,
           "last_touch": "2026-09-22T19:30:00+00:00",
           "in_hvn": false,
-          "score": 30.886823973574412
+          "score": 30.865583165210776
         },
         {
           "price": 79.74354063124903,
@@ -2325,7 +2237,15 @@
           "touch_count": 8,
           "last_touch": "2026-10-29T16:00:00+00:00",
           "in_hvn": false,
-          "score": 25.958945185695622
+          "score": 25.937704377331986
+        },
+        {
+          "price": 80.59922448289467,
+          "level_type": "support",
+          "touch_count": 5,
+          "last_touch": "2026-11-05T15:45:00+00:00",
+          "in_hvn": false,
+          "score": 17.0
         },
         {
           "price": 77.60064173399077,
@@ -2334,25 +2254,17 @@
           "last_touch": "2026-11-03T20:00:00+00:00",
           "in_hvn": false,
           "score": 14.0
-        },
-        {
-          "price": 78.72952132627647,
-          "level_type": "support",
-          "touch_count": 3,
-          "last_touch": "2026-10-26T13:45:00+00:00",
-          "in_hvn": false,
-          "score": 10.868945185695623
         }
       ]
     },
     {
       "symbol": "HOVR",
-      "current_price": 1.17,
-      "nearest_support": 1.16,
+      "current_price": 1.12,
+      "nearest_support": null,
       "nearest_resist": 1.295,
-      "pct_to_support": 0.008620689655172422,
-      "pct_to_resist": 0.09652509652509653,
-      "signal": "BUY_ZONE",
+      "pct_to_support": null,
+      "pct_to_resist": 0.135135135135135,
+      "signal": "NEUTRAL",
       "suggested_strike": 1.5,
       "levels": [
         {
@@ -2361,15 +2273,7 @@
           "touch_count": 3,
           "last_touch": "2026-09-30T14:00:00+00:00",
           "in_hvn": false,
-          "score": 10.112884578499326
-        },
-        {
-          "price": 1.16,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-11-02T20:45:00+00:00",
-          "in_hvn": false,
-          "score": 8.0
+          "score": 10.091643769712121
         },
         {
           "price": 1.295,
@@ -2377,7 +2281,7 @@
           "touch_count": 2,
           "last_touch": "2026-10-28T19:45:00+00:00",
           "in_hvn": false,
-          "score": 7.934399730014478
+          "score": 7.913158921227273
         },
         {
           "price": 1.32,
@@ -2385,17 +2289,17 @@
           "touch_count": 2,
           "last_touch": "2026-10-27T14:30:00+00:00",
           "in_hvn": false,
-          "score": 7.898945184559933
+          "score": 7.877704375772727
         }
       ]
     },
     {
       "symbol": "BWXT",
-      "current_price": 121.5,
-      "nearest_support": 119.69271973201467,
+      "current_price": 114.96,
+      "nearest_support": null,
       "nearest_resist": 133.27202754036088,
-      "pct_to_support": 0.015099333293050186,
-      "pct_to_resist": 0.08833082048515974,
+      "pct_to_support": null,
+      "pct_to_resist": 0.1374033837281808,
       "signal": "NEUTRAL",
       "suggested_strike": 134.0,
       "levels": [
@@ -2405,7 +2309,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-08T13:45:00+00:00",
           "in_hvn": true,
-          "score": 24.34530882011414
+          "score": 24.324068011111112
         },
         {
           "price": 138.321643008107,
@@ -2413,7 +2317,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-29T19:45:00+00:00",
           "in_hvn": false,
-          "score": 22.96349063829596
+          "score": 22.94224982929293
         },
         {
           "price": 133.27202754036088,
@@ -2422,24 +2326,16 @@
           "last_touch": "2026-11-03T20:45:00+00:00",
           "in_hvn": false,
           "score": 20.0
-        },
-        {
-          "price": 119.69271973201467,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-11-04T18:45:00+00:00",
-          "in_hvn": false,
-          "score": 8.0
         }
       ]
     },
     {
       "symbol": "SOXX",
-      "current_price": 150.54,
+      "current_price": 134.785,
       "nearest_support": null,
       "nearest_resist": 170.20083898691237,
       "pct_to_support": null,
-      "pct_to_resist": 0.11551552333078807,
+      "pct_to_resist": 0.20808263459638812,
       "signal": "NEUTRAL",
       "suggested_strike": 171.0,
       "levels": [
@@ -2449,7 +2345,7 @@
           "touch_count": 11,
           "last_touch": "2026-10-27T17:30:00+00:00",
           "in_hvn": true,
-          "score": 36.90258154499899
+          "score": 36.88134073705522
         },
         {
           "price": 190.99346443279927,
@@ -2457,25 +2353,25 @@
           "touch_count": 9,
           "last_touch": "2026-10-09T13:30:00+00:00",
           "in_hvn": false,
-          "score": 28.37409669651414
+          "score": 28.35285588857037
         },
         {
           "price": 172.64722281469838,
           "level_type": "resistance",
           "touch_count": 6,
           "last_touch": "2026-10-29T15:30:00+00:00",
-          "in_hvn": false,
-          "score": 19.958339120756566
+          "in_hvn": true,
+          "score": 21.937098312812793
         }
       ]
     },
     {
       "symbol": "SOXL",
-      "current_price": 66.58,
+      "current_price": 46.03,
       "nearest_support": null,
       "nearest_resist": 104.60263555342999,
       "pct_to_support": null,
-      "pct_to_resist": 0.36349596118931826,
+      "pct_to_resist": 0.5599537262472862,
       "signal": "NEUTRAL",
       "suggested_strike": 105.0,
       "levels": [
@@ -2485,7 +2381,7 @@
           "touch_count": 10,
           "last_touch": "2026-10-28T14:00:00+00:00",
           "in_hvn": false,
-          "score": 31.92743002869798
+          "score": 31.906189220502693
         },
         {
           "price": 105.5679665579293,
@@ -2493,7 +2389,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-29T15:30:00+00:00",
           "in_hvn": false,
-          "score": 16.95833911960707
+          "score": 16.937098311411784
         },
         {
           "price": 108.86732460085646,
@@ -2501,19 +2397,19 @@
           "touch_count": 5,
           "last_touch": "2026-10-28T18:30:00+00:00",
           "in_hvn": false,
-          "score": 16.932884574152524
+          "score": 16.91164376595724
         }
       ]
     },
     {
       "symbol": "TFC",
-      "current_price": 50.9,
-      "nearest_support": 50.09969526394264,
-      "nearest_resist": 51.332545332956094,
-      "pct_to_support": 0.01597424359252231,
-      "pct_to_resist": 0.008426337134667597,
+      "current_price": 49.95,
+      "nearest_support": 48.263935185552064,
+      "nearest_resist": 50.16766841371179,
+      "pct_to_support": 0.0349342590479996,
+      "pct_to_resist": 0.004338818617535983,
       "signal": "CALL_ZONE",
-      "suggested_strike": 52.0,
+      "suggested_strike": 51.0,
       "levels": [
         {
           "price": 46.251444200548356,
@@ -2521,15 +2417,15 @@
           "touch_count": 12,
           "last_touch": "2026-10-19T19:45:00+00:00",
           "in_hvn": false,
-          "score": 37.67258154269663
+          "score": 37.65134073418619
         },
         {
-          "price": 50.09969526394264,
-          "level_type": "support",
+          "price": 50.79279088383482,
+          "level_type": "resistance",
           "touch_count": 7,
-          "last_touch": "2026-09-15T15:45:00+00:00",
+          "last_touch": "2026-11-04T17:15:00+00:00",
           "in_hvn": false,
-          "score": 21.678642148757238
+          "score": 23.0
         },
         {
           "price": 48.263935185552064,
@@ -2537,7 +2433,23 @@
           "touch_count": 6,
           "last_touch": "2026-10-30T18:15:00+00:00",
           "in_hvn": false,
-          "score": 19.99076336087845
+          "score": 19.969522552368012
+        },
+        {
+          "price": 50.16766841371179,
+          "level_type": "resistance",
+          "touch_count": 5,
+          "last_touch": "2026-11-02T20:45:00+00:00",
+          "in_hvn": false,
+          "score": 17.0
+        },
+        {
+          "price": 47.62330608420767,
+          "level_type": "support",
+          "touch_count": 5,
+          "last_touch": "2026-10-21T19:00:00+00:00",
+          "in_hvn": false,
+          "score": 16.708613461458924
         },
         {
           "price": 51.332545332956094,
@@ -2551,29 +2463,29 @@
     },
     {
       "symbol": "JPM",
-      "current_price": 352.225,
+      "current_price": 337.475,
       "nearest_support": 337.46468723677793,
-      "nearest_resist": 352.5044841037173,
-      "pct_to_support": 0.04373883645154759,
-      "pct_to_resist": 0.000792852619812443,
-      "signal": "CALL_ZONE",
-      "suggested_strike": 355.0,
+      "nearest_resist": 338.96060465351036,
+      "pct_to_support": 3.055953292930213e-05,
+      "pct_to_resist": 0.004382823942118403,
+      "signal": "BUY_ZONE",
+      "suggested_strike": 340.0,
       "levels": [
         {
           "price": 331.7519126208963,
           "level_type": "support",
           "touch_count": 19,
           "last_touch": "2026-10-23T19:45:00+00:00",
-          "in_hvn": false,
-          "score": 58.788945178063976
+          "in_hvn": true,
+          "score": 60.767704369114476
         },
         {
-          "price": 334.65386795138755,
+          "price": 334.8571552566014,
           "level_type": "support",
-          "touch_count": 16,
-          "last_touch": "2026-11-03T20:45:00+00:00",
+          "touch_count": 17,
+          "last_touch": "2026-11-05T15:45:00+00:00",
           "in_hvn": true,
-          "score": 52.0
+          "score": 55.0
         },
         {
           "price": 352.5044841037173,
@@ -2584,40 +2496,48 @@
           "score": 38.0
         },
         {
+          "price": 342.19010094212655,
+          "level_type": "resistance",
+          "touch_count": 11,
+          "last_touch": "2026-11-02T20:45:00+00:00",
+          "in_hvn": false,
+          "score": 35.0
+        },
+        {
+          "price": 338.96060465351036,
+          "level_type": "resistance",
+          "touch_count": 10,
+          "last_touch": "2026-11-03T19:00:00+00:00",
+          "in_hvn": false,
+          "score": 32.0
+        },
+        {
           "price": 337.46468723677793,
           "level_type": "support",
           "touch_count": 8,
           "last_touch": "2026-10-30T14:00:00+00:00",
-          "in_hvn": true,
-          "score": 27.98561184473064
-        },
-        {
-          "price": 355.4851568352549,
-          "level_type": "resistance",
-          "touch_count": 4,
-          "last_touch": "2026-09-21T13:30:00+00:00",
           "in_hvn": false,
-          "score": 12.850460329579125
+          "score": 25.964371035781145
         }
       ]
     },
     {
       "symbol": "BAC",
-      "current_price": 51.63,
-      "nearest_support": 51.00701816244301,
-      "nearest_resist": 53.64989166594552,
-      "pct_to_support": 0.012213649415321045,
-      "pct_to_resist": 0.0376495012985767,
+      "current_price": 49.99,
+      "nearest_support": 49.2790231828669,
+      "nearest_resist": 51.13038996337186,
+      "pct_to_support": 0.014427575288876471,
+      "pct_to_resist": 0.022303564752562958,
       "signal": "NEUTRAL",
-      "suggested_strike": 54.0,
+      "suggested_strike": 52.0,
       "levels": [
         {
-          "price": 50.485809873469954,
-          "level_type": "support",
-          "touch_count": 10,
-          "last_touch": "2026-10-28T19:00:00+00:00",
+          "price": 51.13038996337186,
+          "level_type": "resistance",
+          "touch_count": 11,
+          "last_touch": "2026-10-28T16:45:00+00:00",
           "in_hvn": true,
-          "score": 33.93349063157239
+          "score": 36.9095225496532
         },
         {
           "price": 54.23330572180603,
@@ -2625,7 +2545,7 @@
           "touch_count": 8,
           "last_touch": "2026-10-13T19:00:00+00:00",
           "in_hvn": false,
-          "score": 25.497126995208752
+          "score": 25.475886186016837
         },
         {
           "price": 56.55327661508608,
@@ -2633,15 +2553,7 @@
           "touch_count": 7,
           "last_touch": "2026-09-25T19:15:00+00:00",
           "in_hvn": false,
-          "score": 21.97379366187542
-        },
-        {
-          "price": 53.64989166594552,
-          "level_type": "resistance",
-          "touch_count": 5,
-          "last_touch": "2026-10-07T19:45:00+00:00",
-          "in_hvn": false,
-          "score": 16.32349063157239
+          "score": 21.952552852683503
         },
         {
           "price": 49.2790231828669,
@@ -2650,26 +2562,18 @@
           "last_touch": "2026-11-03T20:30:00+00:00",
           "in_hvn": false,
           "score": 14.0
-        },
-        {
-          "price": 51.00701816244301,
-          "level_type": "support",
-          "touch_count": 3,
-          "last_touch": "2026-10-22T18:00:00+00:00",
-          "in_hvn": true,
-          "score": 12.757733055814814
         }
       ]
     },
     {
       "symbol": "COF",
-      "current_price": 206.305,
-      "nearest_support": 199.1536735966376,
-      "nearest_resist": 206.78211435378202,
-      "pct_to_support": 0.03590858393024972,
-      "pct_to_resist": 0.0023073289257779916,
-      "signal": "CALL_ZONE",
-      "suggested_strike": 210.0,
+      "current_price": 203.37,
+      "nearest_support": 201.5248764778325,
+      "nearest_resist": 204.23764995523723,
+      "pct_to_support": 0.009155810212693386,
+      "pct_to_resist": 0.004248237068079216,
+      "signal": "BUY_ZONE",
+      "suggested_strike": 205.0,
       "levels": [
         {
           "price": 199.1536735966376,
@@ -2680,12 +2584,28 @@
           "score": 38.0
         },
         {
+          "price": 204.23764995523723,
+          "level_type": "resistance",
+          "touch_count": 12,
+          "last_touch": "2026-10-30T16:30:00+00:00",
+          "in_hvn": false,
+          "score": 37.967401336244784
+        },
+        {
           "price": 195.08058257818746,
           "level_type": "support",
           "touch_count": 11,
           "last_touch": "2026-10-14T14:30:00+00:00",
           "in_hvn": false,
-          "score": 34.52076335245387
+          "score": 34.499522548365995
+        },
+        {
+          "price": 201.5248764778325,
+          "level_type": "support",
+          "touch_count": 10,
+          "last_touch": "2026-11-05T17:30:00+00:00",
+          "in_hvn": true,
+          "score": 34.0
         },
         {
           "price": 208.6966362670175,
@@ -2696,38 +2616,22 @@
           "score": 29.0
         },
         {
-          "price": 193.1557314968119,
-          "level_type": "support",
-          "touch_count": 8,
-          "last_touch": "2026-10-15T13:45:00+00:00",
-          "in_hvn": false,
-          "score": 25.54894517063569
-        },
-        {
           "price": 211.77830518594337,
           "level_type": "resistance",
           "touch_count": 3,
           "last_touch": "2026-11-02T17:15:00+00:00",
           "in_hvn": false,
           "score": 11.0
-        },
-        {
-          "price": 206.78211435378202,
-          "level_type": "resistance",
-          "touch_count": 3,
-          "last_touch": "2026-09-22T13:30:00+00:00",
-          "in_hvn": false,
-          "score": 9.87955123124175
         }
       ]
     },
     {
       "symbol": "INTC",
-      "current_price": 58.28,
+      "current_price": 53.905,
       "nearest_support": null,
       "nearest_resist": 93.47739073734868,
       "pct_to_support": null,
-      "pct_to_resist": 0.37653373141582186,
+      "pct_to_resist": 0.4233364926556259,
       "signal": "NEUTRAL",
       "suggested_strike": 94.0,
       "levels": [
@@ -2737,7 +2641,7 @@
           "touch_count": 6,
           "last_touch": "2026-10-29T15:30:00+00:00",
           "in_hvn": true,
-          "score": 21.95833910891852
+          "score": 21.93709830455926
         },
         {
           "price": 95.3254702210421,
@@ -2745,25 +2649,25 @@
           "touch_count": 6,
           "last_touch": "2026-10-28T18:30:00+00:00",
           "in_hvn": false,
-          "score": 19.932884563463972
+          "score": 19.911643759104713
         },
         {
-          "price": 106.15755374971198,
+          "price": 102.68882313096464,
           "level_type": "resistance",
           "touch_count": 5,
-          "last_touch": "2026-10-09T18:00:00+00:00",
-          "in_hvn": true,
-          "score": 18.37955123013064
+          "last_touch": "2026-10-13T19:45:00+00:00",
+          "in_hvn": false,
+          "score": 16.47679527425623
         }
       ]
     },
     {
       "symbol": "CLS",
-      "current_price": 236.395,
+      "current_price": 209.53,
       "nearest_support": null,
       "nearest_resist": 366.5231851227479,
       "pct_to_support": null,
-      "pct_to_resist": 0.3550339798536025,
+      "pct_to_resist": 0.4283308437095765,
       "signal": "NEUTRAL",
       "suggested_strike": 370.0,
       "levels": [
@@ -2773,7 +2677,7 @@
           "touch_count": 6,
           "last_touch": "2026-10-06T18:15:00+00:00",
           "in_hvn": false,
-          "score": 19.292581531990237
+          "score": 19.27134072721448
         },
         {
           "price": 366.5231851227479,
@@ -2781,7 +2685,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-09T18:15:00+00:00",
           "in_hvn": false,
-          "score": 16.379854259262963
+          "score": 16.358613454487205
         },
         {
           "price": 373.506065726244,
@@ -2789,18 +2693,18 @@
           "touch_count": 5,
           "last_touch": "2026-10-07T19:30:00+00:00",
           "in_hvn": false,
-          "score": 16.323187592596298
+          "score": 16.30194678782054
         }
       ]
     },
     {
       "symbol": "AVGO",
-      "current_price": 325.63,
-      "nearest_support": 324.24668353324216,
+      "current_price": 297.17,
+      "nearest_support": null,
       "nearest_resist": 344.3411365758301,
-      "pct_to_support": 0.004266247079797853,
-      "pct_to_resist": 0.054338952243394155,
-      "signal": "BUY_ZONE",
+      "pct_to_support": null,
+      "pct_to_resist": 0.13698954776331856,
+      "signal": "NEUTRAL",
       "suggested_strike": 345.0,
       "levels": [
         {
@@ -2809,49 +2713,33 @@
           "touch_count": 8,
           "last_touch": "2026-10-29T19:45:00+00:00",
           "in_hvn": false,
-          "score": 25.963490621743098
-        },
-        {
-          "price": 363.6338424225187,
-          "level_type": "resistance",
-          "touch_count": 7,
-          "last_touch": "2026-10-05T17:45:00+00:00",
-          "in_hvn": true,
-          "score": 24.262884561137035
+          "score": 25.94224981673064
         },
         {
           "price": 354.8888959738305,
           "level_type": "resistance",
           "touch_count": 7,
           "last_touch": "2026-10-01T13:30:00+00:00",
-          "in_hvn": false,
-          "score": 22.141369409621884
+          "in_hvn": true,
+          "score": 24.120128604609427
         },
         {
-          "price": 321.17920030334926,
-          "level_type": "support",
-          "touch_count": 6,
-          "last_touch": "2026-11-04T16:00:00+00:00",
+          "price": 363.6338424225187,
+          "level_type": "resistance",
+          "touch_count": 7,
+          "last_touch": "2026-10-05T17:45:00+00:00",
           "in_hvn": false,
-          "score": 20.0
-        },
-        {
-          "price": 324.24668353324216,
-          "level_type": "support",
-          "touch_count": 3,
-          "last_touch": "2026-11-02T14:30:00+00:00",
-          "in_hvn": false,
-          "score": 11.0
+          "score": 22.241643756124578
         }
       ]
     },
     {
       "symbol": "CBRS",
-      "current_price": 91.81,
+      "current_price": 82.5,
       "nearest_support": null,
       "nearest_resist": 110.75698726867957,
       "pct_to_support": null,
-      "pct_to_resist": 0.171068099051097,
+      "pct_to_resist": 0.25512600121681195,
       "signal": "NEUTRAL",
       "suggested_strike": 111.0,
       "levels": [
@@ -2861,15 +2749,15 @@
           "touch_count": 5,
           "last_touch": "2026-10-06T14:00:00+00:00",
           "in_hvn": false,
-          "score": 16.28743001448889
+          "score": 16.266189209342087
         },
         {
           "price": 110.75698726867957,
           "level_type": "resistance",
           "touch_count": 4,
           "last_touch": "2026-10-26T17:15:00+00:00",
-          "in_hvn": false,
-          "score": 13.873187590246465
+          "in_hvn": true,
+          "score": 15.851946785099663
         },
         {
           "price": 175.42461324081447,
@@ -2877,35 +2765,27 @@
           "touch_count": 4,
           "last_touch": "2026-10-07T19:45:00+00:00",
           "in_hvn": false,
-          "score": 13.323490620549496
+          "score": 13.302249815402693
         }
       ]
     },
     {
       "symbol": "QCOM",
-      "current_price": 173.73,
-      "nearest_support": 173.1841561447462,
+      "current_price": 157.11,
+      "nearest_support": null,
       "nearest_resist": 176.05214076191368,
-      "pct_to_support": 0.0031518117326944156,
-      "pct_to_resist": 0.013190073985263622,
-      "signal": "BUY_ZONE",
+      "pct_to_support": null,
+      "pct_to_resist": 0.10759392461765237,
+      "signal": "NEUTRAL",
       "suggested_strike": 177.0,
       "levels": [
-        {
-          "price": 171.85557712577227,
-          "level_type": "support",
-          "touch_count": 17,
-          "last_touch": "2026-10-23T13:30:00+00:00",
-          "in_hvn": false,
-          "score": 52.78136940738821
-        },
         {
           "price": 176.05214076191368,
           "level_type": "resistance",
           "touch_count": 9,
           "last_touch": "2026-10-23T14:45:00+00:00",
           "in_hvn": true,
-          "score": 30.782884558903366
+          "score": 30.761643753252862
         },
         {
           "price": 177.62234755878333,
@@ -2913,7 +2793,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-19T15:15:00+00:00",
           "in_hvn": true,
-          "score": 24.667126983145792
+          "score": 24.645886177495285
         },
         {
           "price": 185.08113871191748,
@@ -2921,34 +2801,18 @@
           "touch_count": 7,
           "last_touch": "2026-10-29T19:45:00+00:00",
           "in_hvn": false,
-          "score": 22.96349061950943
-        },
-        {
-          "price": 173.1841561447462,
-          "level_type": "support",
-          "touch_count": 5,
-          "last_touch": "2026-10-22T15:00:00+00:00",
-          "in_hvn": true,
-          "score": 18.754096680115488
-        },
-        {
-          "price": 161.97734692291755,
-          "level_type": "support",
-          "touch_count": 3,
-          "last_touch": "2026-11-04T13:30:00+00:00",
-          "in_hvn": false,
-          "score": 11.0
+          "score": 22.942249813858922
         }
       ]
     },
     {
       "symbol": "HONA",
-      "current_price": 156.41,
-      "nearest_support": 155.18886694312795,
+      "current_price": 150.34,
+      "nearest_support": null,
       "nearest_resist": 158.32654356679575,
-      "pct_to_support": 0.007868689816000507,
-      "pct_to_resist": 0.012105004780750422,
-      "signal": "BUY_ZONE",
+      "pct_to_support": null,
+      "pct_to_resist": 0.050443490945195395,
+      "signal": "NEUTRAL",
       "suggested_strike": 159.0,
       "levels": [
         {
@@ -2965,15 +2829,7 @@
           "touch_count": 11,
           "last_touch": "2026-10-14T15:30:00+00:00",
           "in_hvn": false,
-          "score": 34.52197546691717
-        },
-        {
-          "price": 153.67430081577803,
-          "level_type": "support",
-          "touch_count": 8,
-          "last_touch": "2026-10-30T16:30:00+00:00",
-          "in_hvn": false,
-          "score": 25.988642133583838
+          "score": 34.500734660407744
         },
         {
           "price": 167.9538797467727,
@@ -2981,35 +2837,19 @@
           "touch_count": 8,
           "last_touch": "2026-10-27T19:45:00+00:00",
           "in_hvn": false,
-          "score": 25.905308800250506
-        },
-        {
-          "price": 155.18886694312795,
-          "level_type": "support",
-          "touch_count": 7,
-          "last_touch": "2026-11-04T16:00:00+00:00",
-          "in_hvn": false,
-          "score": 23.0
-        },
-        {
-          "price": 151.41363274162475,
-          "level_type": "support",
-          "touch_count": 6,
-          "last_touch": "2026-10-30T18:30:00+00:00",
-          "in_hvn": false,
-          "score": 19.99106637600808
+          "score": 25.884067993741077
         }
       ]
     },
     {
       "symbol": "CNK",
-      "current_price": 40.39,
+      "current_price": 39.95,
       "nearest_support": 39.621156873315364,
-      "nearest_resist": null,
-      "pct_to_support": 0.01940486314276321,
-      "pct_to_resist": null,
-      "signal": "NEUTRAL",
-      "suggested_strike": null,
+      "nearest_resist": 40.04258175023357,
+      "pct_to_support": 0.008299685133780453,
+      "pct_to_resist": 0.0023120824429116726,
+      "signal": "BUY_ZONE",
+      "suggested_strike": 41.0,
       "levels": [
         {
           "price": 35.84121241079739,
@@ -3017,7 +2857,7 @@
           "touch_count": 12,
           "last_touch": "2026-10-08T18:15:00+00:00",
           "in_hvn": false,
-          "score": 37.35076334455758
+          "score": 37.32952253778788
         },
         {
           "price": 38.42032543976047,
@@ -3033,18 +2873,42 @@
           "touch_count": 7,
           "last_touch": "2026-10-30T16:15:00+00:00",
           "in_hvn": false,
-          "score": 22.988339102133335
+          "score": 22.967098295363638
+        },
+        {
+          "price": 40.322123275862076,
+          "level_type": "resistance",
+          "touch_count": 5,
+          "last_touch": "2026-10-30T13:30:00+00:00",
+          "in_hvn": false,
+          "score": 16.963764962030304
+        },
+        {
+          "price": 40.04258175023357,
+          "level_type": "resistance",
+          "touch_count": 3,
+          "last_touch": "2026-11-03T15:15:00+00:00",
+          "in_hvn": true,
+          "score": 13.0
+        },
+        {
+          "price": 41.45185678132909,
+          "level_type": "resistance",
+          "touch_count": 2,
+          "last_touch": "2026-11-05T16:15:00+00:00",
+          "in_hvn": false,
+          "score": 8.0
         }
       ]
     },
     {
       "symbol": "CRWD",
-      "current_price": 240.995,
-      "nearest_support": 240.07097050130398,
+      "current_price": 221.03,
+      "nearest_support": 208.06609416004073,
       "nearest_resist": 263.66395391536355,
-      "pct_to_support": 0.003848984726335375,
-      "pct_to_resist": 0.08597668956538636,
-      "signal": "BUY_ZONE",
+      "pct_to_support": 0.06230667179241449,
+      "pct_to_resist": 0.16169807545649223,
+      "signal": "NEUTRAL",
       "suggested_strike": 265.0,
       "levels": [
         {
@@ -3053,7 +2917,7 @@
           "touch_count": 10,
           "last_touch": "2026-10-30T13:30:00+00:00",
           "in_hvn": false,
-          "score": 31.985005767792256
+          "score": 31.963764960787543
         },
         {
           "price": 268.63835958595854,
@@ -3061,7 +2925,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-29T13:45:00+00:00",
           "in_hvn": false,
-          "score": 22.956217889004378
+          "score": 22.934977081999662
         },
         {
           "price": 272.6024429096753,
@@ -3069,43 +2933,35 @@
           "touch_count": 7,
           "last_touch": "2026-10-28T13:30:00+00:00",
           "in_hvn": false,
-          "score": 22.926823949610437
+          "score": 22.905583142605725
         },
         {
-          "price": 240.07097050130398,
+          "price": 204.50554787282917,
           "level_type": "support",
-          "touch_count": 5,
-          "last_touch": "2026-11-04T16:15:00+00:00",
+          "touch_count": 3,
+          "last_touch": "2026-09-11T18:45:00+00:00",
           "in_hvn": false,
-          "score": 17.0
+          "score": 9.544674051696633
         },
         {
-          "price": 235.4124793164384,
+          "price": 208.06609416004073,
           "level_type": "support",
-          "touch_count": 5,
-          "last_touch": "2026-10-23T13:30:00+00:00",
+          "touch_count": 3,
+          "last_touch": "2026-09-09T16:15:00+00:00",
           "in_hvn": false,
-          "score": 16.781369404155893
-        },
-        {
-          "price": 237.48436351396833,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-11-04T14:30:00+00:00",
-          "in_hvn": true,
-          "score": 10.0
+          "score": 9.483461930484513
         }
       ]
     },
     {
       "symbol": "ZS",
-      "current_price": 224.4,
-      "nearest_support": 216.06001604106513,
-      "nearest_resist": 228.85322196672527,
-      "pct_to_support": 0.038600311671502206,
-      "pct_to_resist": 0.019458856329201055,
+      "current_price": 206.09,
+      "nearest_support": 195.04102710243123,
+      "nearest_resist": 215.45920633902216,
+      "pct_to_support": 0.05664948068472844,
+      "pct_to_resist": 0.043484827119802144,
       "signal": "NEUTRAL",
-      "suggested_strike": 230.0,
+      "suggested_strike": 220.0,
       "levels": [
         {
           "price": 195.04102710243123,
@@ -3113,7 +2969,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-02T19:45:00+00:00",
           "in_hvn": true,
-          "score": 24.178036069691583
+          "score": 24.156795262501685
         },
         {
           "price": 261.3920937149921,
@@ -3121,15 +2977,15 @@
           "touch_count": 5,
           "last_touch": "2026-10-27T18:15:00+00:00",
           "in_hvn": false,
-          "score": 16.90349061514613
+          "score": 16.882249807956228
         },
         {
-          "price": 216.06001604106513,
-          "level_type": "support",
+          "price": 215.45920633902216,
+          "level_type": "resistance",
           "touch_count": 5,
-          "last_touch": "2026-10-15T18:30:00+00:00",
+          "last_touch": "2026-10-20T16:00:00+00:00",
           "in_hvn": false,
-          "score": 16.554702736358248
+          "score": 16.67588617159259
         },
         {
           "price": 162.7703423874824,
@@ -3137,34 +2993,34 @@
           "touch_count": 5,
           "last_touch": "2026-09-11T19:15:00+00:00",
           "in_hvn": false,
-          "score": 15.566520918176431
+          "score": 15.545280110986532
         },
         {
-          "price": 228.85322196672527,
+          "price": 228.7715837120657,
           "level_type": "resistance",
-          "touch_count": 3,
-          "last_touch": "2026-11-04T15:15:00+00:00",
+          "touch_count": 4,
+          "last_touch": "2026-11-04T20:15:00+00:00",
           "in_hvn": false,
-          "score": 11.0
+          "score": 14.0
         },
         {
-          "price": 231.1971293623721,
-          "level_type": "resistance",
-          "touch_count": 2,
-          "last_touch": "2026-10-21T17:30:00+00:00",
-          "in_hvn": true,
-          "score": 9.728036069691584
+          "price": 188.5361617875831,
+          "level_type": "support",
+          "touch_count": 4,
+          "last_touch": "2026-09-28T13:30:00+00:00",
+          "in_hvn": false,
+          "score": 13.03285586856229
         }
       ]
     },
     {
       "symbol": "PANW",
-      "current_price": 348.045,
-      "nearest_support": 347.1350943191506,
+      "current_price": 318.695,
+      "nearest_support": null,
       "nearest_resist": 378.51750167776834,
-      "pct_to_support": 0.00262118609077556,
-      "pct_to_resist": 0.08050486844782553,
-      "signal": "BUY_ZONE",
+      "pct_to_support": null,
+      "pct_to_resist": 0.1580442156904417,
+      "signal": "NEUTRAL",
       "suggested_strike": 380.0,
       "levels": [
         {
@@ -3173,7 +3029,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-29T16:45:00+00:00",
           "in_hvn": true,
-          "score": 24.95985425043973
+          "score": 24.938613443079124
         },
         {
           "price": 405.6184471899643,
@@ -3181,7 +3037,7 @@
           "touch_count": 6,
           "last_touch": "2026-10-28T13:30:00+00:00",
           "in_hvn": false,
-          "score": 19.926823947409428
+          "score": 19.905583140048822
         },
         {
           "price": 394.1982493034015,
@@ -3189,41 +3045,17 @@
           "touch_count": 6,
           "last_touch": "2026-10-26T18:30:00+00:00",
           "in_hvn": false,
-          "score": 19.874702735288217
-        },
-        {
-          "price": 347.1350943191506,
-          "level_type": "support",
-          "touch_count": 5,
-          "last_touch": "2026-11-04T16:15:00+00:00",
-          "in_hvn": false,
-          "score": 17.0
-        },
-        {
-          "price": 339.4255440713655,
-          "level_type": "support",
-          "touch_count": 3,
-          "last_touch": "2026-10-20T19:45:00+00:00",
-          "in_hvn": false,
-          "score": 10.701672432257912
-        },
-        {
-          "price": 327.35435586734695,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-09-11T19:00:00+00:00",
-          "in_hvn": false,
-          "score": 6.566217886803367
+          "score": 19.853461927927608
         }
       ]
     },
     {
       "symbol": "HOOD",
-      "current_price": 87.44,
-      "nearest_support": 83.4909426465796,
+      "current_price": 77.8,
+      "nearest_support": null,
       "nearest_resist": 109.63001042597557,
-      "pct_to_support": 0.04729923064992706,
-      "pct_to_resist": 0.20240817582480047,
+      "pct_to_support": null,
+      "pct_to_resist": 0.29034030282673234,
       "signal": "NEUTRAL",
       "suggested_strike": 110.0,
       "levels": [
@@ -3232,8 +3064,8 @@
           "level_type": "resistance",
           "touch_count": 4,
           "last_touch": "2026-10-12T14:00:00+00:00",
-          "in_hvn": true,
-          "score": 15.461975461488215
+          "in_hvn": false,
+          "score": 13.440734653911449
         },
         {
           "price": 121.52723622472121,
@@ -3241,7 +3073,7 @@
           "touch_count": 4,
           "last_touch": "2026-09-25T13:30:00+00:00",
           "in_hvn": false,
-          "score": 12.966823946336701
+          "score": 12.945583138759932
         },
         {
           "price": 126.30575506353097,
@@ -3249,36 +3081,28 @@
           "touch_count": 4,
           "last_touch": "2026-09-23T15:45:00+00:00",
           "in_hvn": false,
-          "score": 12.911369400882155
-        },
-        {
-          "price": 83.4909426465796,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-11-04T14:30:00+00:00",
-          "in_hvn": false,
-          "score": 8.0
-        },
-        {
-          "price": 82.32656280918044,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-10-30T18:45:00+00:00",
-          "in_hvn": false,
-          "score": 7.991369400882155
+          "score": 12.890128593305388
         }
       ]
     },
     {
       "symbol": "RBLX",
-      "current_price": 49.31,
-      "nearest_support": 48.83496183974611,
-      "nearest_resist": 49.758486213684584,
-      "pct_to_support": 0.009727419503526019,
-      "pct_to_resist": 0.00901326080859026,
+      "current_price": 47.36,
+      "nearest_support": 47.00167800513307,
+      "nearest_resist": 49.791332123276135,
+      "pct_to_support": 0.007623600051636332,
+      "pct_to_resist": 0.0488304293055769,
       "signal": "BUY_ZONE",
       "suggested_strike": 50.0,
       "levels": [
+        {
+          "price": 49.791332123276135,
+          "level_type": "resistance",
+          "touch_count": 6,
+          "last_touch": "2026-11-05T14:30:00+00:00",
+          "in_hvn": false,
+          "score": 20.0
+        },
         {
           "price": 42.50963540905824,
           "level_type": "support",
@@ -3293,7 +3117,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-29T16:30:00+00:00",
           "in_hvn": false,
-          "score": 16.9595512179101
+          "score": 16.938310410042423
         },
         {
           "price": 51.242467067734445,
@@ -3301,15 +3125,15 @@
           "touch_count": 5,
           "last_touch": "2026-10-19T15:45:00+00:00",
           "in_hvn": false,
-          "score": 16.66773303609192
+          "score": 16.646492228224243
         },
         {
-          "price": 48.83496183974611,
+          "price": 45.488861856439044,
           "level_type": "support",
-          "touch_count": 5,
-          "last_touch": "2026-10-13T14:00:00+00:00",
-          "in_hvn": false,
-          "score": 16.49106636942525
+          "touch_count": 4,
+          "last_touch": "2026-11-05T16:00:00+00:00",
+          "in_hvn": true,
+          "score": 16.0
         },
         {
           "price": 47.00167800513307,
@@ -3317,25 +3141,17 @@
           "touch_count": 4,
           "last_touch": "2026-10-15T13:30:00+00:00",
           "in_hvn": false,
-          "score": 13.54864212700101
-        },
-        {
-          "price": 49.758486213684584,
-          "level_type": "resistance",
-          "touch_count": 4,
-          "last_touch": "2026-10-12T18:15:00+00:00",
-          "in_hvn": false,
-          "score": 13.467126975485858
+          "score": 13.527401319133332
         }
       ]
     },
     {
       "symbol": "RDW",
-      "current_price": 7.72,
+      "current_price": 6.235,
       "nearest_support": null,
       "nearest_resist": 8.638957520146057,
       "pct_to_support": null,
-      "pct_to_resist": 0.10637365885907504,
+      "pct_to_resist": 0.2782693993505612,
       "signal": "NEUTRAL",
       "suggested_strike": 9.0,
       "levels": [
@@ -3345,7 +3161,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-01T17:30:00+00:00",
           "in_hvn": true,
-          "score": 24.14621788352727
+          "score": 24.124977075444107
         },
         {
           "price": 8.638957520146057,
@@ -3353,7 +3169,7 @@
           "touch_count": 6,
           "last_touch": "2026-10-22T13:30:00+00:00",
           "in_hvn": false,
-          "score": 19.75227848958788
+          "score": 19.731037681504713
         },
         {
           "price": 11.71513267600589,
@@ -3361,28 +3177,20 @@
           "touch_count": 5,
           "last_touch": "2026-09-28T14:15:00+00:00",
           "in_hvn": false,
-          "score": 16.05500576231515
+          "score": 16.033764954231987
         }
       ]
     },
     {
       "symbol": "RKLB",
-      "current_price": 52.34,
-      "nearest_support": 52.25283876918346,
-      "nearest_resist": 52.774152956736074,
-      "pct_to_support": 0.0016680669006627269,
-      "pct_to_resist": 0.008226621033443906,
-      "signal": "BUY_ZONE",
-      "suggested_strike": 53.0,
+      "current_price": 45.955,
+      "nearest_support": null,
+      "nearest_resist": 55.05580863551572,
+      "pct_to_support": null,
+      "pct_to_resist": 0.1653015160628286,
+      "signal": "NEUTRAL",
+      "suggested_strike": 56.0,
       "levels": [
-        {
-          "price": 52.774152956736074,
-          "level_type": "resistance",
-          "touch_count": 5,
-          "last_touch": "2026-11-04T17:45:00+00:00",
-          "in_hvn": false,
-          "score": 17.0
-        },
         {
           "price": 55.05580863551572,
           "level_type": "resistance",
@@ -3397,41 +3205,25 @@
           "touch_count": 5,
           "last_touch": "2026-10-13T19:45:00+00:00",
           "in_hvn": false,
-          "score": 16.498036064301346
+          "score": 16.476795255968685
         },
         {
-          "price": 50.540320662460566,
-          "level_type": "support",
-          "touch_count": 4,
-          "last_touch": "2026-11-04T16:00:00+00:00",
+          "price": 72.10971289133812,
+          "level_type": "resistance",
+          "touch_count": 5,
+          "last_touch": "2026-10-07T19:45:00+00:00",
           "in_hvn": false,
-          "score": 14.0
-        },
-        {
-          "price": 51.584360483614375,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-11-04T19:00:00+00:00",
-          "in_hvn": true,
-          "score": 10.0
-        },
-        {
-          "price": 52.25283876918346,
-          "level_type": "support",
-          "touch_count": 2,
-          "last_touch": "2026-10-26T14:00:00+00:00",
-          "in_hvn": false,
-          "score": 7.869248185513468
+          "score": 16.302249801423233
         }
       ]
     },
     {
       "symbol": "PL",
-      "current_price": 12.65,
+      "current_price": 11.38,
       "nearest_support": null,
       "nearest_resist": 13.778253624689311,
       "pct_to_support": null,
-      "pct_to_resist": 0.08188654784722416,
+      "pct_to_resist": 0.1740607837550522,
       "signal": "NEUTRAL",
       "suggested_strike": 14.0,
       "levels": [
@@ -3441,7 +3233,7 @@
           "touch_count": 8,
           "last_touch": "2026-09-30T13:45:00+00:00",
           "in_hvn": false,
-          "score": 25.112581517788552
+          "score": 25.091340709218855
         },
         {
           "price": 17.23107743592223,
@@ -3449,7 +3241,7 @@
           "touch_count": 5,
           "last_touch": "2026-10-09T19:45:00+00:00",
           "in_hvn": false,
-          "score": 16.38167242687946
+          "score": 16.360431618309764
         },
         {
           "price": 13.778253624689311,
@@ -3457,17 +3249,17 @@
           "touch_count": 4,
           "last_touch": "2026-10-21T20:45:00+00:00",
           "in_hvn": false,
-          "score": 13.731975457182491
+          "score": 13.710734648612794
         }
       ]
     },
     {
       "symbol": "ASTS",
-      "current_price": 35.59,
+      "current_price": 30.705,
       "nearest_support": null,
       "nearest_resist": 58.79310315812331,
       "pct_to_support": null,
-      "pct_to_resist": 0.39465688850814445,
+      "pct_to_resist": 0.4777448654577853,
       "signal": "NEUTRAL",
       "suggested_strike": 59.0,
       "levels": [
@@ -3476,34 +3268,34 @@
           "level_type": "resistance",
           "touch_count": 7,
           "last_touch": "2026-10-06T19:30:00+00:00",
-          "in_hvn": true,
-          "score": 24.29409666825488
+          "in_hvn": false,
+          "score": 22.272855859036362
         },
         {
           "price": 62.14081055385958,
           "level_type": "resistance",
           "touch_count": 6,
           "last_touch": "2026-09-28T18:15:00+00:00",
-          "in_hvn": false,
-          "score": 19.059854244012456
+          "in_hvn": true,
+          "score": 21.038613434793938
         },
         {
           "price": 58.79310315812331,
           "level_type": "resistance",
           "touch_count": 4,
           "last_touch": "2026-10-05T14:15:00+00:00",
-          "in_hvn": false,
-          "score": 13.258642122800337
+          "in_hvn": true,
+          "score": 15.237401313581818
         }
       ]
     },
     {
       "symbol": "LUNR",
-      "current_price": 9.92,
+      "current_price": 8.6,
       "nearest_support": null,
       "nearest_resist": 10.729114548970538,
       "pct_to_support": null,
-      "pct_to_resist": 0.07541298448045486,
+      "pct_to_resist": 0.1984427083197492,
       "signal": "NEUTRAL",
       "suggested_strike": 11.0,
       "levels": [
@@ -3513,7 +3305,15 @@
           "touch_count": 5,
           "last_touch": "2026-10-09T13:30:00+00:00",
           "in_hvn": false,
-          "score": 16.374096667145455
+          "score": 16.352855857768688
+        },
+        {
+          "price": 10.729114548970538,
+          "level_type": "resistance",
+          "touch_count": 4,
+          "last_touch": "2026-11-03T17:15:00+00:00",
+          "in_hvn": true,
+          "score": 16.0
         },
         {
           "price": 14.972867459225782,
@@ -3521,24 +3321,16 @@
           "touch_count": 4,
           "last_touch": "2026-09-30T16:45:00+00:00",
           "in_hvn": true,
-          "score": 15.116217879266667
-        },
-        {
-          "price": 10.729114548970538,
-          "level_type": "resistance",
-          "touch_count": 4,
-          "last_touch": "2026-11-03T17:15:00+00:00",
-          "in_hvn": false,
-          "score": 14.0
+          "score": 15.094977069889898
         }
       ]
     },
     {
       "symbol": "NEE",
-      "current_price": 88.43,
+      "current_price": 87.715,
       "nearest_support": 81.41371999723467,
       "nearest_resist": null,
-      "pct_to_support": 0.08618056026679115,
+      "pct_to_support": 0.0773982567432046,
       "pct_to_resist": null,
       "signal": "NEUTRAL",
       "suggested_strike": null,
@@ -3549,7 +3341,7 @@
           "touch_count": 9,
           "last_touch": "2026-09-30T13:30:00+00:00",
           "in_hvn": false,
-          "score": 28.112278484216162
+          "score": 28.091037674568685
         },
         {
           "price": 81.41371999723467,
@@ -3557,7 +3349,7 @@
           "touch_count": 7,
           "last_touch": "2026-10-28T13:30:00+00:00",
           "in_hvn": false,
-          "score": 22.926823938761615
+          "score": 22.90558312911414
         },
         {
           "price": 78.10047891948396,
@@ -3565,16 +3357,16 @@
           "touch_count": 7,
           "last_touch": "2026-10-21T19:45:00+00:00",
           "in_hvn": false,
-          "score": 22.73076333270101
+          "score": 22.709522523053536
         }
       ]
     },
     {
       "symbol": "D",
-      "current_price": 69.76,
+      "current_price": 69.295,
       "nearest_support": 64.98459157549638,
       "nearest_resist": null,
-      "pct_to_support": 0.07348524178929022,
+      "pct_to_support": 0.06632969939490915,
       "pct_to_resist": null,
       "signal": "NEUTRAL",
       "suggested_strike": null,
@@ -3584,8 +3376,8 @@
           "level_type": "support",
           "touch_count": 11,
           "last_touch": "2026-10-29T17:45:00+00:00",
-          "in_hvn": true,
-          "score": 36.96106636186734
+          "in_hvn": false,
+          "score": 34.93982555201885
         },
         {
           "price": 61.221558795931394,
@@ -3593,7 +3385,7 @@
           "touch_count": 9,
           "last_touch": "2026-10-09T13:30:00+00:00",
           "in_hvn": false,
-          "score": 28.374096664897642
+          "score": 28.352855855049157
         },
         {
           "price": 62.25961886988873,
@@ -3601,17 +3393,17 @@
           "touch_count": 6,
           "last_touch": "2026-10-21T19:45:00+00:00",
           "in_hvn": false,
-          "score": 19.73076333156431
+          "score": 19.709522521715826
         }
       ]
     },
     {
       "symbol": "FTEC",
-      "current_price": 275.63,
-      "nearest_support": 275.01208085612365,
+      "current_price": 257.995,
+      "nearest_support": 255.86814866760167,
       "nearest_resist": 285.71066465256797,
-      "pct_to_support": 0.0022468799986994845,
-      "pct_to_resist": 0.035282773447838714,
+      "pct_to_support": 0.008312294216664396,
+      "pct_to_resist": 0.09700605571118942,
       "signal": "BUY_ZONE",
       "suggested_strike": 290.0,
       "levels": [
@@ -3621,15 +3413,7 @@
           "touch_count": 4,
           "last_touch": "2026-10-20T14:30:00+00:00",
           "in_hvn": true,
-          "score": 15.695308784961616
-        },
-        {
-          "price": 275.01208085612365,
-          "level_type": "support",
-          "touch_count": 3,
-          "last_touch": "2026-11-04T16:00:00+00:00",
-          "in_hvn": true,
-          "score": 13.0
+          "score": 15.67406797489192
         },
         {
           "price": 285.71066465256797,
@@ -3637,7 +3421,7 @@
           "touch_count": 3,
           "last_touch": "2026-10-23T14:45:00+00:00",
           "in_hvn": true,
-          "score": 12.782884542537374
+          "score": 12.761643732467677
         },
         {
           "price": 291.9773744437381,
@@ -3645,19 +3429,27 @@
           "touch_count": 3,
           "last_touch": "2026-10-29T19:45:00+00:00",
           "in_hvn": false,
-          "score": 10.963490603143434
+          "score": 10.942249793073737
+        },
+        {
+          "price": 255.86814866760167,
+          "level_type": "support",
+          "touch_count": 2,
+          "last_touch": "2026-11-05T18:00:00+00:00",
+          "in_hvn": false,
+          "score": 8.0
         }
       ]
     },
     {
       "symbol": "IBM",
-      "current_price": 254.34,
+      "current_price": 249.39,
       "nearest_support": 248.1611191220059,
-      "nearest_resist": 255.6689084169359,
-      "pct_to_support": 0.02489866623689872,
-      "pct_to_resist": 0.005197770918506647,
-      "signal": "CALL_ZONE",
-      "suggested_strike": 260.0,
+      "nearest_resist": 250.24397398208978,
+      "pct_to_support": 0.004951947679563394,
+      "pct_to_resist": 0.003412565619465896,
+      "signal": "BUY_ZONE",
+      "suggested_strike": 255.0,
       "levels": [
         {
           "price": 229.87779727322365,
@@ -3665,7 +3457,7 @@
           "touch_count": 10,
           "last_touch": "2026-10-19T13:30:00+00:00",
           "in_hvn": false,
-          "score": 31.66500575371515
+          "score": 31.64376494375421
         },
         {
           "price": 248.1611191220059,
@@ -3681,51 +3473,51 @@
           "touch_count": 8,
           "last_touch": "2026-10-08T14:30:00+00:00",
           "in_hvn": false,
-          "score": 25.346217874927273
+          "score": 25.32497706496633
         },
         {
-          "price": 255.6689084169359,
+          "price": 250.24397398208978,
           "level_type": "resistance",
-          "touch_count": 5,
-          "last_touch": "2026-11-04T18:30:00+00:00",
+          "touch_count": 7,
+          "last_touch": "2026-11-03T18:45:00+00:00",
           "in_hvn": false,
-          "score": 17.0
+          "score": 23.0
         },
         {
-          "price": 257.8298036804012,
+          "price": 255.71257976460794,
           "level_type": "resistance",
-          "touch_count": 2,
-          "last_touch": "2026-11-04T15:30:00+00:00",
+          "touch_count": 6,
+          "last_touch": "2026-11-05T14:30:00+00:00",
           "in_hvn": false,
-          "score": 8.0
+          "score": 20.0
         },
         {
-          "price": 259.5878094344193,
+          "price": 253.0584388554722,
           "level_type": "resistance",
-          "touch_count": 2,
-          "last_touch": "2026-11-02T17:15:00+00:00",
+          "touch_count": 4,
+          "last_touch": "2026-10-28T16:45:00+00:00",
           "in_hvn": false,
-          "score": 8.0
+          "score": 13.909522519511784
         }
       ]
     },
     {
       "symbol": "VHT",
-      "current_price": 351.1,
+      "current_price": 343.62,
       "nearest_support": 330.6962610929472,
-      "nearest_resist": null,
-      "pct_to_support": 0.061699333520187624,
-      "pct_to_resist": null,
+      "nearest_resist": 348.2421019771072,
+      "pct_to_support": 0.039080390157239686,
+      "pct_to_resist": 0.013272668499488481,
       "signal": "NEUTRAL",
-      "suggested_strike": null,
+      "suggested_strike": 350.0,
       "levels": [
         {
           "price": 315.8644572748268,
           "level_type": "support",
           "touch_count": 8,
           "last_touch": "2026-10-13T19:45:00+00:00",
-          "in_hvn": true,
-          "score": 27.49803605570101
+          "in_hvn": false,
+          "score": 25.476795245340067
         },
         {
           "price": 330.6962610929472,
@@ -3733,7 +3525,7 @@
           "touch_count": 6,
           "last_touch": "2026-10-28T13:30:00+00:00",
           "in_hvn": false,
-          "score": 19.92682393448889
+          "score": 19.905583124127947
         },
         {
           "price": 311.13264555108015,
@@ -3741,7 +3533,15 @@
           "touch_count": 6,
           "last_touch": "2026-10-06T17:30:00+00:00",
           "in_hvn": false,
-          "score": 19.291672419337374
+          "score": 19.27043160897643
+        },
+        {
+          "price": 348.2421019771072,
+          "level_type": "resistance",
+          "touch_count": 2,
+          "last_touch": "2026-11-04T14:45:00+00:00",
+          "in_hvn": false,
+          "score": 8.0
         }
       ]
     }
