@@ -1,23 +1,23 @@
 {
-  "fetched_at": "2026-11-09T21:43:44.562300+00:00",
+  "fetched_at": "2026-11-10T03:53:30.521827+00:00",
   "oil": [
     {
       "symbol": "CL=F",
       "label": "WTI crude",
-      "price": 86.84,
-      "prev_close": 90.83,
-      "change": -3.989999999999995,
-      "change_pct": -4.392821754926781,
-      "as_of": "2026-11-09T21:33:00+00:00"
+      "price": 85.71,
+      "prev_close": 86.85,
+      "change": -1.1400000000000006,
+      "change_pct": -1.3126079447322978,
+      "as_of": "2026-11-10T03:42:47+00:00"
     },
     {
       "symbol": "BZ=F",
       "label": "Brent crude",
-      "price": 92.56,
-      "prev_close": 98.32,
-      "change": -5.759999999999991,
-      "change_pct": -5.8584214808787545,
-      "as_of": "2026-11-09T21:32:45+00:00"
+      "price": 91.53,
+      "prev_close": 92.57,
+      "change": -1.039999999999992,
+      "change_pct": -1.1234741276871472,
+      "as_of": "2026-11-10T03:42:27+00:00"
     }
   ],
   "voo": {
@@ -134,6 +134,6 @@
     }
   },
   "errors": [
-    "fred_wti: GET failed for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO&cosd=2026-07-12: The read operation timed out"
+    "fred_wti: GET failed for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO&cosd=2026-07-13: The read operation timed out"
   ]
 }
