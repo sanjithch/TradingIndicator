@@ -1,32 +1,32 @@
 {
-  "fetched_at": "2026-11-16T21:24:36.622602+00:00",
+  "fetched_at": "2026-11-17T04:02:28.445470+00:00",
   "oil": [
     {
       "symbol": "CL=F",
       "label": "WTI crude",
-      "price": 85.4,
-      "prev_close": 88.56,
-      "change": -3.1599999999999966,
-      "change_pct": -3.56820234869015,
-      "as_of": "2026-11-16T21:13:35+00:00"
+      "price": 85.0,
+      "prev_close": 85.72,
+      "change": -0.7199999999999989,
+      "change_pct": -0.8399440037330832,
+      "as_of": "2026-11-17T03:51:42+00:00"
     },
     {
       "symbol": "BZ=F",
       "label": "Brent crude",
-      "price": 92.16,
-      "prev_close": 95.84,
-      "change": -3.680000000000007,
-      "change_pct": -3.8397328881469184,
-      "as_of": "2026-11-16T21:11:01+00:00"
+      "price": 91.58,
+      "prev_close": 92.44,
+      "change": -0.8599999999999994,
+      "change_pct": -0.9303331890956289,
+      "as_of": "2026-11-17T03:48:21+00:00"
     }
   ],
   "voo": {
     "symbol": "VOO",
     "label": "VOO (S&P 500)",
-    "price": 680.21,
+    "price": 680.26,
     "prev_close": 693.38,
-    "change": -13.169999999999959,
-    "change_pct": -1.8993913871181687,
+    "change": -13.120000000000005,
+    "change_pct": -1.8921803340159804,
     "as_of": "2026-11-16T21:00:00+00:00"
   },
   "yield_10y_intraday": {
@@ -134,6 +134,6 @@
     }
   },
   "errors": [
-    "fred_wti: GET failed for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO&cosd=2026-07-19: The read operation timed out"
+    "fred_wti: GET failed for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO&cosd=2026-07-20: The read operation timed out"
   ]
 }
