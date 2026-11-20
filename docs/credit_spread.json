@@ -1,5 +1,5 @@
 {
-  "run_timestamp": "2026-11-19T22:56:10.456854+00:00",
+  "run_timestamp": "2026-11-20T01:40:41.311279+00:00",
   "technicals": [
     {
       "symbol": "AVGO",
@@ -159,42 +159,42 @@
     },
     {
       "symbol": "SNDK",
-      "current_price": 754.98,
+      "current_price": 94.37,
       "bar_count": 208,
       "levels": {
         "20": {
-          "support": 749.78,
-          "resistance": 1407.97,
+          "support": 93.72,
+          "resistance": 176.0,
           "bars_used": 20,
-          "pct_to_support": 0.006935367707861033,
-          "pct_to_resistance": -0.46378118851964173
+          "pct_to_support": 0.006935552710200658,
+          "pct_to_resistance": -0.4638068181818182
         },
         "60": {
-          "support": 749.78,
-          "resistance": 1908.97,
+          "support": 93.72,
+          "resistance": 238.62,
           "bars_used": 60,
-          "pct_to_support": 0.006935367707861033,
-          "pct_to_resistance": -0.6045092379660235
+          "pct_to_support": 0.006935552710200658,
+          "pct_to_resistance": -0.6045176431145755
         },
         "120": {
-          "support": 749.78,
-          "resistance": 2353.12,
+          "support": 93.72,
+          "resistance": 294.14,
           "bars_used": 120,
-          "pct_to_support": 0.006935367707861033,
-          "pct_to_resistance": -0.6791578840008159
+          "pct_to_support": 0.006935552710200658,
+          "pct_to_resistance": -0.679166383354865
         }
       },
       "sma": {
         "50": {
-          "value": 1365.3557999999996,
-          "pct_distance": -0.44704523172641136
+          "value": 170.6698000000001,
+          "pct_distance": -0.44706093286568593
         },
         "200": {
-          "value": 1285.4777250000002,
-          "pct_distance": -0.4126852723177293
+          "value": 160.68529999999998,
+          "pct_distance": -0.4127029666061549
         }
       },
-      "rsi14": 27.778150884262374
+      "rsi14": 27.7797672336616
     },
     {
       "symbol": "IONQ",
@@ -262,6 +262,22 @@
       ],
       "is_sector_peer": false,
       "source_ticker": "HPE",
+      "peer_group": null
+    },
+    {
+      "date": "2026-12-04",
+      "category": "macro",
+      "title": "Employment Situation (Nov 2026)",
+      "affects": [
+        "AVGO",
+        "HPE",
+        "MU",
+        "DRAM",
+        "SNDK",
+        "IONQ"
+      ],
+      "is_sector_peer": false,
+      "source_ticker": null,
       "peer_group": null
     }
   ]
