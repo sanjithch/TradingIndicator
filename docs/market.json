@@ -1,90 +1,90 @@
 {
-  "fetched_at": "2026-11-20T19:23:29.683516+00:00",
+  "fetched_at": "2026-11-21T00:53:41.400606+00:00",
   "oil": [
     {
       "symbol": "CL=F",
       "label": "WTI crude",
-      "price": 83.15,
+      "price": 83.62,
       "prev_close": 82.44,
-      "change": 0.710000000000008,
-      "change_pct": 0.8612324114507618,
-      "as_of": "2026-11-20T19:12:46+00:00"
+      "change": 1.1800000000000068,
+      "change_pct": 1.43134400776323,
+      "as_of": "2026-11-20T21:59:59+00:00"
     },
     {
       "symbol": "BZ=F",
       "label": "Brent crude",
-      "price": 89.68,
+      "price": 89.87,
       "prev_close": 89.44,
-      "change": 0.2400000000000091,
-      "change_pct": 0.26833631484795295,
-      "as_of": "2026-11-20T19:12:38+00:00"
+      "change": 0.4300000000000068,
+      "change_pct": 0.48076923076923844,
+      "as_of": "2026-11-20T21:59:18+00:00"
     }
   ],
   "voo": {
     "symbol": "VOO",
     "label": "VOO (S&P 500)",
-    "price": 640.94,
+    "price": 635.54,
     "prev_close": 658.01,
-    "change": -17.069999999999936,
-    "change_pct": -2.5941854987006177,
-    "as_of": "2026-11-20T19:22:47+00:00"
+    "change": -22.470000000000027,
+    "change_pct": -3.4148417197307075,
+    "as_of": "2026-11-20T21:00:03+00:00"
   },
   "yield_10y_intraday": {
     "symbol": "^TNX",
     "label": "10Y (intraday)",
-    "price": 4.942,
+    "price": 4.912,
     "prev_close": 5.052,
-    "change": -0.10999999999999943,
-    "change_pct": -2.1773555027711686,
-    "as_of": "2026-11-20T19:07:45+00:00"
+    "change": -0.13999999999999968,
+    "change_pct": -2.771179730799677,
+    "as_of": "2026-11-20T19:59:55+00:00"
   },
   "treasury": {
-    "as_of": "2026-11-19",
-    "prior_as_of": "2026-11-18",
+    "as_of": "2026-11-20",
+    "prior_as_of": "2026-11-19",
     "curve": [
       {
         "maturity": "3M",
-        "rate": 4.34,
+        "rate": 4.32,
         "prior": 4.34,
-        "change_bp": 0.0
+        "change_bp": -2.0
       },
       {
         "maturity": "2Y",
-        "rate": 4.76,
-        "prior": 4.8,
-        "change_bp": -4.0
+        "rate": 4.63,
+        "prior": 4.76,
+        "change_bp": -13.0
       },
       {
         "maturity": "5Y",
-        "rate": 4.86,
-        "prior": 4.89,
-        "change_bp": -3.0
+        "rate": 4.71,
+        "prior": 4.86,
+        "change_bp": -15.0
       },
       {
         "maturity": "10Y",
-        "rate": 5.04,
-        "prior": 5.07,
-        "change_bp": -3.0
+        "rate": 4.92,
+        "prior": 5.04,
+        "change_bp": -12.0
       },
       {
         "maturity": "30Y",
-        "rate": 5.4,
-        "prior": 5.41,
-        "change_bp": -1.0
+        "rate": 5.31,
+        "prior": 5.4,
+        "change_bp": -9.0
       }
     ],
-    "spread_2s10s_bp": 28.0
+    "spread_2s10s_bp": 29.0
   },
   "signal": {
     "state": "NEUTRAL",
     "score": 0,
     "wti_20d_pct": null,
-    "y10_20d_bp": -8.999999999999986,
+    "y10_20d_bp": -4.0000000000000036,
     "components": [
       {
         "name": "10Y momentum",
         "points": 0,
-        "note": "10Y -9 bp in 20d (inside +/-30 bp)"
+        "note": "10Y -4 bp in 20d (inside +/-30 bp)"
       },
       {
         "name": "Oil + rates",
@@ -93,7 +93,7 @@
       }
     ],
     "as_of": {
-      "y10": "2026-11-19",
+      "y10": "2026-11-20",
       "wti": null
     },
     "calibration": {
@@ -134,6 +134,6 @@
     }
   },
   "errors": [
-    "fred_wti: GET failed for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO&cosd=2026-07-23: The read operation timed out"
+    "fred_wti: GET failed for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO&cosd=2026-07-24: The read operation timed out"
   ]
 }
